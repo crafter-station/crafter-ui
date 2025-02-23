@@ -3,13 +3,13 @@ import { notFound } from "next/navigation"
 import { cn } from "@/lib/utils"
 
 interface CategoryPageProps {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }>
+
 }
 
-export default function CategoryPage({ params }: CategoryPageProps) {
-  const category = categories.find((c) => c.slug === params.slug)
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { slug } = await params
+  const category = categories.find((c) => c.slug === slug)
 
   if (!category) {
     notFound()
