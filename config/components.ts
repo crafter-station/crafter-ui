@@ -31,6 +31,14 @@ import GoogleLoginButtons from "@/registry/default/components/comp-30"
 import LinkedinLoginButtons from "@/registry/default/components/comp-31"
 import MicrosoftLoginButtons from "@/registry/default/components/comp-32"
 import TwitchLoginButtons from "@/registry/default/components/comp-33"
+import RaycastCommandMenu from "@/registry/default/components/comp-34"
+import LinearCommandMenu from "@/registry/default/components/comp-35"
+import VercelCommandMenu from "@/registry/default/components/comp-36"
+import FramerCommandMenu from "@/registry/default/components/comp-37"
+import PerplexityCommandMenu from "@/registry/default/components/comp-38"
+import SpotlightCommandMenu from "@/registry/default/components/comp-39"
+import ClaudeCommandMenu from "@/registry/default/components/comp-40"
+import ChatGPTCommandMenu from "@/registry/default/components/comp-41"
 
 interface ButtonComponent {
   name: string
@@ -469,7 +477,7 @@ export const categories: ComponentCategory[] = [
     slug: "button",
     name: "Button",
     type: "atom",
-    count: 21,
+    count: 28,
     description: "A collection of button components built with Tailwind CSS and React",
     components: [
       {
@@ -612,6 +620,55 @@ export const categories: ComponentCategory[] = [
         name: "Property Tag",
         description: "Property tag button with icon",
         component: PropertyButton
+      },
+    ]
+  },
+  {
+    slug: "command-menu",
+    name: "Command Menu",
+    description: "Command menu components with various styles",
+    type: "organism",
+    count: 8,
+    components: [
+      {
+        name: "Raycast Command Menu",
+        description: "Command menu with Raycast style",
+        component: RaycastCommandMenu
+      },
+      {
+        name: "Linear Command Menu",
+        description: "Command menu with Linear style",
+        component: LinearCommandMenu
+      },
+      {
+        name: "Vercel Command Menu",
+        description: "Command menu with Vercel style",
+        component: VercelCommandMenu
+      },
+      {
+        name: "Framer Command Menu",
+        description: "Command menu with Framer style",
+        component: FramerCommandMenu
+      },
+      {
+        name: "Perplexity Command Menu",
+        description: "Command menu with Perplexity style",
+        component: PerplexityCommandMenu
+      },
+      {
+        name: "Spotlight Command Menu",
+        description: "Command menu with macOS Spotlight style",
+        component: SpotlightCommandMenu
+      },
+      {
+        name: "Claude Command Menu",
+        description: "Command menu with Claude (Anthropic) style",
+        component: ClaudeCommandMenu
+      },
+      {
+        name: "ChatGPT Command Menu",
+        description: "Command menu with ChatGPT style",
+        component: ChatGPTCommandMenu
       },
     ]
   },
