@@ -97,7 +97,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: hsl(var(--color-border));
   }
 }
 
@@ -169,7 +169,7 @@
     /* Neutrals */
     --muted: 240 5% 20%;
     --muted-foreground: 0 0% 85%;
-    --border: 240 5% 15%;
+    --border: 239.9 4% 20%;
     --input: 240 5% 15%;
     --ring: 35 90% 65%;
     --radius: 0.5rem;

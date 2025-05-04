@@ -137,7 +137,7 @@ const RaycastCommandMenu = ({ name }: { name?: string }) => {
                   <div className="flex items-center">
                     <span className="text-xs font-semibold mr-2">Open Application</span>
                     <kbd className="px-1.5 py-1 flex items-center justify-center text-xs bg-muted rounded border text-muted-foreground/70">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-corner-down-left"><polyline points="9 10 4 15 9 20" /><path d="M20 4v7a4 4 0 0 1-4 4H4" /></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-corner-down-left"><polyline points="9 10 4 15 9 20" /><path d="M20 4v7a4 4 0 0 1-4 4H4" /></svg>
                     </kbd>
                   </div>
 
@@ -145,7 +145,7 @@ const RaycastCommandMenu = ({ name }: { name?: string }) => {
                     <span className="text-xs font-semibold text-muted-foreground/70 mr-2">Actions</span>
                     <div className="flex">
                       <kbd className="px-1.5 py-0.5 flex items-center justify-center text-xs bg-muted rounded border text-muted-foreground/70 mr-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-command"><path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-command"><path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" /></svg>
                       </kbd>
                       <kbd className="px-1.5 py-0.5 text-xs bg-muted rounded border text-muted-foreground/70">K</kbd>
                     </div>

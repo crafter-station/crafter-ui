@@ -14,6 +14,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   if (!category) {
     notFound()
   }
+  console.log({ category })
 
   return (
     <div className="container py-10">
@@ -28,10 +29,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       <div className="mt-8">
         <div className={cn(
-          "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-l border-t",
-          category.components.length === 1 && "flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4",
-          category.components.length === 2 && "flex flex-col sm:flex-row w-full md:w-2/3 lg:w-2/4",
-          category.components.length === 3 && "lg:flex lg:w-3/4",
+          category.layout === "column" && "grid grid-cols-1 border-l border-t",
+          category.layout === "default" && "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-l border-t",
+          category.layout !== "column" && category.components.length === 1 && "flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4",
+          category.layout !== "column" && category.components.length === 2 && "flex flex-col sm:flex-row w-full md:w-2/3 lg:w-2/4",
+          category.layout !== "column" && category.components.length === 3 && "lg:flex lg:w-3/4",
         )}>
           {category.components.map((component, i) => {
             const Component = component.component
@@ -41,14 +43,18 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 key={i}
                 className={cn(
                   "flex-1 bg-card relative p-8 transition-colors",
-                  "border-r border-b"
+                  "border-r border-b",
+                  category.layout === "column" && "p-12"
                 )}
               >
                 <div className="flex h-full flex-col justify-between">
                   <div className="flex items-center justify-center py-3">
                     <Component name={component.name} />
                   </div>
-                  <p className="sr-only text-sm text-muted-foreground">
+                  <p className={cn(
+                    "text-sm text-muted-foreground text-center mt-4",
+                    category.layout !== "column" && "sr-only"
+                  )}>
                     {component.description}
                   </p>
                 </div>

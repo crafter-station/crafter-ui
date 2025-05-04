@@ -107,16 +107,16 @@ export default function Page() {
                           )}
                         >
                           <div className="space-y-3">
-                            <div className="aspect-[4/3] relative bg-muted/40">
+                            <div className="relative bg-muted/40">
                               <img
                                 src={`/thumbs/${category.slug}.webp`}
                                 alt={`${category.name} components`}
-                                className="object-cover dark:hidden"
+                                className="object-cover aspect-[4/3] dark:hidden"
                               />
                               <img
                                 src={`/thumbs/${category.slug}-dark.webp`}
                                 alt={`${category.name} components dark`}
-                                className="object-cover hidden dark:block"
+                                className="object-cover aspect-[4/3] hidden dark:block"
                               />
                             </div>
                             <div>

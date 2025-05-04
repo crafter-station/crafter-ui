@@ -34,7 +34,7 @@ import TwitchLoginButtons from "@/registry/default/components/comp-33"
 import RaycastCommandMenu from "@/registry/default/components/comp-34"
 import LinearCommandMenu from "@/registry/default/components/comp-35"
 import VercelCommandMenu from "@/registry/default/components/comp-36"
-import FramerCommandMenu from "@/registry/default/components/comp-37"
+import SupabaseCommandMenu from "@/registry/default/components/comp-37"
 import PerplexityCommandMenu from "@/registry/default/components/comp-38"
 import SpotlightCommandMenu from "@/registry/default/components/comp-39"
 import ClaudeCommandMenu from "@/registry/default/components/comp-40"
@@ -68,6 +68,7 @@ export interface ComponentCategory {
   type: "atom" | "molecule" | "organism" | "template" | "page" | "foundation"
   count: number
   preview?: string // For component preview images
+  layout?: "default" | "column" // Layout type for the component grid
 }
 
 // export const FUTURE_CATEGORIES: ComponentCategory[] = [
@@ -477,6 +478,7 @@ export const categories: ComponentCategory[] = [
     slug: "button",
     name: "Button",
     type: "atom",
+    layout: "default",
     count: 28,
     description: "A collection of button components built with Tailwind CSS and React",
     components: [
@@ -629,6 +631,7 @@ export const categories: ComponentCategory[] = [
     description: "Command menu components with various styles",
     type: "organism",
     count: 8,
+    layout: "default",
     components: [
       {
         name: "Raycast Command Menu",
@@ -646,9 +649,9 @@ export const categories: ComponentCategory[] = [
         component: VercelCommandMenu
       },
       {
-        name: "Framer Command Menu",
-        description: "Command menu with Framer style",
-        component: FramerCommandMenu
+        name: "Supabase Command Menu",
+        description: "Command menu with Supabase style",
+        component: SupabaseCommandMenu
       },
       {
         name: "Perplexity Command Menu",
