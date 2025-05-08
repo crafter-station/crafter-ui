@@ -1,0 +1,21 @@
+{
+  "name": "linkedin-login-button",
+  "type": "registry:component",
+  "title": "LinkedIn Login Button",
+  "description": "LinkedIn login button with icon",
+  "meta": {
+    "tags": [
+      "button",
+      "login",
+      "linkedin",
+      "social"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-31.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

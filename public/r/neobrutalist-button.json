@@ -1,0 +1,19 @@
+{
+  "name": "neobrutalist-button",
+  "type": "registry:component",
+  "title": "Neobrutalist Button",
+  "description": "Button with neobrutalist design style",
+  "meta": {
+    "tags": [
+      "button",
+      "neobrutalist"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-02.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

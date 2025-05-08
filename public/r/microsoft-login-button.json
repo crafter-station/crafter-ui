@@ -1,0 +1,21 @@
+{
+  "name": "microsoft-login-button",
+  "type": "registry:component",
+  "title": "Microsoft Login Button",
+  "description": "Microsoft login button with icon",
+  "meta": {
+    "tags": [
+      "button",
+      "login",
+      "microsoft",
+      "social"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-32.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

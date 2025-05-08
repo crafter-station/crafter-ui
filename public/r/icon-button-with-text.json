@@ -1,0 +1,19 @@
+{
+  "name": "icon-button-with-text",
+  "type": "registry:component",
+  "title": "Icon Button with Text",
+  "description": "Button with leading icon and text",
+  "meta": {
+    "tags": [
+      "button",
+      "icon"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-07.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

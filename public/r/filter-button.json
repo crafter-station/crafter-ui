@@ -1,0 +1,20 @@
+{
+  "name": "filter-button",
+  "type": "registry:component",
+  "title": "Filter Button",
+  "description": "Filter button with dropdown indicator",
+  "meta": {
+    "tags": [
+      "button",
+      "filter",
+      "dropdown"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-21.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

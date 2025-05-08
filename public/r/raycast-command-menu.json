@@ -1,0 +1,20 @@
+{
+  "name": "raycast-command-menu",
+  "type": "registry:component",
+  "title": "Raycast Command Menu",
+  "description": "Command menu with Raycast style",
+  "meta": {
+    "tags": [
+      "command",
+      "menu",
+      "raycast"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-34.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

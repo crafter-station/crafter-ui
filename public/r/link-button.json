@@ -1,0 +1,19 @@
+{
+  "name": "link-button",
+  "type": "registry:component",
+  "title": "Link Button",
+  "description": "Button that looks like a link",
+  "meta": {
+    "tags": [
+      "button",
+      "link"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-13.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

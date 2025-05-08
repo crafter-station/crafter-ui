@@ -1,0 +1,19 @@
+{
+  "name": "print-button",
+  "type": "registry:component",
+  "title": "Print Button",
+  "description": "Button for print action",
+  "meta": {
+    "tags": [
+      "button",
+      "print"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-16.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

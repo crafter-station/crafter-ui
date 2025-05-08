@@ -1,0 +1,20 @@
+{
+  "name": "toggle-button",
+  "type": "registry:component",
+  "title": "Toggle Button",
+  "description": "Toggle switch button",
+  "meta": {
+    "tags": [
+      "button",
+      "toggle",
+      "switch"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-23.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

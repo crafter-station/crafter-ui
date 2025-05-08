@@ -1,0 +1,20 @@
+{
+  "name": "linear-command-menu",
+  "type": "registry:component",
+  "title": "Linear Command Menu",
+  "description": "Command menu with Linear style",
+  "meta": {
+    "tags": [
+      "command",
+      "menu",
+      "linear"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-35.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

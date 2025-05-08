@@ -1,0 +1,19 @@
+{
+  "name": "suggested-teams-button",
+  "type": "registry:component",
+  "title": "Suggested Teams Button",
+  "description": "Button with suggested teams",
+  "meta": {
+    "tags": [
+      "button",
+      "teams"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-14.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

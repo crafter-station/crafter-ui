@@ -1,0 +1,20 @@
+{
+  "name": "property-button",
+  "type": "registry:component",
+  "title": "Property Tag Button",
+  "description": "Property tag button with icon",
+  "meta": {
+    "tags": [
+      "button",
+      "property",
+      "tag"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-24.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

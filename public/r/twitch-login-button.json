@@ -1,0 +1,21 @@
+{
+  "name": "twitch-login-button",
+  "type": "registry:component",
+  "title": "Twitch Login Button",
+  "description": "Twitch login button with icon",
+  "meta": {
+    "tags": [
+      "button",
+      "login",
+      "twitch",
+      "social"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-33.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

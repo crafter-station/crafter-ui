@@ -1,0 +1,20 @@
+{
+  "name": "bookmark-button",
+  "type": "registry:component",
+  "title": "Bookmark Button",
+  "description": "Interactive bookmark button with state",
+  "meta": {
+    "tags": [
+      "button",
+      "bookmark",
+      "interactive"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-06.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

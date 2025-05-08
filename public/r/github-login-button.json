@@ -1,0 +1,21 @@
+{
+  "name": "github-login-button",
+  "type": "registry:component",
+  "title": "Github Login Button",
+  "description": "Github login button with icon",
+  "meta": {
+    "tags": [
+      "button",
+      "login",
+      "github",
+      "social"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-28.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

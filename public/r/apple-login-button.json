@@ -1,0 +1,21 @@
+{
+  "name": "apple-login-button",
+  "type": "registry:component",
+  "title": "Apple Login Button",
+  "description": "Apple login button with icon",
+  "meta": {
+    "tags": [
+      "button",
+      "login",
+      "apple",
+      "social"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-26.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

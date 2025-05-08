@@ -1,0 +1,20 @@
+{
+  "name": "vercel-command-menu",
+  "type": "registry:component",
+  "title": "Vercel Command Menu",
+  "description": "Command menu with Vercel style",
+  "meta": {
+    "tags": [
+      "command",
+      "menu",
+      "vercel"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-36.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

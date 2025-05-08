@@ -1,0 +1,19 @@
+{
+  "name": "copy-button",
+  "type": "registry:component",
+  "title": "Copy Button",
+  "description": "Copy to clipboard with feedback",
+  "meta": {
+    "tags": [
+      "button",
+      "copy"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-08.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

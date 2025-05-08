@@ -1,0 +1,19 @@
+{
+  "name": "primary-button",
+  "type": "registry:component",
+  "title": "Primary Button",
+  "description": "Main call-to-action button",
+  "meta": {
+    "tags": [
+      "button",
+      "primary"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-01.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

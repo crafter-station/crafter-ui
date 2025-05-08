@@ -1,0 +1,19 @@
+{
+  "name": "secondary-button",
+  "type": "registry:component",
+  "title": "Secondary Button",
+  "description": "Alternative action button",
+  "meta": {
+    "tags": [
+      "button",
+      "secondary"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-03.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "twitter-login-button",
+  "type": "registry:component",
+  "title": "Twitter Login Button",
+  "description": "Twitter/X login button with icon",
+  "meta": {
+    "tags": [
+      "button",
+      "login",
+      "twitter",
+      "social"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-27.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

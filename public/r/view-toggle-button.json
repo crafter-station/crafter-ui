@@ -1,0 +1,20 @@
+{
+  "name": "view-toggle-button",
+  "type": "registry:component",
+  "title": "View Toggle Button",
+  "description": "Toggle between different view layouts",
+  "meta": {
+    "tags": [
+      "button",
+      "toggle",
+      "view"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-22.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

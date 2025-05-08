@@ -1,0 +1,487 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "crafterui",
+  "homepage": "https://crafterui.vercel.app",
+  "items": [
+    {
+      "name": "primary-button",
+      "type": "registry:component",
+      "title": "Primary Button",
+      "description": "Main call-to-action button",
+      "meta": {
+        "tags": ["button", "primary"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-01.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "neobrutalist-button",
+      "type": "registry:component",
+      "title": "Neobrutalist Button",
+      "description": "Button with neobrutalist design style",
+      "meta": {
+        "tags": ["button", "neobrutalist"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-02.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "secondary-button",
+      "type": "registry:component",
+      "title": "Secondary Button",
+      "description": "Alternative action button",
+      "meta": {
+        "tags": ["button", "secondary"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-03.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "loading-button",
+      "type": "registry:component",
+      "title": "Loading Button",
+      "description": "Button with loading spinner",
+      "meta": {
+        "tags": ["button", "loading"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "destructive-button",
+      "type": "registry:component",
+      "title": "Destructive Button",
+      "description": "Dangerous action button",
+      "meta": {
+        "tags": ["button", "destructive"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "bookmark-button",
+      "type": "registry:component",
+      "title": "Bookmark Button",
+      "description": "Interactive bookmark button with state",
+      "meta": {
+        "tags": ["button", "bookmark", "interactive"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-06.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "icon-button-with-text",
+      "type": "registry:component",
+      "title": "Icon Button with Text",
+      "description": "Button with leading icon and text",
+      "meta": {
+        "tags": ["button", "icon"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-07.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "copy-button",
+      "type": "registry:component",
+      "title": "Copy Button",
+      "description": "Copy to clipboard with feedback",
+      "meta": {
+        "tags": ["button", "copy"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-08.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "icon-only-button",
+      "type": "registry:component",
+      "title": "Icon Only Button",
+      "description": "Button with only an icon",
+      "meta": {
+        "tags": ["button", "icon"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-09.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "search-mode-button",
+      "type": "registry:component",
+      "title": "Search Mode Button",
+      "description": "Toggle global search mode",
+      "meta": {
+        "tags": ["button", "search", "toggle"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-10.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "voice-mode-button",
+      "type": "registry:component",
+      "title": "Voice Mode Button",
+      "description": "Toggle voice input mode",
+      "meta": {
+        "tags": ["button", "voice", "toggle"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-11.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "download-button",
+      "type": "registry:component",
+      "title": "Download Button",
+      "description": "Button for downloading files",
+      "meta": {
+        "tags": ["button", "download"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-12.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "link-button",
+      "type": "registry:component",
+      "title": "Link Button",
+      "description": "Button that looks like a link",
+      "meta": {
+        "tags": ["button", "link"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-13.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "suggested-teams-button",
+      "type": "registry:component",
+      "title": "Suggested Teams Button",
+      "description": "Button with suggested teams",
+      "meta": {
+        "tags": ["button", "teams"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-14.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "notification-button",
+      "type": "registry:component",
+      "title": "Notification Button",
+      "description": "Button with notification badge",
+      "meta": {
+        "tags": ["button", "notification", "badge"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-15.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "print-button",
+      "type": "registry:component",
+      "title": "Print Button",
+      "description": "Button for print action",
+      "meta": {
+        "tags": ["button", "print"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-16.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "filter-button",
+      "type": "registry:component",
+      "title": "Filter Button",
+      "description": "Filter button with dropdown indicator",
+      "meta": {
+        "tags": ["button", "filter", "dropdown"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-21.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "view-toggle-button",
+      "type": "registry:component",
+      "title": "View Toggle Button",
+      "description": "Toggle between different view layouts",
+      "meta": {
+        "tags": ["button", "toggle", "view"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-22.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "toggle-button",
+      "type": "registry:component",
+      "title": "Toggle Button",
+      "description": "Toggle switch button",
+      "meta": {
+        "tags": ["button", "toggle", "switch"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-23.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "property-button",
+      "type": "registry:component",
+      "title": "Property Tag Button",
+      "description": "Property tag button with icon",
+      "meta": {
+        "tags": ["button", "property", "tag"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-24.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "apple-login-button",
+      "type": "registry:component",
+      "title": "Apple Login Button",
+      "description": "Apple login button with icon",
+      "meta": {
+        "tags": ["button", "login", "apple", "social"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-26.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "twitter-login-button",
+      "type": "registry:component",
+      "title": "Twitter Login Button",
+      "description": "Twitter/X login button with icon",
+      "meta": {
+        "tags": ["button", "login", "twitter", "social"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-27.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "github-login-button",
+      "type": "registry:component",
+      "title": "Github Login Button",
+      "description": "Github login button with icon",
+      "meta": {
+        "tags": ["button", "login", "github", "social"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-28.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "facebook-login-button",
+      "type": "registry:component",
+      "title": "Facebook Login Button",
+      "description": "Facebook login button with icon",
+      "meta": {
+        "tags": ["button", "login", "facebook", "social"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-29.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "google-login-button",
+      "type": "registry:component",
+      "title": "Google Login Button",
+      "description": "Google login button with icon",
+      "meta": {
+        "tags": ["button", "login", "google", "social"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-30.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "linkedin-login-button",
+      "type": "registry:component",
+      "title": "LinkedIn Login Button",
+      "description": "LinkedIn login button with icon",
+      "meta": {
+        "tags": ["button", "login", "linkedin", "social"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-31.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "microsoft-login-button",
+      "type": "registry:component",
+      "title": "Microsoft Login Button",
+      "description": "Microsoft login button with icon",
+      "meta": {
+        "tags": ["button", "login", "microsoft", "social"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-32.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "twitch-login-button",
+      "type": "registry:component",
+      "title": "Twitch Login Button",
+      "description": "Twitch login button with icon",
+      "meta": {
+        "tags": ["button", "login", "twitch", "social"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-33.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "raycast-command-menu",
+      "type": "registry:component",
+      "title": "Raycast Command Menu",
+      "description": "Command menu with Raycast style",
+      "meta": {
+        "tags": ["command", "menu", "raycast"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-34.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "linear-command-menu",
+      "type": "registry:component",
+      "title": "Linear Command Menu",
+      "description": "Command menu with Linear style",
+      "meta": {
+        "tags": ["command", "menu", "linear"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-35.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "vercel-command-menu",
+      "type": "registry:component",
+      "title": "Vercel Command Menu",
+      "description": "Command menu with Vercel style",
+      "meta": {
+        "tags": ["command", "menu", "vercel"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-36.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "supabase-command-menu",
+      "type": "registry:component",
+      "title": "Supabase Command Menu",
+      "description": "Command menu with Supabase style",
+      "meta": {
+        "tags": ["command", "menu", "supabase"]
+      },
+      "files": [
+        {
+          "path": "registry/default/components/comp-37.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+} 

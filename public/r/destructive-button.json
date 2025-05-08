@@ -1,0 +1,19 @@
+{
+  "name": "destructive-button",
+  "type": "registry:component",
+  "title": "Destructive Button",
+  "description": "Dangerous action button",
+  "meta": {
+    "tags": [
+      "button",
+      "destructive"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-05.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

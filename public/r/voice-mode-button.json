@@ -1,0 +1,20 @@
+{
+  "name": "voice-mode-button",
+  "type": "registry:component",
+  "title": "Voice Mode Button",
+  "description": "Toggle voice input mode",
+  "meta": {
+    "tags": [
+      "button",
+      "voice",
+      "toggle"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-11.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

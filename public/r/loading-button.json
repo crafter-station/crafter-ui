@@ -1,0 +1,19 @@
+{
+  "name": "loading-button",
+  "type": "registry:component",
+  "title": "Loading Button",
+  "description": "Button with loading spinner",
+  "meta": {
+    "tags": [
+      "button",
+      "loading"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-04.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

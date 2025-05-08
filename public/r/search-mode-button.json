@@ -1,0 +1,20 @@
+{
+  "name": "search-mode-button",
+  "type": "registry:component",
+  "title": "Search Mode Button",
+  "description": "Toggle global search mode",
+  "meta": {
+    "tags": [
+      "button",
+      "search",
+      "toggle"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-10.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

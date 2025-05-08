@@ -1,0 +1,21 @@
+{
+  "name": "google-login-button",
+  "type": "registry:component",
+  "title": "Google Login Button",
+  "description": "Google login button with icon",
+  "meta": {
+    "tags": [
+      "button",
+      "login",
+      "google",
+      "social"
+    ]
+  },
+  "files": [
+    {
+      "path": "registry/default/components/comp-30.tsx",
+      "type": "registry:component"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

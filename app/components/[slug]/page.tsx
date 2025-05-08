@@ -1,10 +1,10 @@
 import { categories } from "@/config/components"
 import { notFound } from "next/navigation"
 import { cn } from "@/registry/default/lib/utils"
+import { ComponentActions } from "@/components/component-actions"
 
 interface CategoryPageProps {
   params: Promise<{ slug: string }>
-
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
@@ -37,16 +37,21 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         )}>
           {category.components.map((component, i) => {
             const Component = component.component
+            // Determine the component name for actions
+            const componentName = `${component.name.toLowerCase().replace(/\s+/g, '-')}`
 
             return (
               <div
                 key={i}
                 className={cn(
-                  "flex-1 bg-card relative p-8 transition-colors",
+                  "group flex-1 bg-card relative p-8 transition-colors",
                   "border-r border-b",
                   category.layout === "column" && "p-12"
                 )}
               >
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <ComponentActions componentName={componentName} />
+                </div>
                 <div className="flex h-full flex-col justify-between">
                   <div className="flex items-center justify-center py-3">
                     <Component name={component.name} />
