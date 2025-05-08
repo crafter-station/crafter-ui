@@ -22,7 +22,7 @@ export default function DocsPage() {
 
           <pre className="rounded-md bg-zinc-950 p-4 text-white overflow-x-auto">
             <code>
-              npx shadcn@latest add https://crafterui.vercel.app/r/[component-name].json
+              npx shadcn@latest add https://crafter-ui.vercel.app/r/[component-name].json
             </code>
           </pre>
 
@@ -30,7 +30,7 @@ export default function DocsPage() {
 
           <pre className="rounded-md bg-zinc-950 p-4 text-white overflow-x-auto">
             <code>
-              npx shadcn@latest add https://crafterui.vercel.app/r/primary-button.json
+              npx shadcn@latest add https://crafter-ui.vercel.app/r/primary-button.json
             </code>
           </pre>
 

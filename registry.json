@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "crafterui",
-  "homepage": "https://crafterui.vercel.app",
+  "name": "crafter-ui",
+  "homepage": "https://crafter-ui.vercel.app",
   "items": [
     {
       "name": "primary-button",

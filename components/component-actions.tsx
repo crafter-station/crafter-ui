@@ -16,7 +16,7 @@ export function ComponentActions({ componentName }: ComponentActionsProps) {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
-    const command = `npx shadcn@latest add https://crafterui.vercel.app/r/${componentName}.json`
+    const command = `npx shadcn@latest add https://crafter-ui.vercel.app/r/${componentName}.json`
     navigator.clipboard.writeText(command)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
@@ -47,7 +47,7 @@ export function ComponentActions({ componentName }: ComponentActionsProps) {
         </Tooltip>
       </TooltipProvider>
 
-      <OpenInV0 componentSource={`https://crafterui.vercel.app/r/${componentName}.json`} />
+      <OpenInV0 componentSource={`https://crafter-ui.vercel.app/r/${componentName}.json`} />
     </div>
   )
 } 

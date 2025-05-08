@@ -7,13 +7,13 @@ CrafterUI is a collection of reusable UI components built with React, Tailwind C
 You can use any component from the CrafterUI registry in your project by adding it via the shadcn CLI:
 
 ```bash
-npx shadcn@latest add https://crafterui.vercel.app/r/<component-name>.json
+npx shadcn@latest add https://crafter-ui.vercel.app/r/<component-name>.json
 ```
 
 For example, to add the Primary Button component:
 
 ```bash
-npx shadcn@latest add https://crafterui.vercel.app/r/primary-button.json
+npx shadcn@latest add https://crafter-ui.vercel.app/r/primary-button.json
 ```
 
 ## Available Components

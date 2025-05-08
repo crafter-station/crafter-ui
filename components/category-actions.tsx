@@ -14,7 +14,7 @@ export function CategoryActions({ categorySlug }: CategoryActionsProps) {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
-    const command = `npx shadcn@latest add https://crafterui.vercel.app/r/${categorySlug}.json`
+    const command = `npx shadcn@latest add https://crafter-ui.vercel.app/r/${categorySlug}.json`
     navigator.clipboard.writeText(command)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
@@ -45,7 +45,7 @@ export function CategoryActions({ categorySlug }: CategoryActionsProps) {
         </Tooltip>
       </TooltipProvider>
 
-      <OpenInV0 componentSource={`https://crafterui.vercel.app/r/${categorySlug}.json`} />
+      <OpenInV0 componentSource={`https://crafter-ui.vercel.app/r/${categorySlug}.json`} />
     </div>
   )
 } 

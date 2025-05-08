@@ -21,7 +21,7 @@ This project now includes a component registry powered by the shadcn registry fo
 Users can install components using the shadcn CLI:
 
 ```bash
-npx shadcn@latest add https://crafterui.vercel.app/r/[component-name].json
+npx shadcn@latest add https://crafter-ui.vercel.app/r/[component-name].json
 ```
 
 ### v0.dev Integration
