@@ -1,11 +1,11 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/registry/default/ui/button"
 import { categories } from "@/config/components"
 import { Search } from "lucide-react"
 import Link from "next/link"
-import { cn } from "@/lib/utils"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Badge } from "@/components/ui/badge"
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
+import { cn } from "@/registry/default/lib/utils"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/default/ui/tabs"
+import { Badge } from "@/registry/default/ui/badge"
+import { ScrollArea, ScrollBar } from "@/registry/default/ui/scroll-area"
 
 export default function Page() {
   const groupedCategories = {

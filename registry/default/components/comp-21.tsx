@@ -1,5 +1,5 @@
 "use client"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/registry/default/ui/button"
 import { SlidersHorizontal } from "lucide-react"
 
 export default function FilterButton() {

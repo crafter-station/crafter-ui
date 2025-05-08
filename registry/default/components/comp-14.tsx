@@ -1,8 +1,8 @@
 "use client"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { Button } from "@/registry/default/ui/button"
+import { cn } from "@/registry/default/lib/utils"
 import { ArrowRight, User } from "lucide-react"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/default/ui/avatar"
 
 export default function SuggestedTeamsButton() {
   return (

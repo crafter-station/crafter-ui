@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/registry/default/ui/button"
 import { ChevronRight } from "lucide-react"
 
 export default function LinkButton() {

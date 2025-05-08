@@ -1,8 +1,5 @@
 import "./globals.css";
-import { EnvVarWarning } from "@/components/env-var-warning";
-import HeaderAuth from "@/components/header-auth";
 import { ThemeSwitcher } from "@/components/theme-switcher";
-import { hasEnvVars } from "@/utils/supabase/check-env-vars";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import Link from "next/link";
@@ -55,7 +52,9 @@ export default function RootLayout({
                   </Link>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Link href="https://github.com/yourusername/crafter-ui" className="hover:underline transition-all underline-offset-2 decoration-dotted flex gap-1 items-center text-sm text-muted-foreground hover:text-foreground">
+                  <Link
+                    target="_blank"
+                    href="https://github.com/crafter-station/crafter-ui" className="hover:underline transition-all underline-offset-2 decoration-dotted flex gap-1 items-center text-sm text-muted-foreground hover:text-foreground">
                     GitHub
                     <ExternalLinkIcon className="w-4 h-4" />
                   </Link>

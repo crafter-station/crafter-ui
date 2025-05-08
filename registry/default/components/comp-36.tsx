@@ -10,11 +10,8 @@ import {
   CommandEmpty,
   CommandGroup,
   CommandItem,
-  CommandShortcut,
-  CommandSeparator
-} from "@/components/ui/command"
-import { cn } from "@/lib/utils"
-import { DialogContent } from "@/components/ui/dialog"
+} from "@/registry/default/ui/command"
+import { DialogContent } from "@/registry/default/ui/dialog"
 
 // Vercel Command Menu
 const VercelCommandMenu = ({ name }: { name?: string }) => {

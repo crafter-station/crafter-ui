@@ -1,5 +1,5 @@
 "use client"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/registry/default/ui/button"
 import { AudioLines } from "lucide-react"
 import { useState } from "react"
 

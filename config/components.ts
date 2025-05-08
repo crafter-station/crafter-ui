@@ -35,10 +35,6 @@ import RaycastCommandMenu from "@/registry/default/components/comp-34"
 import LinearCommandMenu from "@/registry/default/components/comp-35"
 import VercelCommandMenu from "@/registry/default/components/comp-36"
 import SupabaseCommandMenu from "@/registry/default/components/comp-37"
-import PerplexityCommandMenu from "@/registry/default/components/comp-38"
-import SpotlightCommandMenu from "@/registry/default/components/comp-39"
-import ClaudeCommandMenu from "@/registry/default/components/comp-40"
-import ChatGPTCommandMenu from "@/registry/default/components/comp-41"
 
 interface ButtonComponent {
   name: string
@@ -652,26 +648,6 @@ export const categories: ComponentCategory[] = [
         name: "Supabase Command Menu",
         description: "Command menu with Supabase style",
         component: SupabaseCommandMenu
-      },
-      {
-        name: "Perplexity Command Menu",
-        description: "Command menu with Perplexity style",
-        component: PerplexityCommandMenu
-      },
-      {
-        name: "Spotlight Command Menu",
-        description: "Command menu with macOS Spotlight style",
-        component: SpotlightCommandMenu
-      },
-      {
-        name: "Claude Command Menu",
-        description: "Command menu with Claude (Anthropic) style",
-        component: ClaudeCommandMenu
-      },
-      {
-        name: "ChatGPT Command Menu",
-        description: "Command menu with ChatGPT style",
-        component: ChatGPTCommandMenu
       },
     ]
   },

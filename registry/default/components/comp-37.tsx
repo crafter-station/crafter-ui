@@ -10,11 +10,9 @@ import {
   CommandEmpty,
   CommandGroup,
   CommandItem,
-  CommandShortcut,
-  CommandSeparator
-} from "@/components/ui/command"
-import { DialogContent } from "@/components/ui/dialog"
-import { cn } from "@/lib/utils"
+} from "@/registry/default/ui/command"
+import { DialogContent } from "@/registry/default/ui/dialog"
+import { cn } from "@/registry/default/lib/utils"
 
 // Supabase Command Menu
 const SupabaseCommandMenu = ({ name }: { name?: string }) => {
