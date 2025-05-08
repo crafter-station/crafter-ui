@@ -6,7 +6,6 @@ import { cn } from "@/registry/default/lib/utils"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/default/ui/tabs"
 import { Badge } from "@/registry/default/ui/badge"
 import { ScrollArea, ScrollBar } from "@/registry/default/ui/scroll-area"
-import { CategoryActions } from "@/components/category-actions"
 
 export default function Page() {
   const groupedCategories = {
@@ -103,13 +102,10 @@ export default function Page() {
                           key={category.slug}
                           href={`/components/${category.slug}`}
                           className={cn(
-                            "group relative flex-1 bg-card p-4 hover:bg-muted/50 transition-colors",
+                            "group flex-1 bg-card relative p-4 hover:bg-muted/50 transition-colors",
                             "border-r border-b"
                           )}
                         >
-                          <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                            <CategoryActions categorySlug={category.slug} />
-                          </div>
                           <div className="space-y-3">
                             <div className="relative bg-muted/40">
                               <img
@@ -163,13 +159,10 @@ export default function Page() {
                       key={category.slug}
                       href={`/components/${category.slug}`}
                       className={cn(
-                        "group relative bg-card p-4 hover:bg-muted/50 transition-colors",
+                        "group bg-card relative p-4 hover:bg-muted/50 transition-colors",
                         "border-r border-b"
                       )}
                     >
-                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                        <CategoryActions categorySlug={category.slug} />
-                      </div>
                       <div className="space-y-3">
                         <div className="aspect-[4/3] relative bg-muted/40">
                           <img
