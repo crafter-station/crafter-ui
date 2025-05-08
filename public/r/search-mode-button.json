@@ -1,20 +1,21 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "search-mode-button",
   "type": "registry:component",
   "title": "Search Mode Button",
   "description": "Toggle global search mode",
+  "files": [
+    {
+      "path": "registry/default/components/comp-10.tsx",
+      "content": "\"use client\"\nimport { Button } from \"@/registry/default/ui/button\"\nimport { cn } from \"@/registry/default/lib/utils\"\nimport { Globe } from \"lucide-react\"\nimport { useState } from \"react\"\n\nexport default function SearchModeButton() {\n  const [isActive, setIsActive] = useState(true)\n\n  return (\n    <Button\n      variant=\"outline\"\n      className={cn(\n        \"gap-2 rounded-full transition-colors\",\n        isActive && \"bg-[#DAEEFF] hover:bg-[#BDDCF4] text-[#0385FF] hover:text-[#0385FF] hover:border-[#BDDCF4] !border-transparent dark:bg-[#294A6D] dark:text-[#48AAFF] dark:hover:bg-[#1A416A]\"\n      )}\n      onClick={() => setIsActive(!isActive)}\n    >\n      <Globe className=\"h-4 w-4\" />\n      Search\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "search",
       "toggle"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-10.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

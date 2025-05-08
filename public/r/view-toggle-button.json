@@ -1,20 +1,21 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "view-toggle-button",
   "type": "registry:component",
   "title": "View Toggle Button",
   "description": "Toggle between different view layouts",
+  "files": [
+    {
+      "path": "registry/default/components/comp-22.tsx",
+      "content": "\"use client\"\nimport { Button } from \"@/registry/default/ui/button\"\nimport { LayoutList, LayoutGrid, ChartGantt } from \"lucide-react\"\n\nexport default function ViewToggleButton() {\n  return (\n    <div className=\"inline-flex rounded-md border\">\n      <Button variant=\"ghost\" className=\"rounded-none rounded-l-md border-r\">\n        <LayoutList className=\"h-4 w-4\" />\n      </Button>\n      <Button variant=\"ghost\" className=\"rounded-none border-r\">\n        <LayoutGrid className=\"h-4 w-4\" />\n      </Button>\n      <Button variant=\"ghost\" className=\"rounded-none rounded-r-md\">\n        <ChartGantt className=\"h-4 w-4\" />\n      </Button>\n    </div>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "toggle",
       "view"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-22.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

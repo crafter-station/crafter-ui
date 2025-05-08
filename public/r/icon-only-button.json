@@ -1,19 +1,20 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "icon-only-button",
   "type": "registry:component",
   "title": "Icon Only Button",
   "description": "Button with only an icon",
+  "files": [
+    {
+      "path": "registry/default/components/comp-09.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\"\nimport { SendHorizontal } from \"lucide-react\"\n\nexport default function IconOnlyButton() {\n  return (\n    <Button variant=\"outline\" className=\"rounded-lg\">\n      <SendHorizontal className=\"h-4 w-4\" />\n    </Button>\n  )\n} \n",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "icon"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-09.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

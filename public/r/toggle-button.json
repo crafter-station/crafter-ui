@@ -1,20 +1,21 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "toggle-button",
   "type": "registry:component",
   "title": "Toggle Button",
   "description": "Toggle switch button",
+  "files": [
+    {
+      "path": "registry/default/components/comp-23.tsx",
+      "content": "\"use client\"\nimport { Button } from \"@/registry/default/ui/button\"\nimport { useState } from \"react\"\n\nexport default function ToggleButton() {\n  const [isActive, setIsActive] = useState(false)\n\n  return (\n    <Button\n      variant={isActive ? \"default\" : \"outline\"}\n      className=\"w-[120px] transition-all\"\n      onClick={() => setIsActive(!isActive)}\n    >\n      {isActive ? \"Enabled\" : \"Disabled\"}\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "toggle",
       "switch"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-23.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

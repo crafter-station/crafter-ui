@@ -1,20 +1,21 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "filter-button",
   "type": "registry:component",
   "title": "Filter Button",
   "description": "Filter button with dropdown indicator",
+  "files": [
+    {
+      "path": "registry/default/components/comp-21.tsx",
+      "content": "\"use client\"\nimport { Button } from \"@/registry/default/ui/button\"\nimport { SlidersHorizontal } from \"lucide-react\"\n\nexport default function FilterButton() {\n  return (\n    <Button variant=\"outline\" className=\"group gap-1\">\n      <div className=\"relative\">\n        <SlidersHorizontal className=\"h-4 w-4\" />\n        <div className=\"absolute transition-all -top-1 -right-1 h-2.5 w-2.5 border-2 !border-card rounded-full bg-[#6D78D5] group-hover:!border-accent\" />\n      </div>\n      Display\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "filter",
       "dropdown"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-21.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

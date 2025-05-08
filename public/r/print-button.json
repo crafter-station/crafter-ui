@@ -1,19 +1,20 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "print-button",
   "type": "registry:component",
   "title": "Print Button",
   "description": "Button for print action",
+  "files": [
+    {
+      "path": "registry/default/components/comp-16.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\"\nimport { Printer } from \"lucide-react\"\n\nexport default function PrintButton() {\n  return (\n    <Button variant=\"outline\" size=\"sm\">\n      <Printer className=\"mr-2 h-4 w-4\" />\n      Print\n      <kbd className=\"bg-background text-muted-foreground/70 ms-1 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 text-xs font-medium\">\n        <span className=\"text-sm\">⌘</span>P\n      </kbd>\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "print"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-16.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

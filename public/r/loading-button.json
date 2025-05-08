@@ -1,19 +1,20 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "loading-button",
   "type": "registry:component",
   "title": "Loading Button",
   "description": "Button with loading spinner",
+  "files": [
+    {
+      "path": "registry/default/components/comp-04.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\"\nimport { Loader } from \"lucide-react\"\n\nexport default function LoadingButton() {\n  return (\n    <Button\n      className=\"border !border-muted-foreground/20 disabled:bg-muted disabled:text-muted-foreground\"\n      disabled>\n      <Loader className=\"h-4 w-4 animate-spin\" />\n      Please wait\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "loading"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-04.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

@@ -1,8 +1,16 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "twitch-login-button",
   "type": "registry:component",
   "title": "Twitch Login Button",
   "description": "Twitch login button with icon",
+  "files": [
+    {
+      "path": "registry/default/components/comp-33.tsx",
+      "content": "\"use client\"\nimport { Button } from \"@/registry/default/ui/button\"\n\nexport default function TwitchLoginButtons() {\n  return (\n    <div className=\"flex flex-col gap-4\">\n      {/* Filled Variant */}\n      <div className=\"flex gap-4\">\n        <Button\n          className=\"w-full bg-[#9146FF] hover:bg-[#9146FF] text-white hover:brightness-[115%] transition-all\"\n        >\n          <svg className=\"!size-5\" viewBox=\"0 0 32 32\" fill=\"none\">\n            <path fillRule=\"evenodd\" clipRule=\"evenodd\" d=\"M7.03583 5L5.87517 8.11429V24.6857H11.5185V28H14.6398L17.9625 24.6857H22.765L28.4083 19.0571V5H7.03583ZM26.0863 17.9429L22.765 21.2571H16.8018L13.479 24.5714V21.2571H8.67717V7.31429H26.0863V17.9429Z\" fill=\"currentColor\" />\n            <path d=\"M22.765 11.8286H20.443V17.4571H22.765V11.8286Z\" fill=\"currentColor\" />\n            <path d=\"M16.8018 11.8286H14.4798V17.4571H16.8018V11.8286Z\" fill=\"currentColor\" />\n          </svg>\n          Sign in with Twitch\n        </Button>\n\n        <Button\n          size=\"icon\"\n          className=\"w-full bg-[#9146FF] hover:bg-[#9146FF] text-white hover:brightness-[115%] transition-all\"\n        >\n          <svg className=\"!size-5\" viewBox=\"0 0 32 32\" fill=\"none\">\n            <path fillRule=\"evenodd\" clipRule=\"evenodd\" d=\"M7.03583 5L5.87517 8.11429V24.6857H11.5185V28H14.6398L17.9625 24.6857H22.765L28.4083 19.0571V5H7.03583ZM26.0863 17.9429L22.765 21.2571H16.8018L13.479 24.5714V21.2571H8.67717V7.31429H26.0863V17.9429Z\" fill=\"currentColor\" />\n            <path d=\"M22.765 11.8286H20.443V17.4571H22.765V11.8286Z\" fill=\"currentColor\" />\n            <path d=\"M16.8018 11.8286H14.4798V17.4571H16.8018V11.8286Z\" fill=\"currentColor\" />\n          </svg>\n        </Button>\n      </div>\n\n      {/* Outline Variant */}\n      <div className=\"flex gap-4\">\n        <Button\n          variant=\"outline\"\n          className=\"w-full\"\n        >\n          <svg className=\"!size-5\" viewBox=\"0 0 32 32\" fill=\"none\">\n            <path fillRule=\"evenodd\" clipRule=\"evenodd\" d=\"M7.03583 5L5.87517 8.11429V24.6857H11.5185V28H14.6398L17.9625 24.6857H22.765L28.4083 19.0571V5H7.03583ZM26.0863 17.9429L22.765 21.2571H16.8018L13.479 24.5714V21.2571H8.67717V7.31429H26.0863V17.9429Z\" fill=\"#9146FF\" />\n            <path d=\"M22.765 11.8286H20.443V17.4571H22.765V11.8286Z\" fill=\"#9146FF\" />\n            <path d=\"M16.8018 11.8286H14.4798V17.4571H16.8018V11.8286Z\" fill=\"#9146FF\" />\n          </svg>\n          Sign in with Twitch\n        </Button>\n\n        <Button\n          variant=\"outline\"\n          size=\"icon\"\n          className=\"w-full px-3\"\n        >\n          <svg className=\"!size-5\" viewBox=\"0 0 32 32\" fill=\"none\">\n            <path fillRule=\"evenodd\" clipRule=\"evenodd\" d=\"M7.03583 5L5.87517 8.11429V24.6857H11.5185V28H14.6398L17.9625 24.6857H22.765L28.4083 19.0571V5H7.03583ZM26.0863 17.9429L22.765 21.2571H16.8018L13.479 24.5714V21.2571H8.67717V7.31429H26.0863V17.9429Z\" fill=\"#9146FF\" />\n            <path d=\"M22.765 11.8286H20.443V17.4571H22.765V11.8286Z\" fill=\"#9146FF\" />\n            <path d=\"M16.8018 11.8286H14.4798V17.4571H16.8018V11.8286Z\" fill=\"#9146FF\" />\n          </svg>\n        </Button>\n      </div>\n    </div>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
@@ -10,12 +18,5 @@
       "twitch",
       "social"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-33.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

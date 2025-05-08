@@ -1,19 +1,20 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "link-button",
   "type": "registry:component",
   "title": "Link Button",
   "description": "Button that looks like a link",
+  "files": [
+    {
+      "path": "registry/default/components/comp-13.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\"\nimport { ChevronRight } from \"lucide-react\"\n\nexport default function LinkButton() {\n  return (\n    <Button variant=\"link\" className=\"text-[#06c] dark:text-[#2997FF] gap-0\">\n      <span >Explore what&apos;s new in SwiftUI</span>\n      <ChevronRight className=\"h-4 w-4 translate-y-[0.1rem]\" />\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "link"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-13.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

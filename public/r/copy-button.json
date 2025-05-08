@@ -1,19 +1,20 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "copy-button",
   "type": "registry:component",
   "title": "Copy Button",
   "description": "Copy to clipboard with feedback",
+  "files": [
+    {
+      "path": "registry/default/components/comp-08.tsx",
+      "content": "\"use client\"\nimport { Button } from \"@/registry/default/ui/button\"\nimport { Copy, Check } from \"lucide-react\"\nimport { useState } from \"react\"\n\nexport default function CopyButton({ name = \"Copy\" }) {\n  const [copied, setCopied] = useState(false)\n\n  const handleCopy = () => {\n    setCopied(true)\n    setTimeout(() => setCopied(false), 2000)\n  }\n\n  return (\n    <Button\n      variant=\"secondary\"\n      className=\"relative group\"\n      onClick={handleCopy}\n    >\n      <div className=\"flex items-center\">\n        {copied ? (\n          <>\n            <Check className=\"mr-2 h-4 w-4 text-green-500 animate-scale\" />\n            <span className=\"animate-fade-in\">Copied!</span>\n          </>\n        ) : (\n          <>\n            <Copy className=\"mr-2 h-4 w-4\" />\n            {name}\n          </>\n        )}\n      </div>\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "copy"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-08.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

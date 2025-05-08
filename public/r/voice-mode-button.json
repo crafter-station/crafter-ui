@@ -1,20 +1,21 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "voice-mode-button",
   "type": "registry:component",
   "title": "Voice Mode Button",
   "description": "Toggle voice input mode",
+  "files": [
+    {
+      "path": "registry/default/components/comp-11.tsx",
+      "content": "\"use client\"\nimport { Button } from \"@/registry/default/ui/button\"\nimport { AudioLines } from \"lucide-react\"\nimport { useState } from \"react\"\n\nexport default function VoiceModeButton() {\n  const [isActive, setIsActive] = useState(false)\n\n  return (\n    <Button\n      variant={isActive ? \"default\" : \"outline\"}\n      size=\"icon\"\n      className=\"rounded-full transition-colors\"\n      onClick={() => setIsActive(!isActive)}\n    >\n      <AudioLines className={`h-4 w-4 ${isActive ? \"animate-pulse\" : \"\"}`} />\n      <span className=\"sr-only\">Toggle voice mode</span>\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "voice",
       "toggle"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-11.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

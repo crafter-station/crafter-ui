@@ -1,19 +1,20 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "suggested-teams-button",
   "type": "registry:component",
   "title": "Suggested Teams Button",
   "description": "Button with suggested teams",
+  "files": [
+    {
+      "path": "registry/default/components/comp-14.tsx",
+      "content": "\"use client\"\nimport { Button } from \"@/registry/default/ui/button\"\nimport { cn } from \"@/registry/default/lib/utils\"\nimport { ArrowRight, User } from \"lucide-react\"\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/registry/default/ui/avatar\"\n\nexport default function SuggestedTeamsButton() {\n  return (\n    <Button\n      variant=\"ghost\"\n      className=\"w-full justify-between\"\n    >\n      <div className=\"flex items-center gap-3\">\n        <div className=\"relative items-center flex -space-x-4\">\n          <Avatar className=\"h-8 w-8 rounded-full border-2 !border-white flex items-center justify-center text-sm\">\n            <AvatarImage src=\"https://github.com/shadcn.png\" />\n            <AvatarFallback>\n              <User className=\"h-4 w-4\" />\n            </AvatarFallback>\n          </Avatar>\n          <Avatar className=\"h-7 w-7 bg-black text-white rounded-full border-2 !border-white flex items-center justify-center text-xs\">\n            +2\n          </Avatar>\n        </div>\n        <span>Suggested Teams</span>\n      </div>\n      <ArrowRight className=\"h-4 w-4 text-muted-foreground transition-transform\" />\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "teams"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-14.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

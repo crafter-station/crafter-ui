@@ -1,8 +1,16 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "facebook-login-button",
   "type": "registry:component",
   "title": "Facebook Login Button",
   "description": "Facebook login button with icon",
+  "files": [
+    {
+      "path": "registry/default/components/comp-29.tsx",
+      "content": "\"use client\"\nimport { Button } from \"@/registry/default/ui/button\"\n\nexport default function FacebookLoginButtons() {\n  return (\n    <div className=\"flex flex-col gap-4\">\n      {/* Filled Variant */}\n      <div className=\"flex gap-4\">\n        <Button\n          className=\"w-full bg-[#1877F2] text-white hover:bg-[#1877F2]/90\"\n        >\n          <svg className=\"!size-5\" viewBox=\"0 0 32 32\" fill=\"none\">\n            <path d=\"M16 4C9.4 4 4 9.42714 4 16.0603C4 22.0121 8.404 26.9568 14.08 28V19.4372H11.08V16.0603H14.08V13.407C14.08 10.392 16 8.70352 18.76 8.70352C19.6 8.70352 20.56 8.82412 21.4 8.94472V12.0201H19.84C18.4 12.0201 18.04 12.7437 18.04 13.7085V16.0603H21.22L20.68 19.4372H18.04V27.9879C23.71 26.9387 28 22.0121 28 16.0603C28 9.42714 22.6 4 16 4Z\" fill=\"currentColor\" />\n          </svg>\n          Login with Facebook\n        </Button>\n\n        <Button\n          className=\"w-full px-3 bg-[#1877F2] text-white hover:bg-[#1877F2]/90\"\n          size=\"icon\"\n        >\n          <svg className=\"!size-5\" viewBox=\"0 0 32 32\" fill=\"none\">\n            <path d=\"M16 4C9.4 4 4 9.42714 4 16.0603C4 22.0121 8.404 26.9568 14.08 28V19.4372H11.08V16.0603H14.08V13.407C14.08 10.392 16 8.70352 18.76 8.70352C19.6 8.70352 20.56 8.82412 21.4 8.94472V12.0201H19.84C18.4 12.0201 18.04 12.7437 18.04 13.7085V16.0603H21.22L20.68 19.4372H18.04V27.9879C23.71 26.9387 28 22.0121 28 16.0603C28 9.42714 22.6 4 16 4Z\" fill=\"currentColor\" />\n          </svg>\n        </Button>\n      </div>\n\n      {/* Outline Variant */}\n      <div className=\"flex gap-4\">\n        <Button\n          variant=\"outline\"\n          className=\"w-full\"\n        >\n          <svg className=\"!size-5 text-[#1877F2]\" viewBox=\"0 0 32 32\" fill=\"none\">\n            <path d=\"M16 4C9.4 4 4 9.42714 4 16.0603C4 22.0121 8.404 26.9568 14.08 28V19.4372H11.08V16.0603H14.08V13.407C14.08 10.392 16 8.70352 18.76 8.70352C19.6 8.70352 20.56 8.82412 21.4 8.94472V12.0201H19.84C18.4 12.0201 18.04 12.7437 18.04 13.7085V16.0603H21.22L20.68 19.4372H18.04V27.9879C23.71 26.9387 28 22.0121 28 16.0603C28 9.42714 22.6 4 16 4Z\" fill=\"url(#paint0_linear_177_3289)\"></path>\n            <defs>\n              <linearGradient id=\"paint0_linear_177_3289\" x1=\"16\" y1=\"27.2824\" x2=\"16\" y2=\"4\" gradientUnits=\"userSpaceOnUse\">\n                <stop stopColor=\"#0062E0\" />\n                <stop offset=\"1\" stopColor=\"#19AFFF\" />\n              </linearGradient>\n            </defs>\n          </svg>\n          Login with Facebook\n        </Button>\n\n        <Button\n          variant=\"outline\"\n          className=\"w-full px-3\"\n          size=\"icon\"\n        >\n          <svg className=\"!size-5 text-[#1877F2]\" viewBox=\"0 0 32 32\" fill=\"none\">\n            <path d=\"M16 4C9.4 4 4 9.42714 4 16.0603C4 22.0121 8.404 26.9568 14.08 28V19.4372H11.08V16.0603H14.08V13.407C14.08 10.392 16 8.70352 18.76 8.70352C19.6 8.70352 20.56 8.82412 21.4 8.94472V12.0201H19.84C18.4 12.0201 18.04 12.7437 18.04 13.7085V16.0603H21.22L20.68 19.4372H18.04V27.9879C23.71 26.9387 28 22.0121 28 16.0603C28 9.42714 22.6 4 16 4Z\" fill=\"url(#paint0_linear_177_3289)\"></path>\n            <defs>\n              <linearGradient id=\"paint0_linear_177_3289\" x1=\"16\" y1=\"27.2824\" x2=\"16\" y2=\"4\" gradientUnits=\"userSpaceOnUse\">\n                <stop stopColor=\"#0062E0\" />\n                <stop offset=\"1\" stopColor=\"#19AFFF\" />\n              </linearGradient>\n            </defs>\n          </svg>\n        </Button>\n      </div>\n    </div>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
@@ -10,12 +18,5 @@
       "facebook",
       "social"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-29.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

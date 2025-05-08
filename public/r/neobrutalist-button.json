@@ -1,19 +1,20 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "neobrutalist-button",
   "type": "registry:component",
   "title": "Neobrutalist Button",
   "description": "Button with neobrutalist design style",
+  "files": [
+    {
+      "path": "registry/default/components/comp-02.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\"\n\nexport default function NeobrutalistButton({ name = \"Neobrutalist\" }) {\n  return (\n    <Button className=\"border-2 bg-background hover:bg-background text-foreground !border-foreground shadow-[4px_4px_0px_0px_var(--color-foreground)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none\">\n      {name}\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "neobrutalist"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-02.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

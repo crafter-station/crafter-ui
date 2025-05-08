@@ -1,8 +1,16 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "twitter-login-button",
   "type": "registry:component",
   "title": "Twitter Login Button",
   "description": "Twitter/X login button with icon",
+  "files": [
+    {
+      "path": "registry/default/components/comp-27.tsx",
+      "content": "\"use client\"\nimport { Button } from \"@/registry/default/ui/button\"\n\nexport default function TwitterLoginButtons() {\n  return (\n    <div className=\"flex flex-col gap-4\">\n      {/* Filled Variant */}\n      <div className=\"flex gap-4\">\n        <Button\n          className=\"w-full bg-black text-white dark:text-black dark:bg-white hover:opacity-95 dark:hover:opacity-70 transition-all\"\n        >\n          <svg className=\"!size-5\" viewBox=\"0 0 32 32\" fill=\"none\">\n            <path d=\"M3.06327 4L13.1016 17.2376L3 28H5.27364L14.1177 18.5771L21.2633 28H29L18.3967 14.018L27.7993 4H25.5256L17.3809 12.678L10.8 4H3.06327ZM6.40675 5.65195H9.96097L25.6561 26.3485H22.1019L6.40675 5.65195Z\" fill=\"currentColor\" />\n          </svg>\n          Sign in with Twitter\n        </Button>\n\n        <Button\n          size=\"icon\"\n          className=\"w-full px-3 bg-black text-white dark:text-black dark:bg-white hover:opacity-95 dark:hover:opacity-70 transition-all\"\n        >\n          <svg className=\"!size-5\" viewBox=\"0 0 32 32\" fill=\"none\">\n            <path d=\"M3.06327 4L13.1016 17.2376L3 28H5.27364L14.1177 18.5771L21.2633 28H29L18.3967 14.018L27.7993 4H25.5256L17.3809 12.678L10.8 4H3.06327ZM6.40675 5.65195H9.96097L25.6561 26.3485H22.1019L6.40675 5.65195Z\" fill=\"currentColor\" />\n          </svg>\n        </Button>\n      </div>\n\n      {/* Outline Variant */}\n      <div className=\"flex gap-4\">\n        <Button\n          variant=\"outline\"\n          className=\"w-full\"\n        >\n          <svg className=\"!size-5 text-black dark:text-white\" viewBox=\"0 0 32 32\" fill=\"none\">\n            <path d=\"M3.06327 4L13.1016 17.2376L3 28H5.27364L14.1177 18.5771L21.2633 28H29L18.3967 14.018L27.7993 4H25.5256L17.3809 12.678L10.8 4H3.06327ZM6.40675 5.65195H9.96097L25.6561 26.3485H22.1019L6.40675 5.65195Z\" fill=\"currentColor\" />\n          </svg>\n          Sign in with Twitter\n        </Button>\n\n        <Button\n          variant=\"outline\"\n          size=\"icon\"\n          className=\"w-full px-3\"\n        >\n          <svg className=\"!size-5 text-black dark:text-white\" viewBox=\"0 0 32 32\" fill=\"none\">\n            <path d=\"M3.06327 4L13.1016 17.2376L3 28H5.27364L14.1177 18.5771L21.2633 28H29L18.3967 14.018L27.7993 4H25.5256L17.3809 12.678L10.8 4H3.06327ZM6.40675 5.65195H9.96097L25.6561 26.3485H22.1019L6.40675 5.65195Z\" fill=\"currentColor\" />\n          </svg>\n        </Button>\n      </div>\n    </div>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
@@ -10,12 +18,5 @@
       "twitter",
       "social"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-27.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

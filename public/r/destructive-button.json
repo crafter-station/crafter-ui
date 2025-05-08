@@ -1,19 +1,20 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "destructive-button",
   "type": "registry:component",
   "title": "Destructive Button",
   "description": "Dangerous action button",
+  "files": [
+    {
+      "path": "registry/default/components/comp-05.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\"\nimport { Trash } from \"lucide-react\"\n\nexport default function DestructiveButton({ name = \"Delete Item\" }) {\n  return (\n    <Button variant=\"destructive\">\n      <Trash className=\"h-4 w-4\" />\n      {name}\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "destructive"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-05.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

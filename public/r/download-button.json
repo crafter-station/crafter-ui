@@ -1,19 +1,20 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "download-button",
   "type": "registry:component",
   "title": "Download Button",
   "description": "Button for downloading files",
+  "files": [
+    {
+      "path": "registry/default/components/comp-12.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\"\nimport { Download } from \"lucide-react\"\n\nexport default function DownloadButton() {\n  return (\n    <Button variant=\"outline\">\n      <Download className=\"mr-2 h-4 w-4\" />\n      Download\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "download"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-12.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

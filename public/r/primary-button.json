@@ -1,19 +1,20 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "primary-button",
   "type": "registry:component",
   "title": "Primary Button",
   "description": "Main call-to-action button",
+  "files": [
+    {
+      "path": "registry/default/components/comp-01.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\"\n\nexport default function ButtonDemo({ name = \"Primary\" }) {\n  return (\n    <Button>\n      {name}\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "primary"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-01.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

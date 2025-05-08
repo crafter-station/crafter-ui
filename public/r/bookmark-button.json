@@ -1,20 +1,21 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "bookmark-button",
   "type": "registry:component",
   "title": "Bookmark Button",
   "description": "Interactive bookmark button with state",
+  "files": [
+    {
+      "path": "registry/default/components/comp-06.tsx",
+      "content": "\"use client\"\nimport { Button } from \"@/registry/default/ui/button\"\nimport { Bookmark } from \"lucide-react\"\nimport { useState } from \"react\"\n\nexport default function BookmarkButton({ name = \"Save\" }) {\n  const [saved, setSaved] = useState(false)\n\n  return (\n    <Button\n      variant=\"outline\"\n      className={`group transition-all ${saved ? \"bg-muted text-muted-foreground hover:bg-muted-foreground/30\" : \"\"}`}\n      onClick={() => setSaved(!saved)}\n    >\n      <Bookmark\n        className={`h-4 w-4 ${saved ? \"fill-current animate-scale\" : \"\"}`}\n      />\n      <span>\n        {saved ? \"Saved\" : name}\n      </span>\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "bookmark",
       "interactive"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-06.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }

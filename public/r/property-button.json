@@ -1,20 +1,21 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "property-button",
   "type": "registry:component",
   "title": "Property Tag Button",
   "description": "Property tag button with icon",
+  "files": [
+    {
+      "path": "registry/default/components/comp-24.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\"\nimport { Tag } from \"lucide-react\"\n\nexport default function PropertyButton() {\n  return (\n    <Button\n      variant=\"outline\"\n      className=\"rounded-full bg-background hover:bg-muted\"\n      size=\"sm\"\n    >\n      <Tag className=\"mr-1 h-3 w-3\" />\n      Property\n    </Button>\n  )\n} ",
+      "type": "registry:component"
+    }
+  ],
   "meta": {
     "tags": [
       "button",
       "property",
       "tag"
     ]
-  },
-  "files": [
-    {
-      "path": "registry/default/components/comp-24.tsx",
-      "type": "registry:component"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  }
 }
