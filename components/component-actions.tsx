@@ -7,16 +7,19 @@ import { Check, Copy, ExternalLink } from "lucide-react"
 import { cn } from "@/registry/default/lib/utils"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/registry/default/ui/tooltip"
 import { ShadcnLogo } from "./shadcn-logo"
+import { ComponentCategory } from "@/config/components"
 
 interface ComponentActionsProps {
   componentName: string
+  categoryName: string
 }
 
-export function ComponentActions({ componentName }: ComponentActionsProps) {
+export function ComponentActions({ componentName, categoryName }: ComponentActionsProps) {
   const [copied, setCopied] = useState(false)
+  const fullName = `${componentName}-${categoryName}`
 
   const handleCopy = () => {
-    const command = `npx shadcn@latest add https://crafter-ui.vercel.app/r/${componentName}.json`
+    const command = `npx shadcn@latest add https://crafter-ui.vercel.app/r/${fullName}.json`
     navigator.clipboard.writeText(command)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
@@ -47,7 +50,7 @@ export function ComponentActions({ componentName }: ComponentActionsProps) {
         </Tooltip>
       </TooltipProvider>
 
-      <OpenInV0 componentSource={`https://crafter-ui.vercel.app/r/${componentName}.json`} />
+      <OpenInV0 componentSource={`https://crafter-ui.vercel.app/r/${fullName}.json`} />
     </div>
   )
 } 

@@ -50,14 +50,14 @@ export default function RootLayout({
                     <Logo />
                     <span className="font-bold">Crafter UI</span>
                   </Link>
-                  <nav className="hidden md:flex gap-6">
+                  {/* <nav className="hidden md:flex gap-6">
                     <Link href="/registry" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                       Registry
                     </Link>
                     <Link href="/docs" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                       Docs
                     </Link>
-                  </nav>
+                  </nav> */}
                 </div>
                 <div className="flex items-center gap-4">
                   <Link

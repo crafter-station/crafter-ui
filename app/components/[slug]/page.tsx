@@ -38,6 +38,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             const Component = component.component
             // Determine the component name for actions
             const componentName = `${component.name.toLowerCase().replace(/\s+/g, '-')}`
+            const categoryName = category.name.toLowerCase().replace(/\s+/g, '-')
 
             return (
               <div
@@ -49,7 +50,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 )}
               >
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <ComponentActions componentName={componentName} />
+                  <ComponentActions componentName={componentName} categoryName={categoryName} />
                 </div>
                 <div className="flex h-full flex-col justify-between">
                   <div className="flex items-center justify-center py-3">
