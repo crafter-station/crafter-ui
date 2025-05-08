@@ -14,7 +14,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   if (!category) {
     notFound()
   }
-  console.log({ category })
 
   return (
     <div className="container py-10">

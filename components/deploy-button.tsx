@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "@/registry/default/ui/button";
 
 export default function DeployButton() {
   return (

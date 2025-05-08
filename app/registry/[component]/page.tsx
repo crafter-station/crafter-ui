@@ -1,9 +1,10 @@
 import { RegistryComponentView } from "@/components/registry-component-view"
 
 interface ComponentPageProps {
-  params: { component: string }
+  params: Promise<{ component: string }>
 }
 
-export default function ComponentPage({ params }: ComponentPageProps) {
-  return <RegistryComponentView componentName={params.component} />
+export default async function ComponentPage({ params }: ComponentPageProps) {
+  const { component } = await params
+  return <RegistryComponentView componentName={component} />
 } 

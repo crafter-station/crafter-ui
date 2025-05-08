@@ -1,8 +1,7 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command"
-import { Search } from "lucide-react"
+import { Button } from "@/registry/default/ui/button"
+import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/registry/default/ui/command"
 import { useRouter } from "next/navigation"
 import * as React from "react"
 
