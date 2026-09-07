@@ -24,6 +24,19 @@ Output directories must be empty. A downloaded library.json can be used again as
 
 The starter is a shadcn registry style, so installing it applies your theme. Individual components preserve the consumer's existing theme. The exported theme.json lets you apply only your defaults.
 
+## Extract existing components
+
+Download the standalone extractor at `/extract`, or run it from this checkout:
+
+```sh
+bun run extract --project ../my-app --entry src/components/card.tsx
+bun run extract --project ../my-app --entry src/components/card.tsx --out /tmp/my-extracted-ui
+```
+
+The first command previews the source graph and requirements. The second writes an installable registry only when that graph resolves. The source project stays unchanged. Repeat `--entry` for multiple components.
+
+Supports TS/JS, tsconfig aliases, re-exports, literal dynamic imports, JSON, and imported SVG. Reports unsupported styles, assets, environment access, and server dependencies. Global styles and providers still need consumer verification. The downloadable tool runs independently with Bun and TypeScript.
+
 ## Maintain
 
 - `lib/catalog.ts`: names, descriptions, usage, and component entrypoints.

@@ -212,6 +212,7 @@ export function Studio() {
         <nav aria-label="Main navigation">
           <a href="#components">Components</a>
           <a href="#make-it-yours">Make it yours</a>
+          <a href="/extract">Extract</a>
           <a href="/llms.txt" className="agent-link">
             llms.txt <ArrowRight size={13} />
           </a>

@@ -55,3 +55,18 @@ await writeFile(
 console.log(
   `Collected ${Object.keys(sources).length} source files from ${catalog.length} catalog entries.`,
 );
+const extractorPaths = [
+  "lib/extraction/extract.ts",
+  "lib/extraction/select-declarations.ts",
+  "lib/write-bundle.ts",
+  "scripts/extract-library.ts",
+];
+const extractor = Object.fromEntries(
+  await Promise.all(
+    extractorPaths.map(async (file) => [file, await readFile(file, "utf8")]),
+  ),
+);
+await writeFile(
+  "lib/generated/extractor.json",
+  `${JSON.stringify(extractor, null, 2)}\n`,
+);

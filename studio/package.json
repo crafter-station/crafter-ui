@@ -7,10 +7,11 @@
     "build": "bun run sources && next build",
     "start": "next start",
     "sources": "bun scripts/collect-sources.ts",
-    "test": "bun test lib/generate-library.test.ts",
+    "test": "bun test lib",
     "check": "biome check .",
     "typecheck": "tsc --noEmit",
-    "export": "bun run sources && bun scripts/export-library.ts"
+    "export": "bun run sources && bun scripts/export-library.ts",
+    "extract": "bun scripts/extract-library.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

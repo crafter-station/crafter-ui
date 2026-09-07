@@ -1,0 +1,43 @@
+{
+  "name": "Crafter Button",
+  "slug": "crafter-button",
+  "ready": true,
+  "entries": [
+    "components/ui/button.tsx"
+  ],
+  "files": [
+    {
+      "path": "components/ui/button.tsx",
+      "sha256": "111269a0cdbdb02c6281156fb41897636831be58126599abd1ce8b1f47c80a5c",
+      "imports": [
+        "lib/utils.ts"
+      ],
+      "exports": [
+        "ButtonProps",
+        "Button",
+        "buttonVariants"
+      ]
+    },
+    {
+      "path": "lib/utils.ts",
+      "sha256": "e46429536f43f5910f5b2b0c50bb2769b510a4558bb4b5d20a3b0a9091dbf7c3",
+      "imports": [],
+      "exports": [
+        "cn"
+      ]
+    }
+  ],
+  "dependencies": [
+    "@radix-ui/react-slot@1.1.1",
+    "class-variance-authority@^0.7.1",
+    "clsx@^2.1.1",
+    "tailwind-merge@^2.5.5"
+  ],
+  "requirements": [
+    "React application",
+    "Review the source project's global styles and providers before publishing",
+    "react ^19"
+  ],
+  "issues": [],
+  "output": "/tmp/crafter-button-extracted-20260907"
+}

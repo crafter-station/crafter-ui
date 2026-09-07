@@ -10,7 +10,7 @@
 
 ## Checks
 
-- `bun test`: 12 passing tests, 81 assertions. Dependency closure, excluded components, identity separation, unsafe/invalid config, source/built manifests, and style/theme item types.
+- `bun test`: 34 passing tests, 134 assertions. Dependency closure, excluded components, identity separation, unsafe/invalid config, source/built manifests, and style/theme item types.
 - `bun run typecheck`: passed.
 - `bun run check`: passed with no diagnostics. Upstream shadcn files excluded; the six custom component files are included. Reduced-motion overrides intentionally use !important to override utility animations.
 - Studio production build: passed locally and on Vercel.
@@ -49,8 +49,8 @@ Used agent-browser sessions crafter-ui-studio and crafter-ui-consumer.
 
 ## Deployed preview
 
-- URL: https://crafter-c10ws0053-crafter-station.vercel.app
-- Deployment: dpl_GPtP4ifr9aF2L7CCHeRBEEHqComq
+- URL: https://crafter-p68e7wkbu-crafter-station.vercel.app
+- Deployment: dpl_3DLyrVriz982T1cuLvTfrM6SYRNJ
 - Vercel project: crafter-ui, team: crafter-station
 - Verified target preview, status Ready.
 - Deployed a source snapshot of studio/ so the legacy app at repository root remains untouched.
@@ -61,4 +61,18 @@ Used agent-browser sessions crafter-ui-studio and crafter-ui-consumer.
 
 - Approve production publication, configure the studio root for future Git deployments, and verify ui.crafter.run.
 - Reuse components in an existing production application. The clean consumer proves portability, not production adoption.
-- Productization follow-up: import an existing component folder, resolve arbitrary local aliases/assets, preview an extraction plan, and publish/update the generated registry. The current builder personalizes this curated catalog; it does not automatically extract arbitrary repositories.
+- Productization follow-up: hosted publishing/updating, global-style and provider migration, and broader source compatibility. The local extractor reports unsupported requirements and does not claim arbitrary repository support.
+
+## Local extraction
+
+- `/extract` provides a standalone ZIP containing the extractor source, package manifest, and instructions. Its only package dependency is TypeScript 5.9.3; it runs with Bun.
+- CLI defaults to a plan containing file hashes, imports, exports, dependencies, requirements, and blockers. `--out` writes atomically to an empty directory only when no blockers remain.
+- Follows TS/JS imports, aliases, re-exports, literal dynamic imports, JSON, and SVG. Conservative declaration selection removes unrelated functions/types and unused JSON imports while retaining runtime imports and top-level effects.
+- Tests cover import cycles, shared exports, missing packages/files, workspace dependencies, external symlinks, loaders, styles, environment access, server directives, and output failures.
+- Extracted the real crafter.run button with its utility, installed with shadcn 4.21.0 into the clean consumer, and verified its click counter.
+- Extracted registry/src/components/design/slider-with-input.tsx with five dependencies. Selection excluded unrelated registry data and environment functions from utils.ts. Rebuilt its registry using the official CLI from the output directory, installed into the consumer, and verified changing the numeric input updates the slider to 42.
+- Consumer production build passed with both extracted components and the six curated components together. Extraction preserves the original code's behavior and accessibility limitations; it does not infer global styles or providers.
+- Downloaded the extractor through its browser link, unzipped it, installed TypeScript, and successfully extracted a real component independently of Studio.
+- `/extract` axe checks: zero violations on desktop and mobile, 35 passing rules, zero incomplete rules. Evidence and source-hash reports are alongside this document.
+
+Final deployed extractor check: downloaded `/api/extractor` through the protected preview, compared all four source files byte-for-byte with generated/extractor.json, and ran it in a fresh temporary folder against the real slider. Six source files, zero issues. Mobile document width equals viewport width (390px).

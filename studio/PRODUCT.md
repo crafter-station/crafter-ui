@@ -35,8 +35,10 @@ Keep the legacy application intact while studio/ is built and tested as a standa
 | Change branding across CSS and registry metadata | Validated library configuration produces both | Two differently named libraries install independently |
 | Manually collect source and dependencies | Dependency closure assembled into portable bundle | Clean consumer compiles without studio imports |
 | Write setup and agent instructions per library | Generated README and llms.txt | Instructions use the exported name and URL |
+| Follow aliases and copy utility dependencies from an existing app | Local TypeScript import graph with conservative declaration selection | Real button and slider install and work in a separate app |
+| Repeat extraction setup for each user | Downloadable standalone Bun extractor | Unzip, install parser, extract without the Studio checkout |
 | Configure and build registry JSON | One export pipeline with ready-to-serve r/ files | Actual CLI can install exported payload |
 
 ## Remaining release gates
 
-Implementation, browser verification, clean-consumer installation/build, and a protected Vercel preview are verified in evidence/verification.md. Canonical domain publication and reuse in an existing production app remain pending. Automatic extraction from arbitrary repositories is the next productization capability; the current builder personalizes the curated catalog. Do not mark the overall objective complete from the preview alone.
+Implementation, browser verification, clean-consumer installation/build, and a protected Vercel preview are verified in evidence/verification.md. Canonical domain publication and reuse in an existing production app remain pending. The builder personalizes the curated catalog. A standalone local extractor now resolves selected React components into portable registries, with explicit blockers for unsupported requirements. Verified against crafter.run and crafter-station/registry; universal repository extraction is not claimed. Do not mark the overall objective complete from the preview alone.

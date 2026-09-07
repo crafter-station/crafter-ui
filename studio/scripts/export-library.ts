@@ -1,7 +1,8 @@
-import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
 import { generateLibrary } from "../lib/generate-library";
 import { defaultConfig } from "../lib/library-config";
+import { writeBundle } from "../lib/write-bundle";
 
 const args = process.argv.slice(2);
 if (args.includes("--help")) {
@@ -29,16 +30,7 @@ const input = flags.has("--config")
   ? JSON.parse(await readFile(resolve(flags.get("--config") as string), "utf8"))
   : defaultConfig;
 const result = generateLibrary(input);
-await mkdir(output, { recursive: true });
-if ((await readdir(output)).length)
-  throw new Error(
-    "Output directory must be empty. Existing files were not changed.",
-  );
-for (const [path, content] of Object.entries(result.files)) {
-  const target = join(output, path);
-  await mkdir(resolve(target, ".."), { recursive: true });
-  await writeFile(target, content, { flag: "wx" });
-}
+await writeBundle(output, result.files);
 console.log(
   `Exported ${result.config.name}: ${Object.keys(result.files).length} files to ${output}`,
 );
