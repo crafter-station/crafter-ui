@@ -1,4 +1,5 @@
-import { ArrowLeft, ArrowRight, Download, Layers3 } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
+import { SiteHeader } from "@/components/site-header";
 import { CopyButton } from "@/components/ui/copy-button";
 
 const inspect =
@@ -8,18 +9,7 @@ const build = `${inspect} --out ../my-library`;
 export default function ExtractPage() {
   return (
     <div className="site-shell">
-      <header className="site-header">
-        <a href="/" className="brand">
-          <span className="brand-mark">
-            <Layers3 size={19} />
-          </span>
-          crafter<span className="brand-suffix">/ ui</span>
-        </a>
-        <a href="/" className="quiet-link">
-          <ArrowLeft size={14} />
-          Back to the library
-        </a>
-      </header>
+      <SiteHeader />
       <main className="extract-page">
         <div className="eyebrow">BRING YOUR OWN COMPONENTS</div>
         <h1>
@@ -109,7 +99,7 @@ export default function ExtractPage() {
             tells you whether the component is truly ready to reuse.
           </p>
         </div>
-        <a href="/" className="quiet-link">
+        <a href="/create" className="quiet-link">
           Prefer a fresh start? Make a library from our components{" "}
           <ArrowRight size={14} />
         </a>

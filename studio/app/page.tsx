@@ -1,5 +1,4 @@
-import { Studio } from "@/components/studio";
-
+import { LibraryHome } from "@/components/library-home";
 export default function Page() {
-  return <Studio />;
+  return <LibraryHome />;
 }
