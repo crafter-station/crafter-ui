@@ -30,3 +30,11 @@ User explicitly authorized publication and requested crafter.run's visual identi
 Local DNS retained the earlier negative answer. Browser verification used the publicly resolved IP through a session-only resolver rule, preserving the canonical hostname and HTTPS certificate checks. Both library and extractor ZIPs were downloaded from ui.crafter.run. The downloaded theme contains #ffffff background, #141414 ink and 0rem radius; installing it with shadcn into the independent consumer and rebuilding passed. Direct CLI URL installation was initially blocked by local DNS caching, not counted as passed.
 
 The earlier production-authorization blocker above is resolved. Existing production app adoption remains outstanding.
+
+## Adoption and final delivery
+
+Crafter UI PR #1 is merged into main at 50e9c77. Git-triggered production dpl_D97mEDvxgmguM7NHBKvZgiMBKVYV was inspected Ready with ui.crafter.run assigned, proving the studio/ root setup works from GitHub.
+
+Petdex PR #772 is merged at 5d1844be151bb4e613b62b2e50a70bc8e1540d65. SubmissionCard now uses the exported ActionButton and Spinner while retaining the local Button and existing product styling. Only Spinner's cn import was adapted. Two focused tests (8 assertions), project-wide TypeScript, app CI, lockfile checks and the preview build passed. Vercel Agent Review was skipped, not counted as an independent review. No production withdrawal was performed.
+
+The starter endpoint at the canonical domain returned HTTP 200, registry:style, 14 source files, and the expected Crafter white/ink/sharp tokens. Both production ZIP downloads succeeded. Source collection now sorts its manifest keys; two consecutive generations produce the same SHA-256. The scaffold favicon was replaced with the Crafter layer mark.

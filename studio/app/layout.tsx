@@ -8,6 +8,7 @@ const geistMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ui.crafter.run"),
   title: "Crafter UI | Good defaults. Your fingerprints.",
   description:
     "Shape your own component library. Preview, personalize, and export shadcn components with your defaults.",

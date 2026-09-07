@@ -50,7 +50,7 @@ for (const item of catalog)
 await mkdir("lib/generated", { recursive: true });
 await writeFile(
   "lib/generated/sources.json",
-  `${JSON.stringify(sources, null, 2)}\n`,
+  `${JSON.stringify(Object.fromEntries(Object.entries(sources).sort(([a], [b]) => a.localeCompare(b))), null, 2)}\n`,
 );
 console.log(
   `Collected ${Object.keys(sources).length} source files from ${catalog.length} catalog entries.`,
