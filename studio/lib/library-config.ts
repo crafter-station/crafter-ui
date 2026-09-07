@@ -1,5 +1,9 @@
 import { z } from "zod";
-import { componentNames } from "@/lib/catalog";
+import { exportCatalog } from "@/lib/export-catalog";
+
+const componentNames = exportCatalog.map((entry) => entry.name);
+
+import { themeDocumentSchema } from "@/lib/theme-schema";
 
 export const librarySchema = z.object({
   name: z
@@ -36,6 +40,7 @@ export const librarySchema = z.object({
   accent: z.enum(["ink", "forest", "blue", "orange"]),
   radius: z.enum(["sharp", "soft", "round"]),
   font: z.enum(["sans", "mono"]),
+  theme: themeDocumentSchema.optional(),
   components: z
     .array(
       z.enum(
@@ -120,10 +125,35 @@ export function themeVariables(
       };
   return {
     ...base,
+    "syntax-text": dark ? "#ededed" : "#242424",
+    "syntax-keyword": dark ? "#c6a3df" : "#754399",
+    "syntax-string": dark ? "#98c4a4" : "#326348",
+    "syntax-function": dark ? "#9cbedf" : "#315d89",
+    "syntax-number": dark ? "#d7b27d" : "#86551f",
+    "syntax-comment": dark ? "#a3a3a3" : "#6b6b6b",
+    "syntax-punctuation": dark ? "#b0b0b0" : "#616161",
+    "syntax-type": dark ? "#dda2aa" : "#7c464c",
+    "syntax-background": dark ? "#1b1b1b" : "#f8f8f8",
+
+    sidebar: base.muted,
+    "sidebar-foreground": base.foreground,
+    "sidebar-primary": accents[config.accent][dark ? 1 : 0],
+    "sidebar-primary-foreground": dark ? "#141414" : "#ffffff",
+    "sidebar-accent": base.accent,
+    "sidebar-accent-foreground": base.foreground,
+    "sidebar-border": base.border,
+    "sidebar-ring": accents[config.accent][dark ? 1 : 0],
+    "chart-1": accents[config.accent][dark ? 1 : 0],
+    "chart-2": dark ? "#d4d4d4" : "#525252",
+    "chart-3": dark ? "#a3a3a3" : "#737373",
+    "chart-4": dark ? "#737373" : "#a3a3a3",
+    "chart-5": dark ? "#525252" : "#d4d4d4",
     primary: accents[config.accent][dark ? 1 : 0],
     "primary-foreground": dark ? "#141414" : "#ffffff",
     ring: accents[config.accent][dark ? 1 : 0],
     radius: radii[config.radius],
     "font-sans": fonts[config.font],
+    "control-height": "2rem",
+    ...config.theme?.[dark ? "dark" : "light"],
   };
 }

@@ -1,0 +1,43 @@
+$ bun run sources && next build
+$ bun scripts/collect-sources.ts
+Collected 77 source files from 76 catalog entries.
+▲ Next.js 16.3.4 (Turbopack)
+✓ Running next.config.ts took 49ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1439ms
+  Running TypeScript ...
+  Finished TypeScript in 1931ms ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/89) ...
+  Generating static pages using 11 workers (22/89) 
+  Generating static pages using 11 workers (44/89) 
+  Generating static pages using 11 workers (66/89) 
+✓ Generating static pages using 11 workers (89/89) in 668ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/export
+├ ƒ /api/extractor
+├ ○ /components
+├   /components/[family]/[name]
+│ ├ ● /components/shadcn/accordion
+│ ├ ● /components/shadcn/alert
+│ ├ ● /components/shadcn/alert-dialog
+│ └ ● [+73 more paths]
+├ ○ /create
+├ ○ /docs
+├ ○ /docs/agents
+├ ○ /extract
+├ ○ /icon.svg
+├ ƒ /llms.txt
+├ ƒ /r/[name]
+└ ƒ /skill.md
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

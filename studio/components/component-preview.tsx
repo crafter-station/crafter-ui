@@ -6,14 +6,70 @@ import { ActionButton } from "@/components/ui/action-button";
 import { Button } from "@/components/ui/button";
 import { CopyButton } from "@/components/ui/copy-button";
 import { EmptyState } from "@/components/ui/empty-state";
+import { KeyboardShortcut } from "@/components/ui/keyboard-shortcut";
+import { MemberItem } from "@/components/ui/member-item";
+import { NotificationPreferences } from "@/components/ui/notification-preferences";
+import { ProjectCard } from "@/components/ui/project-card";
+import { SearchField } from "@/components/ui/search-field";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SettingsCard } from "@/components/ui/settings-card";
+import { StatusIndicator } from "@/components/ui/status-indicator";
 import { TextField } from "@/components/ui/text-field";
 import type { ComponentName } from "@/lib/catalog";
 
 export function ComponentPreview({ name }: { name: ComponentName }) {
   const [pending, setPending] = useState(false);
   const [created, setCreated] = useState(false);
+  const [query, setQuery] = useState("");
+  if (name === "status-indicator")
+    return (
+      <div className="flex gap-3">
+        <StatusIndicator />
+        <StatusIndicator status="busy" />
+        <StatusIndicator status="offline" />
+      </div>
+    );
+  if (name === "keyboard-shortcut") return <KeyboardShortcut />;
+  if (name === "search-field")
+    return (
+      <div className="grid w-full gap-3">
+        <SearchField value={query} onValueChange={setQuery} />
+        <p role="status" className="text-sm text-muted-foreground">
+          {query ? `Searching for ${query}` : "Type to search"}
+        </p>
+      </div>
+    );
+  if (name === "member-item")
+    return (
+      <MemberItem
+        name="Alex Rivera"
+        email="alex@example.com"
+        memberRole="Owner"
+      />
+    );
+  if (name === "project-card")
+    return (
+      <div className="grid w-full gap-3">
+        <ProjectCard
+          name="Crafter UI"
+          description="A library with your fingerprints."
+          onOpen={() => setCreated(true)}
+        />
+        {created && (
+          <p role="status" className="text-sm">
+            Project opened. Your workspace is ready.
+          </p>
+        )}
+      </div>
+    );
+  if (name === "notification-preferences")
+    return (
+      <NotificationPreferences
+        onSave={async () => {
+          await new Promise((resolve) => setTimeout(resolve, 600));
+        }}
+      />
+    );
   if (name === "action-button")
     return (
       <div className="flex flex-wrap items-center gap-3">

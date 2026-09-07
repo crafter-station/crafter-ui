@@ -1,0 +1,47 @@
+scripts/sync-theme.ts:17:26 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  i Template literals are preferred over string concatenation.
+  
+    15 │ const css = (mode: string) =>
+    16 │ 	Object.entries(theme[mode])
+  > 17 │ 		.map(([key, value]) => "  --" + key + ": " + value + ";")
+       │ 		                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    18 │ 		.join("\n");
+    19 │ await Bun.write(
+  
+  i Unsafe fix: Use a template literal.
+  
+    15 15 │   const css = (mode: string) =>
+    16 16 │     Object.entries(theme[mode])
+    17    │ - → → .map(([key,·value])·=>·"··--"·+·key·+·":·"·+·value·+·";")
+       17 │ + → → .map(([key,·value])·=>·`··--${key}:·${value};`)
+    18 18 │       .join("\n");
+    19 19 │   await Bun.write(
+  
+
+scripts/sync-theme.ts:21:2 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  i Template literals are preferred over string concatenation.
+  
+    19 │ await Bun.write(
+    20 │ 	"app/crafter-theme.css",
+  > 21 │ 	":root {\n" + css("light") + "\n}\n.dark {\n" + css("dark") + "\n}\n",
+       │ 	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    22 │ );
+    23 │ 
+  
+  i Unsafe fix: Use a template literal.
+  
+    19 19 │   await Bun.write(
+    20 20 │     "app/crafter-theme.css",
+    21    │ - → ":root·{\n"·+·css("light")·+·"\n}\n.dark·{\n"·+·css("dark")·+·"\n}\n",
+       21 │ + → `:root·{\n${css("light")}\n}\n.dark·{\n${css("dark")}\n}\n`,
+    22 22 │   );
+    23 23 │   
+  
+
+Skipped 2 suggested fixes.
+If you wish to apply the suggested (unsafe) fixes, use the command biome check --write --unsafe
+
+Checked 5 files in 46ms. Fixed 1 file.
+Found 2 infos.

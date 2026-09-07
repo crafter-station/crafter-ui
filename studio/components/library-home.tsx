@@ -6,6 +6,7 @@ import { ComponentPreview } from "@/components/component-preview";
 import { FoundationPreview } from "@/components/foundation-preview";
 import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
+import { UseCrafterButton } from "@/components/use-crafter-button";
 
 export function LibraryHome() {
   return (
@@ -30,12 +31,7 @@ export function LibraryHome() {
             from a single action into the interfaces you ship.
           </p>
           <div className="home-actions">
-            <Link className="primary-link" href="/docs">
-              Get started <ArrowRight size={16} />
-            </Link>
-            <Link className="home-secondary" href="/components">
-              Browse components <ArrowUpRight size={16} />
-            </Link>
+            <UseCrafterButton />
           </div>
           <div className="home-lineage">
             <span>shadcn/ui</span>

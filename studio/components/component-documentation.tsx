@@ -3,11 +3,12 @@
 import { ArrowLeft, ArrowRight, Moon, RotateCcw, Sun } from "lucide-react";
 import Link from "next/link";
 import { type CSSProperties, useState } from "react";
+import { CodeBlock } from "@/components/code-block";
 import { ComponentPreview } from "@/components/component-preview";
 import { FoundationPreview } from "@/components/foundation-preview";
+import { useTheme } from "@/components/theme-workbench";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CopyButton } from "@/components/ui/copy-button";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import type { ComponentName } from "@/lib/catalog";
 import {
@@ -15,29 +16,27 @@ import {
   type DocumentationEntry,
   documentation,
 } from "@/lib/documentation";
-import { previewTheme } from "@/lib/preview-theme";
+import { setThemeMode } from "@/lib/theme-store";
 
 export function ComponentDocumentation({
   entry,
   source,
+  exampleSource,
 }: {
   entry: DocumentationEntry;
   source: string;
+  exampleSource?: string;
 }) {
   const [view, setView] = useState("preview");
-  const [dark, setDark] = useState(false);
+
   const [revision, setRevision] = useState(0);
-  const [theme, setTheme] = useState(
-    entry.family === "shadcn" ? "shadcn" : "crafter",
-  );
-  const tokens = previewTheme(theme, dark);
+  const sharedTheme = useTheme();
+  const dark = sharedTheme.mode === "dark";
+  const tokens = sharedTheme.theme[dark ? "dark" : "light"];
   const style = Object.fromEntries(
     Object.entries(tokens).map(([key, value]) => [`--${key}`, value]),
   ) as CSSProperties;
-  const command =
-    entry.family === "shadcn"
-      ? `bunx --bun shadcn@4.21.0 add ${entry.name}`
-      : `bunx --bun shadcn@4.21.0 add https://ui.crafter.run/r/${entry.name}.json`;
+  const command = `bunx --bun shadcn@4.21.0 add http://localhost:4324/r/${entry.name}.json`;
   const index = documentation.findIndex((item) => item.name === entry.name);
   const symbol = entry.title
     .replace(/(?:^|\s)\S/g, (letter) => letter.toUpperCase())
@@ -51,9 +50,19 @@ export function ComponentDocumentation({
   const buttonImport = ["dialog", "empty-state"].includes(entry.name)
     ? 'import { Button } from "@/components/ui/button";\n'
     : "";
-  const usage = `${buttonImport}import { ${symbols} } from "@/components/ui/${entry.name}";\n\n${entry.usage}`;
+  const usage =
+    exampleSource ||
+    `${buttonImport}import { ${symbols} } from "@/components/ui/${entry.name}";\n\n${entry.usage}`;
   return (
-    <article className="component-doc">
+    <article
+      className="component-doc"
+      data-markdown={`# ${entry.title}\n\n${entry.description}\n\n## Installation\n\n\`\`\`bash\n${command}\n\`\`\`\n\n## Usage\n\n\`\`\`tsx\n${usage}\n\`\`\`\n\n## Source\n\n\`\`\`tsx\n${source}\n\`\`\``}
+    >
+      <style>{`body:has(.doc-preview.dark) [data-base-ui-portal] { ${Object.entries(
+        sharedTheme.theme.dark,
+      )
+        .map(([key, value]) => `--${key}: ${value};`)
+        .join(" ")} color-scheme: dark; }`}</style>
       <div className="doc-breadcrumb">
         <Link href="/components">Components</Link>
         <span>/</span>
@@ -97,7 +106,7 @@ export function ComponentDocumentation({
             size="icon"
             variant="ghost"
             aria-label={dark ? "Light preview" : "Dark preview"}
-            onClick={() => setDark(!dark)}
+            onClick={() => setThemeMode(dark ? "light" : "dark")}
           >
             {dark ? <Sun /> : <Moon />}
           </Button>
@@ -121,26 +130,18 @@ export function ComponentDocumentation({
           </div>
         ) : (
           <div className="doc-code">
-            <CopyButton
-              value={view === "source" ? source : usage}
-              label={view === "source" ? "Copy source" : "Copy usage"}
+            <CodeBlock
+              code={view === "source" ? source : usage}
+              language="tsx"
             />
-            <pre>
-              <code>{view === "source" ? source : usage}</code>
-            </pre>
           </div>
         )}
       </div>
       <div className="doc-preview-footer">
-        <span>THEME</span>
-        <ToggleGroup
-          aria-label="Preview theme"
-          value={[theme]}
-          onValueChange={(values) => values[0] && setTheme(values[0])}
-        >
-          <ToggleGroupItem value="shadcn">shadcn</ToggleGroupItem>
-          <ToggleGroupItem value="crafter">Crafter</ToggleGroupItem>
-        </ToggleGroup>
+        <span>CRAFTER STYLE</span>
+        <Link className="doc-text-link" href="/create">
+          Open style generator ↗
+        </Link>
         <span className="preview-live-label">Interactive · React 19</span>
       </div>
       <div className="doc-sections">
@@ -148,13 +149,10 @@ export function ComponentDocumentation({
           <h2>Installation</h2>
           <p>
             {entry.family === "shadcn"
-              ? "Add the original shadcn primitive to a Base UI project."
+              ? "Add the shadcn primitive and the shared Crafter theme to a Base UI project. The theme updates your project-wide tokens."
               : "Add the Crafter composition to your shadcn Base UI project. You own the source."}
           </p>
-          <div className="command-block">
-            <code>{command}</code>
-            <CopyButton value={command} label="Copy command" />
-          </div>
+          <CodeBlock code={command} />
           <Link className="doc-text-link" href="/docs">
             First time here? Read the setup guide ↗
           </Link>
@@ -192,7 +190,7 @@ export function ComponentDocumentation({
           </h2>
           <p>
             {entry.family === "shadcn"
-              ? "These examples use our installed shadcn Base UI source. Theme choices change tokens; they do not change the component API."
+              ? "These primitives use shadcn Base UI with the same Crafter colors, typography and corners as this entire site. Customize that shared identity in the style generator."
               : "Install a single component, or choose your theme and a collection to export together. Crafter defaults are monochrome with sharp corners."}
           </p>
           <Link

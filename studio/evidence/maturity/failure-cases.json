@@ -1,0 +1,9 @@
+{
+  "malformedJson": 400,
+  "invalidConfiguration": 400,
+  "oversizedBody": 413,
+  "staleRevision": {
+    "error": "Library changed. Read get_library and retry.",
+    "ok": false
+  }
+}

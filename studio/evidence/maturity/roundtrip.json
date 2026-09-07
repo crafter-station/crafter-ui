@@ -1,0 +1,8 @@
+{
+  "name": "Dogfood UI",
+  "components": 76,
+  "lightPrimary": "#234567",
+  "radius": "0.75rem",
+  "freshSessionIdentical": true,
+  "invalidImportPreservedState": true
+}

@@ -1,0 +1,397 @@
+[
+  {
+    "path": "/docs",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/docs/agents",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/accordion",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/alert",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/alert-dialog",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/aspect-ratio",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/attachment",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/avatar",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/badge",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/breadcrumb",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/bubble",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/button",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/button-group",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/calendar",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/card",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/carousel",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/chart",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/checkbox",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/collapsible",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/combobox",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/command",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/context-menu",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/data-table",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/date-picker",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/dialog",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/direction",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/drawer",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/dropdown-menu",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/empty",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/field",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/hover-card",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/input",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/input-group",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/input-otp",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/item",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/kbd",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/label",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/marker",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/menubar",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/message",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/message-scroller",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/native-select",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/navigation-menu",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/pagination",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/popover",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/progress",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/questionnaire",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/radio-group",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/resizable",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/scroll-area",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/select",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/separator",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/sheet",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/sidebar",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/skeleton",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/slider",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/spinner",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/switch",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/table",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/tabs",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/textarea",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/toast",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/toggle",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/toggle-group",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/tooltip",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/shadcn/typography",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/crafter/action-button",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/crafter/copy-button",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/crafter/text-field",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/crafter/empty-state",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/crafter/section-heading",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/crafter/settings-card",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/crafter/status-indicator",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/crafter/keyboard-shortcut",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/crafter/search-field",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/crafter/member-item",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/crafter/project-card",
+    "status": 200,
+    "copyMarkdown": true
+  },
+  {
+    "path": "/components/crafter/notification-preferences",
+    "status": 200,
+    "copyMarkdown": true
+  }
+]

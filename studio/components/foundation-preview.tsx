@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { type CSSProperties, useState } from "react";
+import { examples } from "@/components/example-registry";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,6 +24,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Spinner } from "@/components/ui/spinner";
+import { Toaster } from "@/components/ui/toast";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 export function FoundationPreview({
   name,
@@ -34,6 +37,25 @@ export function FoundationPreview({
   dark?: boolean;
 }) {
   const [count, setCount] = useState(0);
+  const Example = examples[name];
+  if (
+    Example &&
+    ![
+      "button",
+      "input",
+      "badge",
+      "card",
+      "dialog",
+      "separator",
+      "spinner",
+    ].includes(name)
+  )
+    return (
+      <TooltipProvider>
+        <Example />
+        <Toaster />
+      </TooltipProvider>
+    );
   if (name === "button")
     return (
       <div className="flex flex-wrap items-center gap-3">

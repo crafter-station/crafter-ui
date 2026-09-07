@@ -1,0 +1,1066 @@
+[
+  {
+    "path": "/components/shadcn/accordion",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Accordion"
+  },
+  {
+    "path": "/components/shadcn/alert",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Alert"
+  },
+  {
+    "path": "/components/shadcn/alert-dialog",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Alert Dialog"
+  },
+  {
+    "path": "/components/shadcn/aspect-ratio",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Aspect Ratio"
+  },
+  {
+    "path": "/components/shadcn/attachment",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Attachment"
+  },
+  {
+    "path": "/components/shadcn/avatar",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Avatar"
+  },
+  {
+    "path": "/components/shadcn/badge",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Badge"
+  },
+  {
+    "path": "/components/shadcn/breadcrumb",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Breadcrumb"
+  },
+  {
+    "path": "/components/shadcn/bubble",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Bubble"
+  },
+  {
+    "path": "/components/shadcn/button",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Button"
+  },
+  {
+    "path": "/components/shadcn/button-group",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Button Group"
+  },
+  {
+    "path": "/components/shadcn/calendar",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Calendar"
+  },
+  {
+    "path": "/components/shadcn/card",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Card"
+  },
+  {
+    "path": "/components/shadcn/carousel",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Carousel"
+  },
+  {
+    "path": "/components/shadcn/chart",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Chart"
+  },
+  {
+    "path": "/components/shadcn/checkbox",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Checkbox"
+  },
+  {
+    "path": "/components/shadcn/collapsible",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Collapsible"
+  },
+  {
+    "path": "/components/shadcn/combobox",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Combobox"
+  },
+  {
+    "path": "/components/shadcn/command",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Command"
+  },
+  {
+    "path": "/components/shadcn/context-menu",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Context Menu"
+  },
+  {
+    "path": "/components/shadcn/data-table",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Data Table"
+  },
+  {
+    "path": "/components/shadcn/date-picker",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Date Picker"
+  },
+  {
+    "path": "/components/shadcn/dialog",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Dialog"
+  },
+  {
+    "path": "/components/shadcn/direction",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Direction"
+  },
+  {
+    "path": "/components/shadcn/drawer",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Drawer"
+  },
+  {
+    "path": "/components/shadcn/dropdown-menu",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Dropdown Menu"
+  },
+  {
+    "path": "/components/shadcn/empty",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Empty"
+  },
+  {
+    "path": "/components/shadcn/field",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Field"
+  },
+  {
+    "path": "/components/shadcn/hover-card",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Hover Card"
+  },
+  {
+    "path": "/components/shadcn/input",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Input"
+  },
+  {
+    "path": "/components/shadcn/input-group",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Input Group"
+  },
+  {
+    "path": "/components/shadcn/input-otp",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Input OTP"
+  },
+  {
+    "path": "/components/shadcn/item",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Item"
+  },
+  {
+    "path": "/components/shadcn/kbd",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Kbd"
+  },
+  {
+    "path": "/components/shadcn/label",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Label"
+  },
+  {
+    "path": "/components/shadcn/marker",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Marker"
+  },
+  {
+    "path": "/components/shadcn/menubar",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Menubar"
+  },
+  {
+    "path": "/components/shadcn/message",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Message"
+  },
+  {
+    "path": "/components/shadcn/message-scroller",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Message Scroller"
+  },
+  {
+    "path": "/components/shadcn/native-select",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Native Select"
+  },
+  {
+    "path": "/components/shadcn/navigation-menu",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Navigation Menu"
+  },
+  {
+    "path": "/components/shadcn/pagination",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Pagination"
+  },
+  {
+    "path": "/components/shadcn/popover",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Popover"
+  },
+  {
+    "path": "/components/shadcn/progress",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Progress"
+  },
+  {
+    "path": "/components/shadcn/questionnaire",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Questionnaire"
+  },
+  {
+    "path": "/components/shadcn/radio-group",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Radio Group"
+  },
+  {
+    "path": "/components/shadcn/resizable",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Resizable"
+  },
+  {
+    "path": "/components/shadcn/scroll-area",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Scroll Area"
+  },
+  {
+    "path": "/components/shadcn/select",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Select"
+  },
+  {
+    "path": "/components/shadcn/separator",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Separator"
+  },
+  {
+    "path": "/components/shadcn/sheet",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Sheet"
+  },
+  {
+    "path": "/components/shadcn/sidebar",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Sidebar"
+  },
+  {
+    "path": "/components/shadcn/skeleton",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Skeleton"
+  },
+  {
+    "path": "/components/shadcn/slider",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Slider"
+  },
+  {
+    "path": "/components/shadcn/spinner",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Spinner"
+  },
+  {
+    "path": "/components/shadcn/switch",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Switch"
+  },
+  {
+    "path": "/components/shadcn/table",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Table"
+  },
+  {
+    "path": "/components/shadcn/tabs",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Tabs"
+  },
+  {
+    "path": "/components/shadcn/textarea",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Textarea"
+  },
+  {
+    "path": "/components/shadcn/toast",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Toast"
+  },
+  {
+    "path": "/components/shadcn/toggle",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Toggle"
+  },
+  {
+    "path": "/components/shadcn/toggle-group",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Toggle Group"
+  },
+  {
+    "path": "/components/shadcn/tooltip",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Tooltip"
+  },
+  {
+    "path": "/components/shadcn/typography",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Typography"
+  },
+  {
+    "path": "/components/crafter/action-button",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Action button"
+  },
+  {
+    "path": "/components/crafter/copy-button",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Copy button"
+  },
+  {
+    "path": "/components/crafter/text-field",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Text field"
+  },
+  {
+    "path": "/components/crafter/empty-state",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Empty state"
+  },
+  {
+    "path": "/components/crafter/section-heading",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Section heading"
+  },
+  {
+    "path": "/components/crafter/settings-card",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Settings card"
+  },
+  {
+    "path": "/components/crafter/status-indicator",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Status indicator"
+  },
+  {
+    "path": "/components/crafter/keyboard-shortcut",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Keyboard shortcut"
+  },
+  {
+    "path": "/components/crafter/search-field",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Search field"
+  },
+  {
+    "path": "/components/crafter/member-item",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Member item"
+  },
+  {
+    "path": "/components/crafter/project-card",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Project card"
+  },
+  {
+    "path": "/components/crafter/notification-preferences",
+    "width": 1280,
+    "errors": [],
+    "scroll": 1280,
+    "heading": "Notification preferences"
+  },
+  {
+    "path": "/components/shadcn/accordion",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Accordion"
+  },
+  {
+    "path": "/components/shadcn/alert",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Alert"
+  },
+  {
+    "path": "/components/shadcn/alert-dialog",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Alert Dialog"
+  },
+  {
+    "path": "/components/shadcn/aspect-ratio",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Aspect Ratio"
+  },
+  {
+    "path": "/components/shadcn/attachment",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Attachment"
+  },
+  {
+    "path": "/components/shadcn/avatar",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Avatar"
+  },
+  {
+    "path": "/components/shadcn/badge",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Badge"
+  },
+  {
+    "path": "/components/shadcn/breadcrumb",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Breadcrumb"
+  },
+  {
+    "path": "/components/shadcn/bubble",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Bubble"
+  },
+  {
+    "path": "/components/shadcn/button",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Button"
+  },
+  {
+    "path": "/components/shadcn/button-group",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Button Group"
+  },
+  {
+    "path": "/components/shadcn/calendar",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Calendar"
+  },
+  {
+    "path": "/components/shadcn/card",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Card"
+  },
+  {
+    "path": "/components/shadcn/carousel",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Carousel"
+  },
+  {
+    "path": "/components/shadcn/chart",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Chart"
+  },
+  {
+    "path": "/components/shadcn/checkbox",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Checkbox"
+  },
+  {
+    "path": "/components/shadcn/collapsible",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Collapsible"
+  },
+  {
+    "path": "/components/shadcn/combobox",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Combobox"
+  },
+  {
+    "path": "/components/shadcn/command",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Command"
+  },
+  {
+    "path": "/components/shadcn/context-menu",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Context Menu"
+  },
+  {
+    "path": "/components/shadcn/data-table",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Data Table"
+  },
+  {
+    "path": "/components/shadcn/date-picker",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Date Picker"
+  },
+  {
+    "path": "/components/shadcn/dialog",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Dialog"
+  },
+  {
+    "path": "/components/shadcn/direction",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Direction"
+  },
+  {
+    "path": "/components/shadcn/drawer",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Drawer"
+  },
+  {
+    "path": "/components/shadcn/dropdown-menu",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Dropdown Menu"
+  },
+  {
+    "path": "/components/shadcn/empty",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Empty"
+  },
+  {
+    "path": "/components/shadcn/field",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Field"
+  },
+  {
+    "path": "/components/shadcn/hover-card",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Hover Card"
+  },
+  {
+    "path": "/components/shadcn/input",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Input"
+  },
+  {
+    "path": "/components/shadcn/input-group",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Input Group"
+  },
+  {
+    "path": "/components/shadcn/input-otp",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Input OTP"
+  },
+  {
+    "path": "/components/shadcn/item",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Item"
+  },
+  {
+    "path": "/components/shadcn/kbd",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Kbd"
+  },
+  {
+    "path": "/components/shadcn/label",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Label"
+  },
+  {
+    "path": "/components/shadcn/marker",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Marker"
+  },
+  {
+    "path": "/components/shadcn/menubar",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Menubar"
+  },
+  {
+    "path": "/components/shadcn/message",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Message"
+  },
+  {
+    "path": "/components/shadcn/message-scroller",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Message Scroller"
+  },
+  {
+    "path": "/components/shadcn/native-select",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Native Select"
+  },
+  {
+    "path": "/components/shadcn/navigation-menu",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Navigation Menu"
+  },
+  {
+    "path": "/components/shadcn/pagination",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Pagination"
+  },
+  {
+    "path": "/components/shadcn/popover",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Popover"
+  },
+  {
+    "path": "/components/shadcn/progress",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Progress"
+  },
+  {
+    "path": "/components/shadcn/questionnaire",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Questionnaire"
+  },
+  {
+    "path": "/components/shadcn/radio-group",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Radio Group"
+  },
+  {
+    "path": "/components/shadcn/resizable",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Resizable"
+  },
+  {
+    "path": "/components/shadcn/scroll-area",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Scroll Area"
+  },
+  {
+    "path": "/components/shadcn/select",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Select"
+  },
+  {
+    "path": "/components/shadcn/separator",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Separator"
+  },
+  {
+    "path": "/components/shadcn/sheet",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Sheet"
+  },
+  {
+    "path": "/components/shadcn/sidebar",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Sidebar"
+  },
+  {
+    "path": "/components/shadcn/skeleton",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Skeleton"
+  },
+  {
+    "path": "/components/shadcn/slider",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Slider"
+  },
+  {
+    "path": "/components/shadcn/spinner",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Spinner"
+  },
+  {
+    "path": "/components/shadcn/switch",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Switch"
+  },
+  {
+    "path": "/components/shadcn/table",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Table"
+  },
+  {
+    "path": "/components/shadcn/tabs",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Tabs"
+  },
+  {
+    "path": "/components/shadcn/textarea",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Textarea"
+  },
+  {
+    "path": "/components/shadcn/toast",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Toast"
+  },
+  {
+    "path": "/components/shadcn/toggle",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Toggle"
+  },
+  {
+    "path": "/components/shadcn/toggle-group",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Toggle Group"
+  },
+  {
+    "path": "/components/shadcn/tooltip",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Tooltip"
+  },
+  {
+    "path": "/components/shadcn/typography",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Typography"
+  },
+  {
+    "path": "/components/crafter/action-button",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Action button"
+  },
+  {
+    "path": "/components/crafter/copy-button",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Copy button"
+  },
+  {
+    "path": "/components/crafter/text-field",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Text field"
+  },
+  {
+    "path": "/components/crafter/empty-state",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Empty state"
+  },
+  {
+    "path": "/components/crafter/section-heading",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Section heading"
+  },
+  {
+    "path": "/components/crafter/settings-card",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Settings card"
+  },
+  {
+    "path": "/components/crafter/status-indicator",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Status indicator"
+  },
+  {
+    "path": "/components/crafter/keyboard-shortcut",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Keyboard shortcut"
+  },
+  {
+    "path": "/components/crafter/search-field",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Search field"
+  },
+  {
+    "path": "/components/crafter/member-item",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Member item"
+  },
+  {
+    "path": "/components/crafter/project-card",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Project card"
+  },
+  {
+    "path": "/components/crafter/notification-preferences",
+    "width": 390,
+    "errors": [],
+    "scroll": 390,
+    "heading": "Notification preferences"
+  }
+]

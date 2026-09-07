@@ -1,0 +1,32 @@
+"use client";
+import * as React from "react";
+import { Example } from "@/components/examples/example";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
+export default function Preview() {
+  return (
+    <div className="example-stack">
+      <ScrollAreaVertical />
+    </div>
+  );
+}
+const tags = Array.from({ length: 50 }).map(
+  (_, i, a) => `v1.2.0-beta.${a.length - i}`,
+);
+function ScrollAreaVertical() {
+  return (
+    <Example title="Vertical">
+      <ScrollArea className="mx-auto h-72 w-48 rounded-md border style-luma:rounded-2xl style-rhea:rounded-2xl">
+        <div className="p-4">
+          <h4 className="mb-4 text-sm leading-none font-medium">Tags</h4>
+          {tags.map((tag) => (
+            <React.Fragment key={tag}>
+              <div className="text-sm">{tag}</div>
+              <Separator className="my-2" />
+            </React.Fragment>
+          ))}
+        </div>
+      </ScrollArea>
+    </Example>
+  );
+}

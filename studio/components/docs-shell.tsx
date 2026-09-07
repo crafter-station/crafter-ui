@@ -4,6 +4,7 @@ import { Search } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { type ReactNode, useState } from "react";
+import { CopyMarkdown } from "@/components/copy-markdown";
 import { SiteHeader } from "@/components/site-header";
 import {
   componentHref,
@@ -64,19 +65,31 @@ export function DocsShell({ children }: { children: ReactNode }) {
                 All components <span>{documentation.length}</span>
               </Link>
               <Link onClick={() => setOpen(false)} href="/create">
-                Create your library ↗
+                Style generator ↗
+              </Link>
+              <Link onClick={() => setOpen(false)} href="/docs/agents">
+                For agents
               </Link>
             </div>
             {documentationGroups.map((group) => {
               const matches = entries.filter((entry) => entry.level === group);
               return (
                 matches.length > 0 && (
-                  <div className="docs-nav-group" key={group}>
-                    <p>
+                  <details
+                    className="docs-nav-group"
+                    key={group}
+                    open={
+                      Boolean(query) ||
+                      group !== "Primitives" ||
+                      pathname.includes("/shadcn/")
+                    }
+                  >
+                    <summary>
                       {group === "Primitives"
                         ? "SHADCN / PRIMITIVES"
                         : `CRAFTER / ${group.toUpperCase()}`}
-                    </p>
+                      <span>{matches.length}</span>
+                    </summary>
                     {matches.map((entry) => (
                       <Link
                         onClick={() => setOpen(false)}
@@ -92,7 +105,7 @@ export function DocsShell({ children }: { children: ReactNode }) {
                         )}
                       </Link>
                     ))}
-                  </div>
+                  </details>
                 )
               );
             })}
@@ -105,6 +118,7 @@ export function DocsShell({ children }: { children: ReactNode }) {
           </a>
         </aside>
         <main id="main" className="docs-content">
+          <CopyMarkdown key={pathname} />
           {children}
         </main>
       </div>

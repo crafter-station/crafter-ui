@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import ts from "typescript";
-import { catalog } from "../lib/catalog";
+import { exportCatalog as catalog } from "../lib/export-catalog";
 
 const sources: Record<
   string,
@@ -23,9 +23,17 @@ async function collect(path: string): Promise<void> {
       ? [statement.moduleSpecifier.text]
       : [],
   );
-  const local = imports
-    .filter((name) => name.startsWith("@/"))
-    .map((name) => `${name.slice(2)}.tsx`);
+  const local = await Promise.all(
+    imports
+      .filter((name) => name.startsWith("@/"))
+      .map(async (name) => {
+        for (const extension of [".tsx", ".ts"]) {
+          const candidate = `${name.slice(2)}${extension}`;
+          if (await Bun.file(candidate).exists()) return candidate;
+        }
+        throw new Error(`Cannot resolve ${name} from ${path}`);
+      }),
+  );
   const dependencies = imports
     .filter((name) => !name.startsWith("@/") && name !== "react")
     .map((name) =>
@@ -45,8 +53,7 @@ async function collect(path: string): Promise<void> {
   };
   await Promise.all(local.map(collect));
 }
-for (const item of catalog)
-  for (const root of item.roots) await collect(`components/ui/${root}.tsx`);
+for (const item of catalog) for (const root of item.roots) await collect(root);
 await mkdir("lib/generated", { recursive: true });
 await writeFile(
   "lib/generated/sources.json",
@@ -69,4 +76,9 @@ const extractor = Object.fromEntries(
 await writeFile(
   "lib/generated/extractor.json",
   `${JSON.stringify(extractor, null, 2)}\n`,
+);
+
+await writeFile(
+  "lib/generated/create-app.json",
+  JSON.stringify(await readFile("scripts/templates/create-app.ts", "utf8")),
 );

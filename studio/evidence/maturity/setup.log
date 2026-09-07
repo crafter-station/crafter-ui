@@ -1,0 +1,168 @@
+- Creating a new Next.js project. This may take a few minutes.
+✔ Creating a new Next.js project.
+- Writing components.json.
+✔ Writing components.json.
+- Checking registry.
+✔ Checking registry.
+- Installing dependencies.
+- Installing dependencies.
+✔ Installing dependencies.
+- Updating fonts.
+✔ Updating fonts.
+- Updating files.
+✔ Created 2 files:
+  - components/ui/button.tsx
+  - lib/utils.ts
+- Updating app/globals.css
+✔ Updating app/globals.css
+
+Project initialization completed.
+You may now add components.
+
+- Checking registry.
+✔ Checking registry.
+- Installing dependencies.
+- Installing dependencies.
+✔ Installing dependencies.
+- Updating files.
+✔ Created 76 files:
+  - components/examples/data-table.tsx
+  - components/examples/date-picker.tsx
+  - components/examples/typography.tsx
+  - components/ui/accordion.tsx
+  - components/ui/action-button.tsx
+  - components/ui/alert-dialog.tsx
+  - components/ui/alert.tsx
+  - components/ui/aspect-ratio.tsx
+  - components/ui/attachment.tsx
+  - components/ui/avatar.tsx
+  - components/ui/badge.tsx
+  - components/ui/breadcrumb.tsx
+  - components/ui/bubble.tsx
+  - components/ui/button-group.tsx
+  - components/ui/calendar.tsx
+  - components/ui/card.tsx
+  - components/ui/carousel.tsx
+  - components/ui/chart.tsx
+  - components/ui/checkbox.tsx
+  - components/ui/collapsible.tsx
+  - components/ui/combobox.tsx
+  - components/ui/command.tsx
+  - components/ui/context-menu.tsx
+  - components/ui/copy-button.tsx
+  - components/ui/dialog.tsx
+  - components/ui/direction.tsx
+  - components/ui/drawer.tsx
+  - components/ui/dropdown-menu.tsx
+  - components/ui/empty-state.tsx
+  - components/ui/empty.tsx
+  - components/ui/field.tsx
+  - components/ui/hover-card.tsx
+  - components/ui/input-group.tsx
+  - components/ui/input-otp.tsx
+  - components/ui/input.tsx
+  - components/ui/item.tsx
+  - components/ui/kbd.tsx
+  - components/ui/keyboard-shortcut.tsx
+  - components/ui/label.tsx
+  - components/ui/marker.tsx
+  - components/ui/member-item.tsx
+  - components/ui/menubar.tsx
+  - components/ui/message-scroller.tsx
+  - components/ui/message.tsx
+  - components/ui/native-select.tsx
+  - components/ui/navigation-menu.tsx
+  - components/ui/notification-preferences.tsx
+  - components/ui/pagination.tsx
+  - components/ui/popover.tsx
+  - components/ui/progress.tsx
+  - components/ui/project-card.tsx
+  - components/ui/questionnaire.tsx
+  - components/ui/radio-group.tsx
+  - components/ui/resizable.tsx
+  - components/ui/scroll-area.tsx
+  - components/ui/search-field.tsx
+  - components/ui/section-heading.tsx
+  - components/ui/select.tsx
+  - components/ui/separator.tsx
+  - components/ui/settings-card.tsx
+  - components/ui/sheet.tsx
+  - components/ui/sidebar.tsx
+  - components/ui/skeleton.tsx
+  - components/ui/slider.tsx
+  - components/ui/spinner.tsx
+  - components/ui/status-indicator.tsx
+  - components/ui/switch.tsx
+  - components/ui/table.tsx
+  - components/ui/tabs.tsx
+  - components/ui/text-field.tsx
+  - components/ui/textarea.tsx
+  - components/ui/toast.tsx
+  - components/ui/toggle-group.tsx
+  - components/ui/toggle.tsx
+  - components/ui/tooltip.tsx
+  - hooks/use-mobile.ts
+ℹ Updated 1 file:
+  - components/ui/button.tsx
+- Updating app/globals.css
+✔ Updating app/globals.css
+bun add v1.3.11 (af24e281)
+Saved lockfile
+
+installed @types/bun@1.4.1
+installed @biomejs/biome@2.5.12 with binaries:
+ - biome
+
+23 packages installed [62.00ms]
+Removed: 4
+scripts/sync-theme.ts:17:26 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  i Template literals are preferred over string concatenation.
+  
+    15 │ const css = (mode: string) =>
+    16 │ 	Object.entries(theme[mode])
+  > 17 │ 		.map(([key, value]) => "  --" + key + ": " + value + ";")
+       │ 		                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    18 │ 		.join("\n");
+    19 │ await Bun.write(
+  
+  i Unsafe fix: Use a template literal.
+  
+    15 15 │   const css = (mode: string) =>
+    16 16 │     Object.entries(theme[mode])
+    17    │ - → → .map(([key,·value])·=>·"··--"·+·key·+·":·"·+·value·+·";")
+       17 │ + → → .map(([key,·value])·=>·`··--${key}:·${value};`)
+    18 18 │       .join("\n");
+    19 19 │   await Bun.write(
+  
+
+scripts/sync-theme.ts:21:2 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  i Template literals are preferred over string concatenation.
+  
+    19 │ await Bun.write(
+    20 │ 	"app/crafter-theme.css",
+  > 21 │ 	":root {\n" + css("light") + "\n}\n.dark {\n" + css("dark") + "\n}\n",
+       │ 	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    22 │ );
+    23 │ 
+  
+  i Unsafe fix: Use a template literal.
+  
+    19 19 │   await Bun.write(
+    20 20 │     "app/crafter-theme.css",
+    21    │ - → ":root·{\n"·+·css("light")·+·"\n}\n.dark·{\n"·+·css("dark")·+·"\n}\n",
+       21 │ + → `:root·{\n${css("light")}\n}\n.dark·{\n${css("dark")}\n}\n`,
+    22 22 │   );
+    23 23 │   
+  
+
+Skipped 4 suggested fixes.
+If you wish to apply the suggested (unsafe) fixes, use the command biome check --write --unsafe
+
+Checked 4 files in 15ms. Fixed 4 files.
+Found 2 infos.
+
+Ready at /tmp/crafter-maturity-UD4UCB/final-app
+Run: cd /tmp/crafter-maturity-UD4UCB/final-app && bun run dev
+Your agent skill is installed at .agents/skills/final-ui/SKILL.md.

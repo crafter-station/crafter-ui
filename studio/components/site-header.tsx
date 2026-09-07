@@ -3,20 +3,21 @@
 import { ArrowUpRight, Layers3 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { CustomizeButton } from "@/components/theme-workbench";
 
 export function SiteHeader() {
   const pathname = usePathname();
   const links = [
     ["/docs", "Docs"],
     ["/components", "Components"],
-    ["/create", "Create"],
+    ["/create", "Styles"],
     ["/extract", "Extract"],
   ];
   return (
     <header className="site-header library-header">
       <Link href="/" className="brand" aria-label="Crafter UI home">
         <span className="brand-mark">
-          <Layers3 size={19} />
+          <Layers3 size={16} />
         </span>
         crafter<span className="brand-suffix">/ ui</span>
       </Link>
@@ -31,6 +32,7 @@ export function SiteHeader() {
           </Link>
         ))}
       </nav>
+      <CustomizeButton />
       <a
         className="agent-link"
         href="https://github.com/crafter-station/crafter-ui"

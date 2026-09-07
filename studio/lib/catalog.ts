@@ -54,6 +54,56 @@ export const catalog = [
     usage: '<SettingsCard name="My project" onSave={saveProject} />',
     roots: ["settings-card"],
   },
+  {
+    name: "status-indicator",
+    title: "Status indicator",
+    category: "Atoms",
+    description: "Compact presence with a readable status label.",
+    usage: '<StatusIndicator status="online" />',
+    roots: ["status-indicator"],
+  },
+  {
+    name: "keyboard-shortcut",
+    title: "Keyboard shortcut",
+    category: "Atoms",
+    description: "A readable keyboard command with consistent keycaps.",
+    usage: '<KeyboardShortcut keys={["\u2318", "K"]} label="Search" />',
+    roots: ["keyboard-shortcut"],
+  },
+  {
+    name: "search-field",
+    title: "Search field",
+    category: "Molecules",
+    description: "A controlled search input with an accessible clear action.",
+    usage: "<SearchField value={query} onValueChange={setQuery} />",
+    roots: ["search-field"],
+  },
+  {
+    name: "member-item",
+    title: "Member item",
+    category: "Molecules",
+    description: "Identity, contact and role in one compact row.",
+    usage:
+      '<MemberItem name="Alex Rivera" email="alex@example.com" memberRole="Owner" />',
+    roots: ["member-item"],
+  },
+  {
+    name: "project-card",
+    title: "Project card",
+    category: "Organisms",
+    description: "Project status, progress and a clear next action.",
+    usage:
+      '<ProjectCard name="Crafter UI" description="Your component library" onOpen={openProject} />',
+    roots: ["project-card"],
+  },
+  {
+    name: "notification-preferences",
+    title: "Notification preferences",
+    category: "Organisms",
+    description: "Notification controls with async save and error feedback.",
+    usage: "<NotificationPreferences onSave={savePreferences} />",
+    roots: ["notification-preferences"],
+  },
 ] as const;
 
 export type ComponentName = (typeof catalog)[number]["name"];

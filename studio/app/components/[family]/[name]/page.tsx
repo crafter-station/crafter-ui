@@ -32,8 +32,22 @@ export default async function Page({
     (item) => item.family === family && item.name === name,
   );
   if (!entry) notFound();
+  const recipe = ["date-picker", "data-table", "typography"].includes(
+    entry.name,
+  );
+  const exampleSource =
+    entry.family === "shadcn"
+      ? await readFile(
+          path.join(process.cwd(), "components/examples", `${entry.name}.tsx`),
+          "utf8",
+        ).catch(() => "")
+      : "";
   const source = await readFile(
-    path.join(process.cwd(), "components/ui", `${entry.name}.tsx`),
+    path.join(
+      process.cwd(),
+      recipe ? "components/examples" : "components/ui",
+      `${entry.name}.tsx`,
+    ),
     "utf8",
   );
   return (
@@ -41,6 +55,7 @@ export default async function Page({
       key={`${family}/${name}`}
       entry={entry}
       source={source}
+      exampleSource={exampleSource}
     />
   );
 }

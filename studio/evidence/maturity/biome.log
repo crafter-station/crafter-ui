@@ -1,0 +1,78 @@
+$ biome check .
+lib/generate-library.ts:150:6 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  i Template literals are preferred over string concatenation.
+  
+    148 │     `:root {\n${theme(false)}\n}\n.dark {\n${theme(true)}\n}\n`;
+    149 │   const fence = (language: string, code: string) =>
+  > 150 │     ["```" + language, code, "```"].join("\n");
+        │      ^^^^^^^^^^^^^^^^
+    151 │   files["README.md"] =
+    152 │     [
+  
+  i Unsafe fix: Use a template literal.
+  
+    148 148 │       `:root {\n${theme(false)}\n}\n.dark {\n${theme(true)}\n}\n`;
+    149 149 │     const fence = (language: string, code: string) =>
+    150     │ - ····["```"·+·language,·code,·"```"].join("\n");
+        150 │ + ····[`\`\`\`${language}`,·code,·"```"].join("\n");
+    151 151 │     files["README.md"] =
+    152 152 │       [
+  
+
+lib/generate-library.ts:152:5 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  i Template literals are preferred over string concatenation.
+  
+    150 │     ["```" + language, code, "```"].join("\n");
+    151 │   files["README.md"] =
+  > 152 │     [
+        │     ^
+  > 153 │       `# ${config.name}`,
+         ...
+  > 177 │       "See NOTICE.md for upstream attribution.",
+  > 178 │     ].join("\n\n") + "\n";
+        │     ^^^^^^^^^^^^^^^^^^^^^
+    179 │   files["public/llms.txt"] = [
+    180 │     `# ${config.name}`,
+  
+  i Unsafe fix: Use a template literal.
+  
+    150 150 │       ["```" + language, code, "```"].join("\n");
+    151 151 │     files["README.md"] =
+    152     │ - ····[
+        152 │ + ····`${[
+    153 153 │         `# ${config.name}`,
+    154 154 │         "Your components and defaults, built on shadcn and Base UI.",
+    ······· │ 
+    176 176 │         ),
+    177 177 │         "See NOTICE.md for upstream attribution.",
+    178     │ - ····].join("\n\n")·+·"\n";
+        178 │ + ····].join("\n\n")}\n`;
+    179 179 │     files["public/llms.txt"] = [
+    180 180 │       `# ${config.name}`,
+  
+
+scripts/templates/create-app.ts:84:3 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  i Template literals are preferred over string concatenation.
+  
+    82 │ await Bun.write(
+    83 │   globals,
+  > 84 │   '@import "./crafter-theme.css";\n' + (await Bun.file(globals).text()),
+       │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    85 │ );
+    86 │ const pkgPath = path.join(target, "package.json");
+  
+  i Unsafe fix: Use a template literal.
+  
+     82  82 │   await Bun.write(
+     83  83 │     globals,
+     84     │ - ··'@import·"./crafter-theme.css";\n'·+·(await·Bun.file(globals).text()),
+         84 │ + ··`@import·"./crafter-theme.css";\n${await·Bun.file(globals).text()}`,
+     85  85 │   );
+     86  86 │   const pkgPath = path.join(target, "package.json");
+  
+
+Checked 140 files in 77ms. No fixes applied.
+Found 3 infos.

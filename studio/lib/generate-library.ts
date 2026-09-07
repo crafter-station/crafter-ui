@@ -1,6 +1,8 @@
-import { catalog } from "@/lib/catalog";
+import { exportCatalog as catalog, recipes } from "@/lib/export-catalog";
+import createApp from "@/lib/generated/create-app.json";
 import sourceData from "@/lib/generated/sources.json";
 import { librarySchema, themeVariables } from "@/lib/library-config";
+import { librarySkill } from "@/lib/library-skill";
 
 const sources: Record<
   string,
@@ -21,10 +23,16 @@ export function generateLibrary(input: unknown) {
       seen.add(path);
       for (const dependency of sources[path].local) visit(dependency);
     }
-    for (const root of roots) visit(`components/ui/${root}.tsx`);
+    for (const root of roots) visit(root);
     return [...seen].sort().map((path) => ({
       path,
-      type: "registry:ui" as const,
+      type: path.startsWith("hooks/")
+        ? ("registry:hook" as const)
+        : path.startsWith("lib/")
+          ? ("registry:lib" as const)
+          : path.startsWith("components/examples/")
+            ? ("registry:component" as const)
+            : ("registry:ui" as const),
       content: sources[path].content,
     }));
   }
@@ -85,6 +93,32 @@ export function generateLibrary(input: unknown) {
   const files: Record<string, string> = {};
   const json = (value: unknown) => `${JSON.stringify(value, null, 2)}\n`;
   files["library.json"] = json(config);
+  files["scripts/create-app.ts"] = createApp;
+  files["theme.json"] = json({
+    version: 1,
+    light: themeVariables(config),
+    dark: themeVariables(config, true),
+  });
+  files[`.agents/skills/${config.slug}-ui/SKILL.md`] = librarySkill(
+    config.name,
+    config.slug,
+    homepage,
+  );
+  files["public/skill.md"] = files[`.agents/skills/${config.slug}-ui/SKILL.md`];
+  files["docs/agents.md"] =
+    `# Working with an agent\n\nInstall the skill from .agents/skills/${config.slug}-ui/SKILL.md. The public copy is at /skill.md. theme.json is your theme source; run bun run build after editing it. Browser editing requires a catalog with WebMCP support; this portable registry does not include a running catalog application.\n`;
+  files["scripts/sync-theme.ts"] =
+    `const theme = await Bun.file("theme.json").json();
+if (theme.version !== 1 || !theme.light || !theme.dark) throw new Error("Invalid theme.json");
+for (const mode of ["light", "dark"]) for (const [key, value] of Object.entries(theme[mode])) {
+  if (!/^[a-z][a-z0-9-]*$/.test(key) || typeof value !== "string" || /[;{}<>\\n\\r]/.test(value)) throw new Error("Invalid theme token");
+}
+const registry = await Bun.file("registry.json").json();
+for (const item of registry.items) item.cssVars = { light: theme.light, dark: theme.dark };
+await Bun.write("registry.json", JSON.stringify(registry, null, 2) + "\\n");
+const css = (mode: string) => Object.entries(theme[mode]).map(([key, value]) => "  --" + key + ": " + value + ";").join("\\n");
+await Bun.write("theme.css", ":root {\\n" + css("light") + "\\n}\\n.dark {\\n" + css("dark") + "\\n}\\n");
+`;
   files["registry.json"] = json(registry);
   files["public/r/registry.json"] = json(registry);
   for (const item of builtItems) {
@@ -96,7 +130,8 @@ export function generateLibrary(input: unknown) {
     version: "0.1.0",
     private: true,
     scripts: {
-      build: "bunx --bun shadcn@4.21.0 build registry.json --output public/r",
+      build:
+        "bun scripts/sync-theme.ts && bunx --bun shadcn@4.21.0 build registry.json --output public/r",
       dev: "bunx --bun serve public",
     },
   });
@@ -111,10 +146,46 @@ export function generateLibrary(input: unknown) {
       .join("\n");
   files["theme.css"] =
     `:root {\n${theme(false)}\n}\n.dark {\n${theme(true)}\n}\n`;
+  const fence = (language: string, code: string) =>
+    ["```" + language, code, "```"].join("\n");
   files["README.md"] =
-    `# ${config.name}\n\nYour components and defaults, built on shadcn and Base UI.\n\n## Use in an app\n\nRequires React 19, Tailwind CSS 4, and shadcn configured with the Base UI base. Start a clean app with:\n\n\`\`\`sh\nbunx --bun shadcn@4.21.0 init --template next --base base --preset nova --name my-app\n\`\`\`\n\nFrom that app, install the downloaded starter by its absolute local path:\n\n\`\`\`sh\nbunx --bun shadcn@4.21.0 add /absolute/path/to/${config.slug}-registry/public/r/starter.json\n\`\`\`\n\nThe starter applies your library theme and includes component source and its dependency closure. Installing an individual component preserves the existing app theme; install r/theme.json separately to apply your library defaults. Review existing-file conflicts before accepting replacements. This bundle supplies Base UI primitives; do not install it over an existing Radix component set without reviewing migration.\n\n## Host your registry\n\nDeploy this folder to Vercel (Other framework, output directory public) or serve public/ with any static host. The JSON is already built. Update library.json and registry.json if your public URL changes. Once available at ${homepage}:\n\n\`\`\`sh\nbunx --bun shadcn@4.21.0 add ${homepage}/r/starter.json\n\`\`\`\n\nYou can also install individual items:\n\n${selected.map((item) => `- ${homepage}/r/${item.name}.json`).join("\n")}\n\n## Customize\n\nEdit the source in components/ui/, then run \`bun run build\`. Add new entries to registry.json. The builder generated this initial catalog and all payloads from one definition. Your exported copy is yours to maintain.\n\n## Usage\n\n${selected.map((item) => `### ${item.title}\n\nImport from \`@/components/ui/${item.name}\`.\n\n\`\`\`tsx\n${item.usage}\n\`\`\``).join("\n\n")}\n\nSee NOTICE.md for upstream attribution.\n`;
-  files["public/llms.txt"] =
-    `# ${config.name}\n\nReact 19 / Tailwind 4 / shadcn Base UI.\nInstall: bunx --bun shadcn@4.21.0 add ${homepage}/r/starter.json\nUse the installed source and semantic tokens. Keep accessible labels, keyboard behavior, and async error states. Check before overwriting existing components.\n\n${selected.map((item) => `## ${item.title}\n${item.description}\nImport: @/components/ui/${item.name}\n${item.usage}`).join("\n\n")}\n`;
+    [
+      `# ${config.name}`,
+      "Your components and defaults, built on shadcn and Base UI.",
+      "## Start in one command",
+      "From this folder, run:",
+      fence("sh", "bun scripts/create-app.ts /absolute/path/to/my-app"),
+      "Creates a fresh Next.js app, installs your components, theme.json and agent skill, and configures Bun and Biome. Existing directories are rejected. Then run bun run dev in the created app.",
+      "## Use in an existing app",
+      "Requires React 19, Tailwind CSS 4 and shadcn with the Base UI base. Review conflicts before replacing existing components, especially Radix implementations.",
+      fence(
+        "sh",
+        `bunx --bun shadcn@4.21.0 add /absolute/path/to/${config.slug}-registry/public/r/starter.json`,
+      ),
+      "The starter applies your theme and installs the source dependency closure. Individual component installs preserve the existing theme; install r/theme.json separately to apply library defaults.",
+      "## Customize",
+      "Edit theme.json, then run bun run build to synchronize registry tokens. Edit component source and rebuild after changes. The generated app also reads theme.json through its dev/build scripts.",
+      "## Host your registry",
+      "Serve public/ with a static server, or deploy it separately when ready. The JSON is already built. Update library.json and registry.json when changing the hosting URL.",
+      fence("sh", `bunx --bun shadcn@4.21.0 add ${homepage}/r/starter.json`),
+      ...selected.map((item) => `- ${homepage}/r/${item.name}.json`),
+      "## Usage",
+      ...selected.map(
+        (item) =>
+          `### ${item.title}\n\nImport from @/components/${recipes.has(item.name) ? "examples/" : "ui/"}${item.name}.\n\n${fence("tsx", item.usage || "Read the installed source for the component API.")}`,
+      ),
+      "See NOTICE.md for upstream attribution.",
+    ].join("\n\n") + "\n";
+  files["public/llms.txt"] = [
+    `# ${config.name}`,
+    "React 19 / Tailwind 4 / shadcn Base UI. Use semantic tokens and preserve accessible states.",
+    `Install: bunx --bun shadcn@4.21.0 add ${homepage}/r/starter.json`,
+    ...selected.map(
+      (item) =>
+        `## ${item.title}\n${item.description}\nImport: @/components/${recipes.has(item.name) ? "examples/" : "ui/"}${item.name}\n${item.usage}`,
+    ),
+    `Agent skill: ${homepage}/skill.md\nTheme source: theme.json`,
+  ].join("\n\n");
   files["public/index.html"] =
     `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${config.name}</title><body><h1>${config.name}</h1><p>Your component registry is ready.</p><p><a href="r/starter.json">Starter</a> · <a href="r/registry.json">Catalog</a> · <a href="llms.txt">Agent instructions</a></p><ul>${selected.map((item) => `<li><a href="r/${item.name}.json">${item.title}</a>: ${item.description}</li>`).join("")}</ul></body></html>`;
   files["NOTICE.md"] =

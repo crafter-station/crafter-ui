@@ -1,0 +1,65 @@
+bun test v1.3.11 (af24e281)
+
+lib/maturity.test.ts:
+(pass) portable library > exports every documented component with its complete source graph [7.58ms]
+(pass) portable library > round trips complete library identity, selection and both themes [2.97ms]
+
+lib/generate-library.test.ts:
+(pass) portable library generation > settings-only export brings its complete dependency closure [0.79ms]
+(pass) portable library generation > two identities generate independent tokens, docs, and registries [6.09ms]
+(pass) portable library generation > rejects invalid configuration {"slug":"../escape"}
+(pass) portable library generation > rejects invalid configuration {"slug":"bad name"}
+(pass) portable library generation > rejects invalid configuration {"name":"<script>"}
+(pass) portable library generation > rejects invalid configuration {"homepage":"javascript:alert(1)"} [0.49ms]
+(pass) portable library generation > rejects invalid configuration {"homepage":"https://host.test/path"}
+(pass) portable library generation > rejects invalid configuration {"homepage":"https://host.test/?x=1"}
+(pass) portable library generation > rejects invalid configuration {"components":[]} [0.16ms]
+(pass) portable library generation > rejects invalid configuration {"components":["unknown"]} [0.02ms]
+(pass) portable library generation > rejects invalid configuration {"components":["copy-button","copy-button"]}
+(pass) portable library generation > built payloads contain source; source manifest remains rebuildable [3.84ms]
+
+lib/documentation.test.ts:
+(pass) component documentation coverage > every official component has one route, a live example and source [0.44ms]
+(pass) component documentation coverage > Crafter includes reusable source at each atomic level [0.09ms]
+
+lib/theme-model.test.ts:
+(pass) shared theme editing > batch edits preserve other tokens and the opposite mode [1.04ms]
+(pass) shared theme editing > stale, unknown and unsafe patches cannot partially mutate a theme
+(pass) shared theme editing > portable registry rebuild consumes the edited theme file [68.11ms]
+
+lib/syntax.test.ts:
+(pass) Crafter syntax > preserves tsx source and line endings 70 [1050.33ms]
+(pass) Crafter syntax > preserves bash source and line endings 52 [33.86ms]
+(pass) Crafter syntax > preserves json source and line endings 30 [0.75ms]
+(pass) Crafter syntax > preserves css source and line endings 31 [369.25ms]
+(pass) Crafter syntax > preserves tsx source and line endings 0 [0.02ms]
+(pass) Crafter syntax > classifies grammar into theme tokens [169.73ms]
+
+lib/extraction/extract.test.ts:
+(pass) source extraction > resolves aliases, re-exports, cycles, type imports, index modules and JSON without changing source [29.07ms]
+(pass) source extraction > resolves imported SVG through tsconfig aliases [5.91ms]
+(pass) source extraction > keeps declared package subpaths and avoids reinstalling React [3.36ms]
+(pass) source extraction > collects literal dynamic imports [2.46ms]
+(pass) source extraction > blocks unsupported dependency import "./missing"; export const Component = () => null; [4.10ms]
+(pass) source extraction > blocks unsupported dependency import "~/missing"; export const Component = () => null; [2.72ms]
+(pass) source extraction > blocks unsupported dependency import missing from "undeclared-package"; [1.72ms]
+(pass) source extraction > blocks unsupported dependency export const load = (name: string) => import(name); [2.08ms]
+(pass) source extraction > blocks unsupported dependency import fs from "node:fs"; [2.05ms]
+(pass) source extraction > blocks unsupported dependency "use server"; export async function action() {} [1.90ms]
+(pass) source extraction > blocks unsupported dependency export const key = process.env.API_KEY; [1.59ms]
+(pass) source extraction > blocks unsupported dependency export const Component = () => <img src="/logo.png" alt="Logo" />; [2.00ms]
+(pass) source extraction > blocks unsupported dependency import icon from "./icon.svg?react"; [2.15ms]
+(pass) source extraction > blocks stylesheets instead of silently dropping them [3.45ms]
+(pass) source extraction > blocks symlinks outside the selected project [2.48ms]
+(pass) source extraction > extracts used utility functions without unrelated registry data or environment code [4.56ms]
+(pass) source extraction > preserves runtime imports and top-level effects while selecting declarations [3.39ms]
+(pass) source extraction > merges requested exports when multiple entries share a utility [4.62ms]
+(pass) source extraction > blocks unpublished workspace packages [1.76ms]
+(pass) bundle output > does not overwrite existing content [1.26ms]
+(pass) bundle output > cleans up a failed write without partial output [0.90ms]
+(pass) bundle output > writes a complete bundle into an empty destination [1.06ms]
+
+ 47 pass
+ 0 fail
+ 737 expect() calls
+Ran 47 tests across 6 files. [2.03s]

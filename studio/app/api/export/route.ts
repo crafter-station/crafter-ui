@@ -4,7 +4,7 @@ import { librarySchema } from "@/lib/library-config";
 
 export async function POST(request: Request) {
   const body = await request.text();
-  if (body.length > 8192)
+  if (body.length > 65536)
     return Response.json(
       { error: "Library configuration is too large." },
       { status: 413 },
@@ -25,6 +25,11 @@ export async function POST(request: Request) {
       { status: 400 },
     );
   const result = generateLibrary(parsed.data);
+  if (new URL(request.url).searchParams.get("format") === "json")
+    return Response.json(
+      { files: result.files, config: result.config },
+      { headers: { "Cache-Control": "no-store" } },
+    );
   const archive = zipSync(
     Object.fromEntries(
       Object.entries(result.files).map(([path, content]) => [
