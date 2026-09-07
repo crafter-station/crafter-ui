@@ -1,0 +1,60 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.12/schema.json",
+  "files": {
+    "includes": [
+      "**",
+      "!lib/generated",
+      "!.next",
+      "!evidence",
+      "!bun.lock",
+      "!next-env.d.ts",
+      "!components/ui/button.tsx",
+      "!components/ui/card.tsx",
+      "!components/ui/input.tsx",
+      "!components/ui/field.tsx",
+      "!components/ui/empty.tsx",
+      "!components/ui/dialog.tsx",
+      "!components/ui/tabs.tsx",
+      "!components/ui/badge.tsx",
+      "!components/ui/separator.tsx",
+      "!components/ui/spinner.tsx",
+      "!components/ui/toggle.tsx",
+      "!components/ui/toggle-group.tsx",
+      "!components/ui/label.tsx"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended"
+    }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["app/globals.css"],
+      "linter": {
+        "rules": {
+          "complexity": {
+            "noImportantStyles": "off"
+          }
+        }
+      }
+    }
+  ]
+}
