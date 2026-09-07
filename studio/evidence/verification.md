@@ -76,3 +76,7 @@ Used agent-browser sessions crafter-ui-studio and crafter-ui-consumer.
 - `/extract` axe checks: zero violations on desktop and mobile, 35 passing rules, zero incomplete rules. Evidence and source-hash reports are alongside this document.
 
 Final deployed extractor check: downloaded `/api/extractor` through the protected preview, compared all four source files byte-for-byte with generated/extractor.json, and ran it in a fresh temporary folder against the real slider. Six source files, zero issues. Mobile document width equals viewport width (390px).
+
+## Superseding final release
+
+See release-audit.md Final acceptance for the completed production and adoption gates. Earlier Remaining entries here describe the initial preview milestone. Crafter UI is public at ui.crafter.run and Petdex adoption PR #772 is merged and deployed.

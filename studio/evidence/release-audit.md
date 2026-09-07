@@ -38,3 +38,14 @@ Crafter UI PR #1 is merged into main at 50e9c77. Git-triggered production dpl_D9
 Petdex PR #772 is merged at 5d1844be151bb4e613b62b2e50a70bc8e1540d65. SubmissionCard now uses the exported ActionButton and Spinner while retaining the local Button and existing product styling. Only Spinner's cn import was adapted. Two focused tests (8 assertions), project-wide TypeScript, app CI, lockfile checks and the preview build passed. Vercel Agent Review was skipped, not counted as an independent review. No production withdrawal was performed.
 
 The starter endpoint at the canonical domain returned HTTP 200, registry:style, 14 source files, and the expected Crafter white/ink/sharp tokens. Both production ZIP downloads succeeded. Source collection now sorts its manifest keys; two consecutive generations produce the same SHA-256. The scaffold favicon was replaced with the Crafter layer mark.
+
+## Final acceptance
+
+- Crafter UI: gallery, live previews, customization, exports and local extractor implemented and verified. Canonical domain and Git-based production deployment are live.
+- Crafter visual reference: persisted screenshot, analysis and tokens; implemented in site and exported defaults; desktop/mobile and automated accessibility checks completed.
+- Portable registries: personalized starter installed in an independent app; production ZIP theme installed and rebuilt; actual components extracted from two repositories.
+- Existing production adoption: Petdex PR #772 merged, production dpl_CF4xJgCtF8bLrYMZuETqeXELopJL inspected Ready at petdex.dev, build logs confirm main commit 5d1844b.
+- Shared implementation: typed catalog, source closure, validated settings, atomic output, generated docs, and standalone extraction eliminate the repeated manual packaging work.
+- Quality: 34 Studio tests, 134 assertions; Petdex focused tests and full app CI/typecheck; local and hosted builds; no mobile overflow; zero automated axe violations. The decorative contrast incomplete result remains explicitly documented. No destructive production action was performed for verification.
+
+All delivery gates are satisfied within the supported React/shadcn product. Hosted per-user registry accounts and unsupported source-framework migration remain future capabilities, not advertised as implemented. The references to pending authorization and adoption earlier in this file describe historical stages and are superseded by this section.
