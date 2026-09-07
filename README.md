@@ -1,3 +1,7 @@
+# Crafter UI
+
+The new component library and personal-library builder live in [studio/](studio/README.md). Run `cd studio && bun install && bun run dev`. The legacy application below remains intact.
+
 ## CrafterUI Registry
 
 This project now includes a component registry powered by the shadcn registry format. The registry allows users to easily install components from this UI library in their own projects.

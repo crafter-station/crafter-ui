@@ -1,0 +1,9 @@
+import sourceFiles from "@/lib/generated/extractor.json";
+
+export function extractorBundle() {
+  return {
+    ...sourceFiles,
+    "package.json": `${JSON.stringify({ name: "crafter-ui-extractor", version: "0.1.0", private: true, scripts: { extract: "bun scripts/extract-library.ts" }, dependencies: { typescript: "5.9.3" } }, null, 2)}\n`,
+    "README.md": `# Crafter UI Extractor\n\nTurn selected React components from your project into an installable shadcn registry. Runs locally; no source upload or project script execution. Requires Bun.\n\n## Start\n\nUnzip this folder and open a terminal here:\n\n\`\`\`sh\nbun install\nbun run extract --project ../my-app --entry src/components/card.tsx\n\`\`\`\n\nThe first command installs the TypeScript parser. The second prints the file graph, package dependencies, and any unresolved requirements. It does not modify your project.\n\nWhen the graph resolves:\n\n\`\`\`sh\nbun run extract --project ../my-app --entry src/components/card.tsx --out ../my-library\n\`\`\`\n\nChoose an empty output directory. Repeat --entry to include more components. Use --name, --slug, and --homepage to customize the registry. Run --help for all options.\n\n## Install the result\n\nThe generated README contains the exact shadcn install command and import paths. Install it into a separate app and verify its behavior before publishing.\n\n## Supported\n\n- TS/JS imports, re-exports, literal dynamic imports, type imports, and tsconfig aliases.\n- Local JSON and imported SVG source.\n- Declared package dependencies with registry versions.\n\n## Review required\n\nStylesheets, binary assets, computed imports, undeclared packages, environment variables, and server-only code produce explicit issues instead of incomplete bundles. The extractor does not migrate global styles, provider setup, or infer a source license. A resolved graph proves file completeness, not matching visual behavior.\n`,
+  };
+}

@@ -1,0 +1,123 @@
+{
+  "name": "Crafter Slider",
+  "slug": "crafter-slider",
+  "ready": true,
+  "entries": [
+    "src/components/design/slider-with-input.tsx"
+  ],
+  "files": [
+    {
+      "path": "src/components/design/slider-with-input.tsx",
+      "sha256": "f80ddb63d364ab852043a1b5f241e5514fbae414f55d38e54bdd02c900cfa72c",
+      "imports": [
+        "src/components/ui/input.tsx",
+        "src/components/ui/label.tsx",
+        "src/components/ui/slider.tsx"
+      ],
+      "exports": [
+        "SliderWithInput"
+      ],
+      "removedExports": []
+    },
+    {
+      "path": "src/components/ui/input.tsx",
+      "sha256": "9358755226bd51f555a2be072a3e5f0e49c1cccc5192c5083ff5d50935095dd9",
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "exports": [
+        "Input"
+      ],
+      "removedExports": [
+        "InputProps"
+      ]
+    },
+    {
+      "path": "src/components/ui/label.tsx",
+      "sha256": "cec74a048038cd2f44d5165c27a934c6be32b5c2803843930c7fbcdc35fe6634",
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "exports": [
+        "Label"
+      ],
+      "removedExports": []
+    },
+    {
+      "path": "src/components/ui/slider.tsx",
+      "sha256": "524cc1bad95b1ba5f95f99f7c78a6560018be08048e9c55ff9d2b59f03a2fafe",
+      "imports": [
+        "src/lib/utils.ts",
+        "src/components/ui/tooltip.tsx"
+      ],
+      "exports": [
+        "Slider",
+        "sliderVariants"
+      ],
+      "removedExports": [
+        "SliderProps"
+      ]
+    },
+    {
+      "path": "src/components/ui/tooltip.tsx",
+      "sha256": "2a1d370afeb49a2f92479ea9cf710e1b6591a45241b9412df29476cf1edbd9a4",
+      "imports": [
+        "src/lib/utils.ts"
+      ],
+      "exports": [
+        "Tooltip",
+        "TooltipTrigger",
+        "TooltipContent",
+        "TooltipProvider",
+        "SimpleTooltip",
+        "tooltipVariants",
+        "tooltipArrowVariants"
+      ],
+      "removedExports": [
+        "VariantProps"
+      ]
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "sha256": "4e12f199861d09f1750843fc088c36783dfddcb06d9518b9b9d6822f5f990ce4",
+      "imports": [],
+      "exports": [
+        "cn"
+      ],
+      "removedExports": [
+        "Component",
+        "getComponents",
+        "getComponent",
+        "getRegistryComponent",
+        "findRegistryComponentByDisplayName",
+        "getPrompt",
+        "getComponentSource",
+        "isRegistryComponent",
+        "isDevelopment",
+        "shouldShowBadges",
+        "shouldShowBacklogComponents",
+        "getComponentCount",
+        "getRegistryStats",
+        "getMainDescription",
+        "getShortDescription",
+        "getComponentsDescription",
+        "getComponentsCollectionDescription"
+      ]
+    }
+  ],
+  "dependencies": [
+    "@radix-ui/react-label@2.1.4",
+    "@radix-ui/react-slider@1.3.2",
+    "@radix-ui/react-tooltip@1.2.4",
+    "class-variance-authority@0.7.1",
+    "clsx@2.1.1",
+    "tailwind-merge@3.2.0"
+  ],
+  "requirements": [
+    "React application",
+    "Review the source project's global styles and providers before publishing",
+    "react 19.0.0"
+  ],
+  "issues": [],
+  "output": "/tmp/crafter-slider-extracted-20260907"
+}
