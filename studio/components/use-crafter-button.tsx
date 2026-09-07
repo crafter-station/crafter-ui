@@ -29,8 +29,8 @@ export function UseCrafterButton() {
       </Link>
       <span className="home-action-note" role="status">
         {status === "copied"
-          ? "Paste into your coding agent. It handles setup."
-          : "One prompt. Your agent handles setup."}
+          ? "Paste into your agent to use Crafter UI."
+          : "One shared design system. For your whole team."}
       </span>
       {status === "error" && (
         <textarea

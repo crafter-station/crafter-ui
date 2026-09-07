@@ -14,10 +14,24 @@ export default function Page() {
           Your design system.
         </h1>
         <p className="doc-lead">
-          Tune the real catalog through WebMCP. The Customize panel and your
-          agent edit the same theme.
+          Use Crafter UI consistently across your team’s projects. Create a
+          separate design system when you want your own defaults.
         </p>
         <div className="doc-sections">
+          <section>
+            <h2>Use Crafter UI with your team</h2>
+            <p>
+              Click “Use in my project” on the homepage and paste the prompt
+              into your agent. The skill provides component and token guidance
+              for future UI work, using your project’s existing tools. No
+              starter download or new application is required.
+            </p>
+            <p>
+              Keep the shared Crafter tokens and components consistent across
+              projects. Contribute reusable improvements through the Crafter UI
+              repository; keep product-specific compositions in your app.
+            </p>
+          </section>
           <section>
             <h2>Connect</h2>
             <p>
@@ -57,7 +71,9 @@ export default function Page() {
               expectedRevision. export_library returns a manifest and
               exportRequest; POST that request to download the ZIP. Use
               includeFiles: true only when you need source contents in context.
-              Unzip it and run bun scripts/create-app.ts with a new app path.
+              The export is your own design-system registry. Its optional
+              create-app.ts helper can scaffold a new demo using Bun; adopting
+              the design system in an existing app does not require it.
             </p>
             <p>
               Save library downloads one file containing identity, selection and

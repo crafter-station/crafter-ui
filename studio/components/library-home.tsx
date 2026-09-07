@@ -170,8 +170,8 @@ export function LibraryHome() {
               Your defaults. Every time.
             </h2>
             <p>
-              Pick your pieces and take a personal registry into your next
-              project.
+              Create a separate design system with your own identity, tokens and
+              components, starting from Crafter UI.
             </p>
           </div>
           <Link href="/create" className="primary-link">

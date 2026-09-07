@@ -6,9 +6,13 @@
 
 ## Start with your agent
 
-Open [ui.crafter.run](https://ui.crafter.run), click **Use in my project**, and paste the prompt into your coding agent. It reads the [skill](https://ui.crafter.run/skill.md), inspects your project and sets up compatible components and tokens.
+Open [ui.crafter.run](https://ui.crafter.run), click **Use in my project**, and paste the prompt into your coding agent. The [skill](https://ui.crafter.run/skill.md) gives your agent shared component and token guidance for future UI work while respecting your existing tools. No new app or starter download is required.
 
-For a new app, the [starter ZIP](https://ui.crafter.run/starter.zip) includes the registry, theme and setup script. Extract it and run from its crafter-registry directory:
+## Create your own design system
+
+Use the [style generator](https://ui.crafter.run/create) to choose your own identity, tokens and components and export a separate registry.
+
+For an optional new demo app, the [starter ZIP](https://ui.crafter.run/starter.zip) includes the registry, theme and setup script. Extract it and run from its crafter-registry directory:
 
 ```sh
 bun scripts/create-app.ts /absolute/path/to/my-app

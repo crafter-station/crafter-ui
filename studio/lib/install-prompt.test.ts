@@ -3,11 +3,13 @@ import { strFromU8, unzipSync } from "fflate";
 import { GET } from "../app/starter.zip/route";
 import { installPrompt } from "./install-prompt";
 
-test("team prompt discovers the current host and protects existing projects", () => {
+test("team prompt provides design system context without prescribing app setup", () => {
   const prompt = installPrompt("http://localhost:4324");
   expect(prompt).toContain("http://localhost:4324/skill.md");
-  expect(prompt).toContain("Preserve unrelated changes");
-  expect(prompt).toContain("Do not deploy");
+  expect(prompt).toContain("existing tooling and conventions");
+  expect(prompt).not.toContain("Bun");
+  expect(prompt).not.toContain("starter.zip");
+  expect(prompt).not.toContain("Build one working screen");
 });
 test("starter download contains an executable setup, theme and agent skill", async () => {
   const response = GET(new Request("http://localhost:4324/starter.zip"));
