@@ -22,3 +22,11 @@ Production approval remains unanswered. The local deploy skill requires explicit
 After authorization, reconcile the Vercel project's repository root with studio/ before enabling Git deployment. The parent .vercel/repo.json currently maps the legacy root app, so deploying from studio/ alone can select the wrong source. The verified preview used an isolated studio source snapshot. Publish the verified application, assign and verify ui.crafter.run, and verify downloads plus registry installation against the public canonical origin.
 
 Production app adoption remains a separate unproven gate; the independent consumer is portability evidence only. Additional unrelated features do not substitute for either release gate. The goal is not complete.
+
+## Production update
+
+User explicitly authorized publication and requested crafter.run's visual identity. On 2026-09-07, deployment dpl_3HWffb7dhhhaJCB5tgEwvp5wPUbp reached Ready with target production and ui.crafter.run assigned. Vercel project root is now studio/. Spaceship CNAME ui points to 72f5c6f8292aff15.vercel-dns-016.com. Cloudflare and Google public DNS resolve it; Vercel reports misconfigured=false.
+
+Local DNS retained the earlier negative answer. Browser verification used the publicly resolved IP through a session-only resolver rule, preserving the canonical hostname and HTTPS certificate checks. Both library and extractor ZIPs were downloaded from ui.crafter.run. The downloaded theme contains #ffffff background, #141414 ink and 0rem radius; installing it with shadcn into the independent consumer and rebuilding passed. Direct CLI URL installation was initially blocked by local DNS caching, not counted as passed.
+
+The earlier production-authorization blocker above is resolved. Existing production app adoption remains outstanding.
