@@ -117,9 +117,11 @@ function ComponentPreview({ name }: { name: ComponentName }) {
           title="Your workspace"
           description="A little less setup. A lot more making."
           action={
-            <Button variant="outline" onClick={() => setCreated(!created)}>
-              {created ? "Invite copied" : "Invite team"}
-            </Button>
+            <CopyButton
+              value="https://ui.crafter.run"
+              label="Copy workspace link"
+              copiedLabel="Link copied"
+            />
           }
         />
       </div>

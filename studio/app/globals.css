@@ -72,7 +72,7 @@
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
+  --radius: 0rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -129,31 +129,31 @@
   }
 }
 :root {
-  --background: #fafaf7;
-  --foreground: #242522;
+  --background: #ffffff;
+  --foreground: #141414;
   --card: #ffffff;
-  --card-foreground: #242522;
+  --card-foreground: #141414;
   --popover: #ffffff;
-  --popover-foreground: #242522;
-  --primary: #242522;
+  --popover-foreground: #141414;
+  --primary: #141414;
   --primary-foreground: #ffffff;
-  --secondary: #efefea;
-  --secondary-foreground: #242522;
-  --muted: #efefea;
-  --muted-foreground: #686a62;
-  --accent: #e9ebe2;
-  --accent-foreground: #242522;
-  --border: #e0e1da;
-  --input: #d7d9d0;
-  --ring: #707568;
-  --radius: 0.625rem;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #141414;
+  --muted: #f5f5f5;
+  --muted-foreground: #6b6b6b;
+  --accent: #f0f0f0;
+  --accent-foreground: #141414;
+  --border: #e6e6e6;
+  --input: #cccccc;
+  --ring: #141414;
+  --radius: 0rem;
 }
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 30px;
 }
 body {
-  font-family: var(--font-geist-sans), sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 a,
 button,
@@ -173,10 +173,11 @@ input:focus-visible {
 .site-shell {
   max-width: 1440px;
   margin: auto;
-  padding: 0 64px;
+  padding: 0 40px;
+  border-inline: 1px solid var(--border);
 }
 .site-header {
-  height: 96px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -196,7 +197,7 @@ input:focus-visible {
   place-items: center;
   background: var(--foreground);
   color: var(--background);
-  border-radius: 8px;
+  border-radius: 0;
   width: 32px;
   height: 32px;
   margin-right: 3px;
@@ -242,29 +243,30 @@ input:focus-visible {
   align-items: center;
   gap: 9px;
   font-family: var(--font-geist-mono);
-  font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 1.3px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 .status-dot {
   width: 6px;
   height: 6px;
-  background: #76885b;
+  background: #141414;
   border-radius: 100%;
 }
 .edition {
-  color: #646c5a;
+  color: #6b6b6b;
   margin-left: 12px;
 }
 h1 {
-  font-size: clamp(42px, 5.1vw, 70px);
+  font-size: clamp(42px, 5.5vw, 80px);
+  text-transform: uppercase;
   line-height: 1.06;
-  letter-spacing: -3.3px;
-  font-weight: 550;
+  letter-spacing: -0.055em;
+  font-weight: 700;
   margin: 29px 0 24px;
 }
 h1 span {
-  color: #818676;
+  color: #141414;
 }
 .hero-copy > p {
   max-width: 405px;
@@ -285,7 +287,7 @@ h1 span {
   color: var(--background);
   background: var(--foreground);
   padding: 12px 17px;
-  border-radius: 7px;
+  border-radius: 0;
   font-size: 12px;
 }
 .quiet-link {
@@ -299,7 +301,7 @@ h1 span {
   gap: 11px;
   align-items: center;
   font-size: 10px;
-  color: #646c5a;
+  color: #6b6b6b;
   margin-top: 25px;
 }
 .hero-art {
@@ -311,8 +313,8 @@ h1 span {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(#d6d8ce66 1px, transparent 1px),
-    linear-gradient(90deg, #d6d8ce66 1px, transparent 1px);
+    linear-gradient(#e6e6e680 1px, transparent 1px),
+    linear-gradient(90deg, #e6e6e680 1px, transparent 1px);
   background-size: 30px 30px;
   mask-image: radial-gradient(ellipse, #000 10%, transparent 70%);
 }
@@ -320,21 +322,21 @@ h1 span {
   position: absolute;
   width: 300px;
   height: 206px;
-  border-radius: 14px;
+  border-radius: 0;
 }
 .specimen-back {
   top: 42px;
   left: 70px;
-  background: #e7e9de;
-  transform: rotate(-10deg);
-  border: 1px solid #d0d4c5;
+  background: #f5f5f5;
+  transform: rotate(-8deg);
+  border: 1px solid #d4d4d4;
   padding: 28px;
 }
 .specimen-line {
   height: 6px;
   width: 90px;
-  background: #bdc4ac;
-  border-radius: 4px;
+  background: #b5b5b5;
+  border-radius: 0;
   margin-bottom: 11px;
 }
 .specimen-line.short {
@@ -343,10 +345,10 @@ h1 span {
 .specimen-front {
   top: 89px;
   left: 110px;
-  transform: rotate(5deg);
+  transform: rotate(3deg);
   background: #fff;
-  border: 1px solid #e0e1d9;
-  box-shadow: 0 25px 40px -20px #535a3d42;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 25px 40px -20px #14141424;
   padding: 21px;
 }
 .specimen-top {
@@ -355,13 +357,13 @@ h1 span {
   justify-content: space-between;
   font-family: var(--font-geist-mono);
   font-size: 7px;
-  color: #646c5a;
+  color: #6b6b6b;
   letter-spacing: 1px;
 }
 .mini-mark {
   font-size: 21px;
   font-weight: 700;
-  color: #30392b;
+  color: #141414;
 }
 .specimen-title {
   font-size: 29px;
@@ -377,23 +379,23 @@ h1 span {
 }
 .specimen-pill {
   font-size: 8px;
-  background: #eef0e4;
-  border: 1px solid #e0e4d1;
+  background: #f5f5f5;
+  border: 1px solid #e6e6e6;
   padding: 6px 9px;
-  border-radius: 5px;
+  border-radius: 0;
 }
 .specimen-dot {
   height: 17px;
   width: 17px;
-  background: #aabc86;
+  background: #141414;
   border-radius: 50%;
-  box-shadow: -10px 0 #e3e8d8;
+  box-shadow: -10px 0 #d4d4d4;
 }
 .art-caption {
   position: absolute;
   bottom: 18px;
   left: 108px;
-  color: #646c5a;
+  color: #6b6b6b;
   font-family: var(--font-geist-mono);
   font-size: 8px;
   letter-spacing: 1px;
@@ -402,7 +404,7 @@ h1 span {
   position: absolute;
   top: 30px;
   right: 35px;
-  color: #a7ac9e;
+  color: #a3a3a3;
   font-size: 25px;
   font-weight: 200;
 }
@@ -413,7 +415,7 @@ h1 span {
   justify-content: space-between;
   font-family: var(--font-geist-mono);
   font-size: 9px;
-  color: #646c5a;
+  color: #6b6b6b;
   letter-spacing: 1px;
 }
 .workspace {
@@ -428,7 +430,7 @@ h1 span {
 .sidebar-title {
   font-size: 14px;
   line-height: 1.6;
-  font-weight: 550;
+  font-weight: 700;
   margin-bottom: 25px;
 }
 .sidebar-title span {
@@ -459,8 +461,8 @@ h1 span {
   text-align: left;
   padding: 11px 10px;
   font-size: 12px;
-  border-radius: 5px;
-  color: #646c5a;
+  border-radius: 0;
+  color: #6b6b6b;
 }
 .component-link svg {
   margin-left: auto;
@@ -468,20 +470,20 @@ h1 span {
 .component-number {
   font-family: var(--font-geist-mono);
   font-size: 9px;
-  color: #646c5a;
+  color: #6b6b6b;
 }
 .component-link:hover {
-  background: #efefe9;
+  background: #f5f5f5;
 }
 .component-link.selected {
-  background: #e9ecdf;
-  color: #3b4631;
+  background: #eeeeee;
+  color: #141414;
 }
 .collection-note {
   display: flex;
   gap: 10px;
   margin-top: 50px;
-  color: #646c5a;
+  color: #6b6b6b;
   font-size: 10px;
   line-height: 1.7;
 }
@@ -502,12 +504,12 @@ h1 span {
   margin-bottom: 27px;
 }
 .muted {
-  color: #646c5a;
+  color: #6b6b6b;
   font-size: 8px;
 }
 .detail-heading h2 {
   font-size: 26px;
-  font-weight: 550;
+  font-weight: 700;
   letter-spacing: -0.9px;
   margin: 7px 0 8px;
 }
@@ -523,8 +525,8 @@ h1 span {
   padding: 9px 13px;
   border: 1px solid var(--border);
   border-bottom: 0;
-  border-radius: 9px 9px 0 0;
-  background: #f4f5ef;
+  border-radius: 0;
+  background: #fafafa;
 }
 .preview-canvas {
   min-height: 265px;
@@ -556,10 +558,10 @@ h1 span {
   justify-content: space-between;
   padding: 12px 15px;
   font-size: 9px;
-  color: #646c5a;
+  color: #6b6b6b;
   border: 1px solid var(--border);
   border-top: 0;
-  border-radius: 0 0 9px 9px;
+  border-radius: 0;
 }
 .preview-caption span:first-child {
   font-family: var(--font-geist-mono);
@@ -588,12 +590,12 @@ h1 span {
 }
 .detail-bottom h3 {
   font-size: 12px;
-  font-weight: 550;
+  font-weight: 700;
   margin-bottom: 7px;
 }
 .detail-bottom p {
   max-width: 430px;
-  color: #646c5a;
+  color: #6b6b6b;
   font-size: 11px;
   line-height: 1.7;
 }
@@ -603,7 +605,7 @@ h1 span {
   line-height: 1.8;
   padding: 15px;
   background: var(--muted);
-  border-radius: 8px;
+  border-radius: 0;
 }
 .builder-section {
   border-top: 1px solid var(--border);
@@ -632,13 +634,13 @@ h1 span {
   gap: 10px;
   align-items: center;
   font-size: 12px;
-  font-weight: 550;
+  font-weight: 700;
   margin-bottom: 22px;
 }
 .step-label > span {
   font-family: var(--font-geist-mono);
   font-size: 9px;
-  color: #646c5a;
+  color: #6b6b6b;
   border: 1px solid var(--border);
   border-radius: 50%;
   padding: 4px 5px;
@@ -683,13 +685,13 @@ h1 span {
   font-size: 12px;
 }
 .component-selection input {
-  accent-color: #535e43;
+  accent-color: #141414;
   width: 14px;
   height: 14px;
 }
 .export-panel {
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
 }
 .export-preview {
@@ -716,7 +718,7 @@ h1 span {
 .export-preview h3 {
   font-size: 25px;
   letter-spacing: -0.8px;
-  font-weight: 550;
+  font-weight: 700;
   margin-top: 24px;
   overflow-wrap: anywhere;
 }
@@ -727,7 +729,7 @@ h1 span {
 }
 .export-details {
   padding: 25px;
-  background: #f2f3ec;
+  background: #fafafa;
 }
 .export-details ul {
   display: flex;
@@ -740,12 +742,12 @@ h1 span {
   align-items: center;
   gap: 9px;
   font-size: 11px;
-  color: #606852;
+  color: #525252;
 }
 .export-footnote {
   font-size: 9px;
   text-align: center;
-  color: #646c5a;
+  color: #6b6b6b;
   margin-top: 11px;
 }
 .export-message {
@@ -766,7 +768,7 @@ h1 span {
   padding: 25px 0 35px;
   border-top: 1px solid var(--border);
   font-size: 10px;
-  color: #646c5a;
+  color: #6b6b6b;
 }
 @media (max-width: 1100px) {
   .site-shell {
@@ -989,7 +991,7 @@ h1 span {
   gap: 17px;
   border: 1px solid var(--border);
   background: var(--card);
-  border-radius: 9px;
+  border-radius: 0;
   margin-top: 20px;
   padding: 20px;
 }
@@ -1001,12 +1003,12 @@ h1 span {
 .extraction-boundary {
   margin: 45px 0 30px;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 0;
   padding: 25px;
 }
 .extraction-boundary h2 {
   font-size: 20px;
-  font-weight: 550;
+  font-weight: 700;
   letter-spacing: -0.5px;
   margin-bottom: 14px;
 }
@@ -1015,4 +1017,30 @@ h1 span {
   line-height: 1.8;
   color: var(--muted-foreground);
   margin-top: 10px;
+}
+
+.primary-link {
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+.primary-link:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+.hero-art .specimen {
+  transition: transform 400ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.hero-art:hover .specimen-front {
+  transform: translateY(-8px) rotate(0deg);
+}
+.hero-art:hover .specimen-back {
+  transform: translate(-8px, -4px) rotate(-12deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-art:hover .specimen-front,
+  .hero-art:hover .specimen-back,
+  .primary-link:hover {
+    transform: none;
+  }
 }
