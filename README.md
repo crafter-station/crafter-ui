@@ -1,33 +1,42 @@
 # Crafter UI
 
-The new component library and personal-library builder live in [studio/](studio/README.md). Run `cd studio && bun install && bun run dev`. The legacy application below remains intact.
+[Use Crafter UI](https://ui.crafter.run) · [Components](https://ui.crafter.run/components) · [Agent guide](https://ui.crafter.run/docs/agents) · [Style generator](https://ui.crafter.run/create)
 
-## CrafterUI Registry
+76 components built on shadcn Base UI, with shared light/dark tokens and Crafter atoms, molecules and organisms.
 
-This project now includes a component registry powered by the shadcn registry format. The registry allows users to easily install components from this UI library in their own projects.
+## Start with your agent
 
-### Registry Structure
+Open [ui.crafter.run](https://ui.crafter.run), click **Use in my project**, and paste the prompt into your coding agent. It reads the [skill](https://ui.crafter.run/skill.md), inspects your project and sets up compatible components and tokens.
 
-- `registry.json` - Main registry file that defines all available components
-- `public/r/` - Directory containing individual registry item JSON files for each component
-- `scripts/build-registry.js` - Script to generate the registry item files from the main registry.json
-- `app/registry/` - Registry UI to browse and view components
-- `app/registry/[component]/` - Individual component pages with preview and "Open in v0" button
+For a new app, the [starter ZIP](https://ui.crafter.run/starter.zip) includes the registry, theme and setup script. Extract it and run from its crafter-registry directory:
 
-### Adding to the Registry
-
-1. Add your new component to `config/components.ts`
-2. Add the component entry to `registry.json`
-3. Run `npm run registry:generate` to generate the registry item files
-
-### Using Components
-
-Users can install components using the shadcn CLI:
-
-```bash
-npx shadcn@latest add https://crafter-ui.vercel.app/r/[component-name].json
+```sh
+bun scripts/create-app.ts /absolute/path/to/my-app
 ```
 
-### v0.dev Integration
+The destination must be new. Existing projects should follow the skill to install selected components and review conflicts.
 
-Components include "Open in v0" buttons for easy customization on v0.dev.
+## Develop
+
+The production app lives in [studio/](studio/README.md).
+
+```sh
+cd studio
+bun install
+bun run dev --port 4324
+```
+
+```sh
+bun test lib
+bun run check
+bun run build
+bun run typecheck
+```
+
+## Production
+
+Vercel project: `crafter-station/crafter-ui`. Root directory: `studio`. Production branch: `main`. Install: `bun install --frozen-lockfile`. Build: `bun run build`.
+
+The custom domain `ui.crafter.run` uses Spaceship DNS and Vercel HTTPS. Pushes to main deploy automatically. No application secrets are required for the library, registry or export routes. Theme drafts stay in the browser until exported.
+
+The older application at the repository root is retained for reference; Vercel builds studio.
