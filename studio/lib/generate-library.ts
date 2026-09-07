@@ -2,6 +2,7 @@ import { exportCatalog as catalog, recipes } from "@/lib/export-catalog";
 import createApp from "@/lib/generated/create-app.json";
 import sourceData from "@/lib/generated/sources.json";
 import { librarySchema, themeVariables } from "@/lib/library-config";
+import { libraryDesign } from "@/lib/library-design";
 import { librarySkill } from "@/lib/library-skill";
 
 const sources: Record<
@@ -104,9 +105,11 @@ export function generateLibrary(input: unknown) {
     config.slug,
     homepage,
   );
+  files["DESIGN.md"] = libraryDesign(config.name, homepage);
+  files["public/design.md"] = files["DESIGN.md"];
   files["public/skill.md"] = files[`.agents/skills/${config.slug}-ui/SKILL.md`];
   files["docs/agents.md"] =
-    `# Working with an agent\n\nInstall the skill from .agents/skills/${config.slug}-ui/SKILL.md. The public copy is at /skill.md. theme.json is your theme source; run bun run build after editing it. Browser editing requires a catalog with WebMCP support; this portable registry does not include a running catalog application.\n`;
+    `# Working with an agent\n\nFor product UI work, read DESIGN.md or /design.md. For creating and maintaining the library, install the skill from .agents/skills/${config.slug}-ui/SKILL.md. The public copy is at /skill.md. theme.json is your theme source; run bun run build after editing it. Browser editing requires a catalog with WebMCP support; this portable registry does not include a running catalog application.\n`;
   files["scripts/sync-theme.ts"] =
     `const theme = await Bun.file("theme.json").json();
 if (theme.version !== 1 || !theme.light || !theme.dark) throw new Error("Invalid theme.json");
@@ -179,12 +182,13 @@ await Bun.write("theme.css", ":root {\\n" + css("light") + "\\n}\\n.dark {\\n" +
   files["public/llms.txt"] = [
     `# ${config.name}`,
     "React 19 / Tailwind 4 / shadcn Base UI. Use semantic tokens and preserve accessible states.",
-    `Install: bunx --bun shadcn@4.21.0 add ${homepage}/r/starter.json`,
+    `Design guidelines: ${homepage}/design.md
+Install individual components: ${homepage}/r/<component>.json`,
     ...selected.map(
       (item) =>
         `## ${item.title}\n${item.description}\nImport: @/components/${recipes.has(item.name) ? "examples/" : "ui/"}${item.name}\n${item.usage}`,
     ),
-    `Agent skill: ${homepage}/skill.md\nTheme source: theme.json`,
+    `Create and maintain a library: ${homepage}/skill.md\nTheme source: theme.json`,
   ].join("\n\n");
   files["public/index.html"] =
     `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${config.name}</title><body><h1>${config.name}</h1><p>Your component registry is ready.</p><p><a href="r/starter.json">Starter</a> · <a href="r/registry.json">Catalog</a> · <a href="llms.txt">Agent instructions</a></p><ul>${selected.map((item) => `<li><a href="r/${item.name}.json">${item.title}</a>: ${item.description}</li>`).join("")}</ul></body></html>`;

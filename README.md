@@ -6,7 +6,7 @@
 
 ## Start with your agent
 
-Open [ui.crafter.run](https://ui.crafter.run), click **Use in my project**, and paste the prompt into your coding agent. The [skill](https://ui.crafter.run/skill.md) gives your agent shared component and token guidance for future UI work while respecting your existing tools. No new app or starter download is required.
+Open [ui.crafter.run](https://ui.crafter.run), click **Use in my project**, and paste the prompt into your coding agent. The [design guide](https://crafter.run/design.md) gives your agent shared component and token guidance for future UI work while respecting your existing tools. No new app or starter download is required.
 
 ## Create your own design system
 
@@ -18,7 +18,7 @@ For an optional new demo app, the [starter ZIP](https://ui.crafter.run/starter.z
 bun scripts/create-app.ts /absolute/path/to/my-app
 ```
 
-The destination must be new. Existing projects should follow the skill to install selected components and review conflicts.
+The destination must be new. Existing projects should follow the design guide to install selected components and review conflicts.
 
 ## Develop
 

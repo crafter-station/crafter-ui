@@ -1,28 +1,22 @@
 export function librarySkill(name: string, slug: string, homepage: string) {
   return `---
 name: ${slug}-ui
-description: Use and extend ${name} components, tune its semantic tokens, and verify theme changes visually in its catalog.
+description: Create, customize and maintain a design system based on ${name}; manage its tokens, registry, exports and design guide.
 ---
 
 # ${name}
 
 Use existing components before adding new ones. Read library.json, registry.json when present, and component source for current APIs. This library uses shadcn Base UI, React 19 and Tailwind 4. Atoms are focused controls; molecules combine related controls; organisms complete a task. Match responsibility rather than counting DOM nodes.
 
-## Use this design system
+## Purpose
 
-This skill provides design-system context for the current project. Reading or installing it does not request a new app, screen, redesign or deployment.
-
-Follow the project's existing package manager, tooling and conventions. Discover components at ${homepage}/llms.txt and inspect their source and examples before using them. Reuse ${name} components and semantic tokens consistently, including light/dark, focus, disabled, loading, empty and error states.
-
-When UI work needs a missing component, install only that component from ${homepage}/r/<component>.json using the project's tooling. Check React 19, Tailwind 4 and shadcn Base UI compatibility and review existing component conflicts before editing. Apply ${homepage}/r/theme.json when adopting the shared theme. Preserve unrelated changes. Explain compatibility issues rather than replacing the project's stack.
-
-Keep product-specific compositions in the consuming project. Propose reusable improvements to the shared design-system repository so the team can review and adopt them together. Validate changes using the project's checks and the relevant rendered interactions.
+Use this skill when asked to create, customize or maintain a design system. For building product interfaces with the existing library, read ${homepage}/design.md instead. It contains composition, typography, spacing, component and interaction guidance.
 
 ## Create your own design system
 
-This is a separate, opt-in flow at ${homepage}/create. Choose your library identity, components and tokens, then export your own registry and named skill. Do not start this flow merely to use ${name} in an existing project.
+Start at ${homepage}/create. Choose your library identity, components and tokens, then export your own registry, DESIGN.md and named skill. Preserve the host project's tooling and unrelated changes. Read the existing theme and component APIs before modifying them.
 
-The optional ${homepage}/starter.zip download and its bun scripts/create-app.ts helper scaffold a new demo app from a registry. They are not required to adopt the design system. Use the helper only when a new application is requested; it requires a new destination and uses Bun.
+The optional ${homepage}/starter.zip download and its bun scripts/create-app.ts helper scaffold a new demo app from a registry. Use the helper only when a new application is requested; it requires a new destination and uses Bun. Consuming a library in an existing app does not require this helper.
 
 ## Theme source
 

@@ -5,7 +5,7 @@ import { installPrompt } from "./install-prompt";
 
 test("team prompt provides design system context without prescribing app setup", () => {
   const prompt = installPrompt("http://localhost:4324");
-  expect(prompt).toContain("http://localhost:4324/skill.md");
+  expect(prompt).toContain("http://localhost:4324/design.md");
   expect(prompt).toContain("existing tooling and conventions");
   expect(prompt).not.toContain("Bun");
   expect(prompt).not.toContain("starter.zip");
@@ -26,4 +26,11 @@ test("starter download contains an executable setup, theme and agent skill", asy
     strFromU8(files["crafter-registry/registry.json"]),
   );
   expect(registry.items).toHaveLength(78);
+  const design = strFromU8(files["crafter-registry/DESIGN.md"]);
+  expect(design).toContain("Design with Crafter UI");
+  expect(design).toContain("http://localhost:4324/components");
+  expect(design).toBe(strFromU8(files["crafter-registry/public/design.md"]));
+  expect(installPrompt("https://ui.crafter.run")).toContain(
+    "https://crafter.run/design.md",
+  );
 });

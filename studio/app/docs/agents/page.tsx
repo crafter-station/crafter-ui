@@ -22,9 +22,9 @@ export default function Page() {
             <h2>Use Crafter UI with your team</h2>
             <p>
               Click “Use in my project” on the homepage and paste the prompt
-              into your agent. The skill provides component and token guidance
-              for future UI work, using your project’s existing tools. No
-              starter download or new application is required.
+              into your agent. The design guide provides component and token
+              guidance for future UI work, using your project’s existing tools.
+              No starter download or new application is required.
             </p>
             <p>
               Keep the shared Crafter tokens and components consistent across
@@ -96,14 +96,19 @@ export default function Page() {
             </p>
           </section>
           <section>
-            <h2>Install the skill</h2>
+            <h2>Two guides, two workflows</h2>
             <p>
-              The repository includes .agents/skills/crafter-ui/SKILL.md. Add it
-              to your agent’s project skills. Every generated library includes
-              its own named skill, token source and agent guide.
+              Read DESIGN.md for product UI patterns: composition, spacing,
+              typography, states and component usage. Use SKILL.md when creating
+              or maintaining your own library. Every export includes its own
+              DESIGN.md, named skill and token source.
             </p>
+            <a className="doc-text-link" href="/design.md">
+              Use Crafter: DESIGN.md ↗
+            </a>
+            <br />
             <a className="doc-text-link" href="/skill.md">
-              Read SKILL.md ↗
+              Create your own: SKILL.md ↗
             </a>
           </section>
           <section>

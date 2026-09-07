@@ -207,7 +207,7 @@ export function Studio() {
         schema: z.object({ includeFiles: z.boolean().optional() }).strict(),
         readOnly: true,
         description:
-          "Return a manifest and exportRequest to POST for the ZIP. Use includeFiles=true only when source contents are needed in context. Includes theme.json, SKILL.md and app setup. Does not write files.",
+          "Return a manifest and exportRequest to POST for the ZIP. Use includeFiles=true only when source contents are needed in context. Includes theme.json, DESIGN.md, SKILL.md and app setup. Does not write files.",
         run: async (input: unknown) => {
           const response = await fetch("/api/export?format=json", {
             method: "POST",
@@ -342,7 +342,7 @@ export function Studio() {
             <h1>Your library, ready to build.</h1>
             <p>
               Name it, tune the shared theme, and take the source. Your agent
-              gets the same controls and a ready-to-use skill.
+              gets the same controls, a design guide and a creation skill.
             </p>
           </div>
           <a className="create-agent-link" href="#create-agent">
@@ -629,7 +629,7 @@ export function Studio() {
 Use get_library, then configure_library to name and select components.
 Use get_theme and patch_theme to tune light and dark tokens.
 Call export_library, POST its exportRequest to download and unzip the library.
-Run bun scripts/create-app.ts /absolute/path/to/my-new-app.\nFollow the installed SKILL.md to build with my components.`}
+Run bun scripts/create-app.ts /absolute/path/to/my-new-app.\nFollow DESIGN.md for product UI and SKILL.md to maintain my library.`}
             />
             <a href="/docs/agents">Agent setup & token documentation ↗</a>
           </section>

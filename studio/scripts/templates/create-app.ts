@@ -63,7 +63,7 @@ await run(
 const config = await Bun.file(path.join(registry, "library.json")).json();
 const skill = `.agents/skills/${config.slug}-ui/SKILL.md`;
 await mkdir(path.join(target, path.dirname(skill)), { recursive: true });
-for (const file of ["theme.json", "library.json", skill])
+for (const file of ["theme.json", "library.json", "DESIGN.md", skill])
   await copyFile(path.join(registry, file), path.join(target, file));
 await mkdir(path.join(target, "scripts"), { recursive: true });
 await Bun.write(
