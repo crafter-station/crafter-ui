@@ -37,7 +37,7 @@ Discover available components and source examples at ${homepage}/llms.txt. Reuse
 
 Atoms express one focused control or value: button, field, badge, status.
 Molecules combine controls around a small interaction: search field, member item, project card.
-Organisms complete a workflow: settings group, notification preferences, an inbox or project form.
+Organisms complete a workflow: settings group, notification preferences, command palette, or project form.
 
 Choose boundaries by responsibility. Do not create a new component merely to wrap one visual detail. Keep product-specific compositions in the app; contribute reusable patterns to the shared library.
 

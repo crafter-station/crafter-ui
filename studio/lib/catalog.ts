@@ -55,6 +55,16 @@ export const catalog = [
     roots: ["settings-card"],
   },
   {
+    name: "command-palette",
+    title: "Command palette",
+    category: "Blocks",
+    description:
+      "Search and jump to a command with grouped results and a keyboard shortcut.",
+    usage:
+      "<CommandPalette groups={groups} open={open} onOpenChange={setOpen} />\n<CommandPaletteTrigger onOpen={() => setOpen(true)} />",
+    roots: ["command-palette"],
+  },
+  {
     name: "status-indicator",
     title: "Status indicator",
     category: "Atoms",
