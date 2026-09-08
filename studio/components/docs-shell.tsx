@@ -1,9 +1,9 @@
 "use client";
 
-import { Search } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { type ReactNode, useState } from "react";
+import { CommandPaletteTrigger } from "@/components/command-palette";
 import { CopyMarkdown } from "@/components/copy-markdown";
 import { SiteHeader } from "@/components/site-header";
 import {
@@ -14,13 +14,7 @@ import {
 
 export function DocsShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
-  const entries = documentation.filter((entry) =>
-    `${entry.title} ${entry.family} ${entry.level}`
-      .toLowerCase()
-      .includes(query.toLowerCase()),
-  );
   return (
     <div className="site-shell docs-site">
       <SiteHeader />
@@ -38,15 +32,10 @@ export function DocsShell({ children }: { children: ReactNode }) {
           id="library-sidebar"
           className={`docs-sidebar ${open ? "is-open" : ""}`}
         >
-          <label className="docs-search">
-            <Search size={14} />
-            <input
-              aria-label="Search library components"
-              placeholder="Find a component…"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-            />
-          </label>
+          <CommandPaletteTrigger
+            className="mb-0 w-full"
+            label="Find a component…"
+          />
           <nav aria-label="Library documentation">
             <div className="docs-nav-group">
               <p>GET STARTED</p>
@@ -72,16 +61,16 @@ export function DocsShell({ children }: { children: ReactNode }) {
               </Link>
             </div>
             {documentationGroups.map((group) => {
-              const matches = entries.filter((entry) => entry.level === group);
+              const matches = documentation.filter(
+                (entry) => entry.level === group,
+              );
               return (
                 matches.length > 0 && (
                   <details
                     className="docs-nav-group"
                     key={group}
                     open={
-                      Boolean(query) ||
-                      group !== "Primitives" ||
-                      pathname.includes("/shadcn/")
+                      group !== "Primitives" || pathname.includes("/shadcn/")
                     }
                   >
                     <summary>
@@ -109,9 +98,6 @@ export function DocsShell({ children }: { children: ReactNode }) {
                 )
               );
             })}
-            {!entries.length && (
-              <p className="no-results">No components match “{query}”.</p>
-            )}
           </nav>
           <a href="/llms.txt" className="sidebar-agent">
             For your agent ↗ <span>llms.txt</span>

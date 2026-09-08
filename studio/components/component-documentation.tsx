@@ -46,7 +46,9 @@ export function ComponentDocumentation({
       ? "Card, CardHeader, CardTitle, CardContent"
       : entry.name === "dialog"
         ? "Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription"
-        : symbol;
+        : entry.name === "command-palette"
+          ? "CommandPalette, CommandPaletteTrigger, CommandPaletteItemContent"
+          : symbol;
   const buttonImport = ["dialog", "empty-state"].includes(entry.name)
     ? 'import { Button } from "@/components/ui/button";\n'
     : "";

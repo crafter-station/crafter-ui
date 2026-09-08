@@ -4,6 +4,11 @@ import { ArrowRight, Box, Check, Plus } from "lucide-react";
 import { useState } from "react";
 import { ActionButton } from "@/components/ui/action-button";
 import { Button } from "@/components/ui/button";
+import {
+  CommandPalette,
+  type CommandPaletteGroup,
+  CommandPaletteTrigger,
+} from "@/components/ui/command-palette";
 import { CopyButton } from "@/components/ui/copy-button";
 import { EmptyState } from "@/components/ui/empty-state";
 import { KeyboardShortcut } from "@/components/ui/keyboard-shortcut";
@@ -21,6 +26,8 @@ export function ComponentPreview({ name }: { name: ComponentName }) {
   const [pending, setPending] = useState(false);
   const [created, setCreated] = useState(false);
   const [query, setQuery] = useState("");
+  const [paletteOpen, setPaletteOpen] = useState(false);
+  const [paletteChoice, setPaletteChoice] = useState("");
   if (name === "status-indicator")
     return (
       <div className="flex gap-3">
@@ -135,6 +142,63 @@ export function ComponentPreview({ name }: { name: ComponentName }) {
         }
       />
     );
+  if (name === "command-palette") {
+    const groups: CommandPaletteGroup[] = [
+      {
+        heading: "Suggestions",
+        items: [
+          {
+            id: "projects",
+            label: "Open projects",
+            description: "Jump to your workspace list",
+            icon: <Box />,
+            onSelect: () => setPaletteChoice("Open projects"),
+          },
+          {
+            id: "create",
+            label: "Create project",
+            description: "Start something new",
+            icon: <Plus />,
+            badge: "Action",
+            onSelect: () => setPaletteChoice("Create project"),
+          },
+        ],
+      },
+      {
+        heading: "Settings",
+        items: [
+          {
+            id: "theme",
+            label: "Toggle theme",
+            description: "Switch light and dark",
+            icon: <Check />,
+            onSelect: () => setPaletteChoice("Toggle theme"),
+          },
+        ],
+      },
+    ];
+    return (
+      <div className="grid w-full gap-3">
+        <CommandPaletteTrigger
+          onOpen={() => setPaletteOpen(true)}
+          label="Search commands…"
+          className="w-full max-w-sm"
+          shortcutKey={false}
+        />
+        <CommandPalette
+          open={paletteOpen}
+          onOpenChange={setPaletteOpen}
+          groups={groups}
+          shortcutKey={false}
+        />
+        <p role="status" className="text-sm text-muted-foreground">
+          {paletteChoice
+            ? `Chose “${paletteChoice}”.`
+            : "Open the palette to run a command."}
+        </p>
+      </div>
+    );
+  }
   if (name === "section-heading")
     return (
       <div className="w-full">

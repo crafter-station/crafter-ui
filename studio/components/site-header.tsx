@@ -3,6 +3,7 @@
 import { ArrowUpRight, Layers3 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { CommandPaletteTrigger } from "@/components/command-palette";
 import { CustomizeButton } from "@/components/theme-workbench";
 
 export function SiteHeader() {
@@ -32,6 +33,8 @@ export function SiteHeader() {
           </Link>
         ))}
       </nav>
+      <CommandPaletteTrigger className="ml-auto w-[220px] max-sm:hidden" />
+      <CommandPaletteTrigger className="ml-auto sm:hidden" compact />
       <CustomizeButton />
       <a
         className="agent-link"

@@ -564,6 +564,10 @@ const anatomy: Record<
     level: "Organisms",
     parts: ["Card", "Text field", "Action button", "Form feedback"],
   },
+  "command-palette": {
+    level: "Organisms",
+    parts: ["Command", "Dialog", "Badge", "Kbd", "Item slot"],
+  },
 };
 export const documentation: DocumentationEntry[] = [
   ...foundations.map((entry) => ({

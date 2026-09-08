@@ -1402,6 +1402,9 @@ h1 span {
   color: var(--muted-foreground);
   font-family: var(--font-geist-mono);
 }
+.doc-preview-footer .doc-text-link {
+  margin-top: 0;
+}
 .preview-live-label {
   margin-left: auto;
 }
@@ -1599,7 +1602,7 @@ h1 span {
     padding: 9px 0;
   }
   .library-header > button {
-    margin-left: auto;
+    margin-left: 0;
   }
   .library-header .agent-link {
     display: none;

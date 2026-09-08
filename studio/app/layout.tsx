@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import type { CSSProperties } from "react";
+import { CommandPaletteProvider } from "@/components/command-palette";
 import { ThemeWorkbench } from "@/components/theme-workbench";
 import { defaultConfig, themeVariables } from "@/lib/library-config";
 import initialTheme from "@/theme.json";
@@ -35,7 +36,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       }
     >
       <body className="min-h-full flex flex-col">
-        <ThemeWorkbench>{children}</ThemeWorkbench>
+        <ThemeWorkbench>
+          <CommandPaletteProvider>{children}</CommandPaletteProvider>
+        </ThemeWorkbench>
       </body>
     </html>
   );
