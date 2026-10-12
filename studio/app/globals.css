@@ -41,6 +41,8 @@
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: "Crafter Sans", var(--font-sans);
+  --text-xs: 0.875rem;
+  --text-sm: 1rem;
   --color-brand: #ffc107;
   --color-brand-soft: #f8e9a4;
   --color-sidebar-ring: var(--sidebar-ring);

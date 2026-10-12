@@ -12,11 +12,11 @@ Use the existing shell and navigation. Keep a shared alignment grid across headi
 
 Crafter's voice is warm, editorial and calm: paper surfaces, dark ink, generous reading sizes and one yellow detail. Let typography and spacing carry the hierarchy before reaching for borders, rules or color.
 
-Use Crafter Sans Display (family "Crafter Sans", Medium 500) for headings and Crafter Sans Text (Regular 400, Medium 500, SemiBold 600, Bold 700) for body, controls and metadata. Headings stay in sentence case at weight 500 with slightly tight tracking (about -0.035em); never set display type in bold or all caps. Short headings may end with a period (Craft. Ship. Repeat.). Use monospace only for code, commands and identifiers. The font-sans token names "Crafter Sans Text" first and falls back to the system stack. Crafter Station projects load the preview files from https://ui.crafter.run/fonts/ (CrafterSansPreview-Medium.woff2 and CrafterSansTextPreview-{Regular,Medium,SemiBold,Bold}.woff2) with @font-face; the fonts are not yet publicly licensed, so other projects keep the fallback.
+Use Crafter Sans Display (family "Crafter Sans", Medium 500) for headings and Crafter Sans Text (Regular 400, Medium 500, SemiBold 600, Bold 700) for body, controls and metadata. Headings stay in sentence case at weight 500 with slightly tight tracking (about -0.035em); never set display type in bold or all caps. Short headings may end with a period (Craft. Ship. Repeat.). Use monospace only for code, commands and identifiers. Installing https://ui.crafter.run/r/theme.json sets the 16/14px scale (text-sm and text-xs), a font-heading token, the heading base style and an eyebrow utility. With Crafter Sans it also imports https://ui.crafter.run/fonts/crafter-sans.css. The fonts are preview builds without a public license: use them in Crafter Station projects; elsewhere, set font-sans to your own stack.
 
 Default body, buttons, menus, form controls and ordinary metadata to 16px. Main descriptions use 18px with 1.6 leading; secondary copy uses 16px with 1.65 leading. 14px is the floor, reserved for compact uppercase labels and small code details. Never set text below 14px, including decorative text in SVG or canvas; reflow a crowded layout instead of shrinking it. Page titles scale around clamp(40px, 5vw, 72px) and section titles around clamp(28px, 3.2vw, 44px). Routine app screens use a compact header and restrained headings; large display type belongs to a genuine introduction.
 
-Eyebrows and small labels are uppercase Crafter Sans Text at 14px with 0.04em tracking, optionally led by a 7px square in the brand yellow. Numbered labels read "01 / Foundation".
+Eyebrows and small labels use the eyebrow utility: uppercase Crafter Sans Text at 14px with 0.04em tracking, led by a 7px accent square. Numbered labels read "01 / Foundation".
 
 Start spacing from a 4px rhythm: 4–8px within a control group, 12–16px between related fields and 24–32px between sections; editorial sections breathe at about 64px. These are composition defaults, not overrides of component tokens. Make related items closer than unrelated items.
 
@@ -49,6 +49,8 @@ In a derived library, its theme.json is authoritative for palette, radius, typog
 
 Separate content with spacing, type and soft tonal surfaces rather than repeated horizontal rules. Use one fine border to establish an input boundary. Preserve visible keyboard focus through the component's focus treatment; avoid stacking extra outlines and shadows. Use elevation for overlapping surfaces such as popovers, rather than on every container. Illustrations may keep their own editorial colors in both themes; text surfaces always follow the tokens.
 
+To feature one item on an inverted surface (an ink card in light mode, a paper card in dark mode), swap the token set for that subtree instead of recoloring its contents: give the container the opposite theme's semantic variables and its own background/foreground, so nested buttons, badges and inputs keep readable pairs. Never place outline or ghost controls on bg-primary directly; they inherit foreground colors meant for the page and disappear.
+
 Good: a semantic muted surface with readable secondary text.
 Avoid: arbitrary gray values, cold neutral grays, low-contrast disabled-looking labels or thick double focus borders.
 
@@ -76,6 +78,10 @@ Choose explicit action labels such as “Save changes” or “Create project”
 
 Good: a stable Save changes button with pending and success feedback.
 Avoid: vague action labels, layout shifts or resetting a failed form.
+
+## Dates and times
+
+Show event dates and times in the venue's time zone and label it (for example "6:30 PM GMT-5, Lima time"), not in the browser's zone. Use absolute dates; drive open/closed states from absolute timestamps.
 
 ## States and accessibility
 

@@ -1,7 +1,13 @@
 import { exportCatalog as catalog, recipes } from "@/lib/export-catalog";
 import createApp from "@/lib/generated/create-app.json";
 import sourceData from "@/lib/generated/sources.json";
-import { librarySchema, themeVariables } from "@/lib/library-config";
+import {
+  baseCss,
+  fontFiles,
+  librarySchema,
+  themeVariables,
+  typeScale,
+} from "@/lib/library-config";
 import { libraryDesign } from "@/lib/library-design";
 import { librarySkill } from "@/lib/library-skill";
 
@@ -43,9 +49,14 @@ export function generateLibrary(input: unknown) {
     description: string,
     roots: readonly string[],
   ) {
-    const files = itemFiles(roots);
+    const files = [
+      ...itemFiles(roots),
+      ...(name === "theme" || name === "starter" ? fontFiles(config) : []),
+    ];
     const dependencies = [
-      ...new Set(files.flatMap((file) => sources[file.path].dependencies)),
+      ...new Set(
+        files.flatMap((file) => sources[file.path]?.dependencies ?? []),
+      ),
     ].sort();
     return {
       $schema: "https://ui.shadcn.com/schema/registry-item.json",
@@ -61,9 +72,15 @@ export function generateLibrary(input: unknown) {
       dependencies,
       files,
       cssVars: {
+        ...(name === "theme" || name === "starter"
+          ? { theme: typeScale(config) }
+          : {}),
         light: themeVariables(config),
         dark: themeVariables(config, true),
       },
+      ...(name === "theme" || name === "starter"
+        ? { css: baseCss(config) }
+        : {}),
     };
   }
   const items = selected.map((entry) =>
