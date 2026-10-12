@@ -216,12 +216,16 @@ const crafterFaces = [
 
 export function fontFiles(config: LibraryConfig) {
   if (!usesCrafterSans(config)) return [];
-  const content = crafterFaces
-    .map(
-      ([family, file, weight]) =>
-        `@font-face {\n  font-family: "${family}";\n  src: url("https://ui.crafter.run/fonts/${file}.woff2") format("woff2");\n  font-weight: ${weight};\n  font-display: swap;\n}\n`,
-    )
-    .join("");
+  const notice =
+    '/* Crafter Sans: SIL Open Font License 1.1, Reserved Font Name "Crafter Sans". https://ui.crafter.run/fonts/OFL.txt */\n';
+  const content =
+    notice +
+    crafterFaces
+      .map(
+        ([family, file, weight]) =>
+          `@font-face {\n  font-family: "${family}";\n  src: url("https://ui.crafter.run/fonts/${file}.woff2") format("woff2");\n  font-weight: ${weight};\n  font-display: swap;\n}\n`,
+      )
+      .join("");
   return [
     {
       path: "app/crafter-sans.css",
