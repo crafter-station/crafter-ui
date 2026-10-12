@@ -10,25 +10,51 @@ Use the existing shell and navigation. Keep a shared alignment grid across headi
 
 ## Hierarchy and density
 
-Use a compact header, restrained headings and readable body text. Reserve large display typography for a genuine introduction, not routine app screens. Use the project's type scale consistently. Use monospace for code or identifiers, not all supporting copy.
+Crafter's voice is warm, editorial and calm: paper surfaces, dark ink, generous reading sizes and one yellow detail. Let typography and spacing carry the hierarchy before reaching for borders, rules or color.
 
-Start spacing from a 4px rhythm: 4–8px within a control group, 12–16px between related fields and 24–32px between sections. These are composition defaults, not overrides of component tokens. Make related items closer than unrelated items.
+Use Crafter Sans Display (family "Crafter Sans", Medium 500) for headings and Crafter Sans Text (Regular 400, Medium 500, SemiBold 600, Bold 700) for body, controls and metadata. Headings stay in sentence case at weight 500 with slightly tight tracking (about -0.035em); never set display type in bold or all caps. Short headings may end with a period (Craft. Ship. Repeat.). Use monospace only for code, commands and identifiers. The font-sans token names "Crafter Sans Text" first and falls back to the system stack. Crafter Station projects load the preview files from https://ui.crafter.run/fonts/ (CrafterSansPreview-Medium.woff2 and CrafterSansTextPreview-{Regular,Medium,SemiBold,Bold}.woff2) with @font-face; the fonts are not yet publicly licensed, so other projects keep the fallback.
 
-Align controls by their actual bounds. Buttons in one action row share height, padding and baseline. Put helper text below the row rather than beneath only one button. Give a primary action visual priority; secondary actions should remain quieter.
+Default body, buttons, menus, form controls and ordinary metadata to 16px. Main descriptions use 18px with 1.6 leading; secondary copy uses 16px with 1.65 leading. 14px is the floor, reserved for compact uppercase labels and small code details. Never set text below 14px, including decorative text in SVG or canvas; reflow a crowded layout instead of shrinking it. Page titles scale around clamp(40px, 5vw, 72px) and section titles around clamp(28px, 3.2vw, 44px). Routine app screens use a compact header and restrained headings; large display type belongs to a genuine introduction.
+
+Eyebrows and small labels are uppercase Crafter Sans Text at 14px with 0.04em tracking, optionally led by a 7px square in the brand yellow. Numbered labels read "01 / Foundation".
+
+Start spacing from a 4px rhythm: 4–8px within a control group, 12–16px between related fields and 24–32px between sections; editorial sections breathe at about 64px. These are composition defaults, not overrides of component tokens. Make related items closer than unrelated items.
+
+Align controls by their actual bounds. Buttons in one action row share height, padding and baseline. Put helper text below the row rather than beneath only one button. Keep the primary action next to its title and copy; secondary actions stay quieter, and links do not need repeated arrow decorations.
 
 Good: two aligned actions, one primary, with a shared explanation below.
 Avoid: buttons of different heights, disconnected labels and a tall header that crowds the task.
 
 ## Surfaces and tokens
 
-Use semantic tokens from the installed theme: background/foreground, card/card-foreground, muted/muted-foreground, primary/primary-foreground, secondary/secondary-foreground and destructive. Pair foregrounds with their intended surface.
+Use semantic tokens from the installed theme: background/foreground, card/card-foreground, muted/muted-foreground, primary/primary-foreground, secondary/secondary-foreground, accent and destructive. Pair foregrounds with their intended surface.
 
-Crafter's baseline is monochrome, compact and sharply edged, with fine borders and minimal elevation. In a derived library, its theme.json is authoritative for palette, radius, typography and control-height. Never reintroduce Crafter's baseline over that library's chosen tokens.
+Crafter's baseline palette:
 
-Use one subtle border to establish an input boundary. Preserve visible keyboard focus through the component's focus treatment; avoid stacking extra outlines and shadows. Use elevation for overlapping surfaces such as popovers, rather than on every container.
+| Role | Light | Dark |
+| --- | --- | --- |
+| Canvas (background) | #F7F7F2 | #191B17 |
+| Surface (card) | #EFEFE8 | #22251F |
+| Ink (foreground) | #20221D | #F3F3E9 |
+| Muted text | #60635A | #B3B7A8 |
+| Line (border) | #CFD1C8 | #41443A |
+| Primary action | #20221D | #F8E9A4 |
+| Accessible accent text (ring, chart-1) | #705400 | #F4D56D |
+| Station yellow (brand detail) | #FFC107 | #FFC107 |
+| Station soft (brand surface) | #F8E9A4 | #F8E9A4 |
+
+Light mode leads with ink actions on warm paper; dark mode uses soft yellow actions on deep olive ink. Yellow is a brand surface or small detail, never small text on paper; use the accent text color when text must carry the accent. Never use pure white or pure black for canvas or text. Corners are softly rounded (radius 0.375rem) and controls are comfortable (control-height 2.75rem).
+
+In a derived library, its theme.json is authoritative for palette, radius, typography and control-height. Never reintroduce Crafter's baseline over that library's chosen tokens.
+
+Separate content with spacing, type and soft tonal surfaces rather than repeated horizontal rules. Use one fine border to establish an input boundary. Preserve visible keyboard focus through the component's focus treatment; avoid stacking extra outlines and shadows. Use elevation for overlapping surfaces such as popovers, rather than on every container. Illustrations may keep their own editorial colors in both themes; text surfaces always follow the tokens.
 
 Good: a semantic muted surface with readable secondary text.
-Avoid: arbitrary gray values, low-contrast disabled-looking labels or thick double focus borders.
+Avoid: arbitrary gray values, cold neutral grays, low-contrast disabled-looking labels or thick double focus borders.
+
+## Voice and copy
+
+Write like a community of builders talking to builders: short, warm, concrete and active. Prefer plain verbs ("Explore open source", "Save changes", "Create project") over marketing adjectives. Sentence case everywhere, including buttons and headings. Keep implementation notes about caches, fallbacks or endpoints out of interface copy, and never invent numbers, dates or claims the data does not support.
 
 ## Compose the library
 
@@ -36,7 +62,7 @@ Discover available components and source examples at https://ui.crafter.run/llms
 
 Atoms express one focused control or value: button, field, badge, status.
 Molecules combine controls around a small interaction: search field, member item, project card.
-Organisms complete a workflow: settings group, notification preferences, an inbox or project form.
+Organisms complete a workflow: settings group, notification preferences, command palette, or project form.
 
 Choose boundaries by responsibility. Do not create a new component merely to wrap one visual detail. Keep product-specific compositions in the app; contribute reusable patterns to the shared library.
 

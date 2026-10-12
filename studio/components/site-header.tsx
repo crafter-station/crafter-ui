@@ -1,9 +1,10 @@
 "use client";
 
-import { ArrowUpRight, Layers3 } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CommandPaletteTrigger } from "@/components/command-palette";
+import { CrafterMark } from "@/components/crafter-mark";
 import { CustomizeButton } from "@/components/theme-workbench";
 
 export function SiteHeader() {
@@ -18,7 +19,7 @@ export function SiteHeader() {
     <header className="site-header library-header">
       <Link href="/" className="brand" aria-label="Crafter UI home">
         <span className="brand-mark">
-          <Layers3 size={16} />
+          <CrafterMark size={26} />
         </span>
         crafter<span className="brand-suffix">/ ui</span>
       </Link>

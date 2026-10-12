@@ -58,9 +58,9 @@ export default function Page() {
               each mode in Customize or through patch_theme.
             </p>
             <p>
-              Try: “Make the inputs softer, keep the monochrome palette, and
-              check the result on mobile.” The agent should inspect screenshots
-              and keyboard focus after editing.
+              Try: “Make the inputs softer, keep the paper palette, and check
+              the result on mobile.” The agent should inspect screenshots and
+              keyboard focus after editing.
             </p>
           </section>
           <section>
