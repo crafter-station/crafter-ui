@@ -27,8 +27,8 @@ export default function Page() {
               <strong>shadcn</strong> holds the primitives: buttons, inputs,
               cards and dialogs. <strong>Crafter</strong> holds opinionated
               compositions with focused APIs, sensible states and less repeated
-              markup. Both layers share the same Crafter colors, typography and
-              sharp corners used throughout this site.
+              markup. Both layers share the same Crafter paper palette, Crafter
+              Sans type and softly rounded corners used throughout this site.
             </p>
             <div className="atomic-overview">
               {[
@@ -74,7 +74,7 @@ export default function Page() {
             <CodeBlock code="bunx --bun shadcn@4.21.0 init --base base" />
             <CodeBlock code={install} />
             <p>
-              The starter applies Crafter's monochrome theme and includes all 76
+              The starter applies Crafter's warm paper theme and includes all 76
               shadcn and Crafter components with their dependencies. Individual
               component installs preserve your existing theme.
             </p>

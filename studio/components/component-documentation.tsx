@@ -193,7 +193,7 @@ export function ComponentDocumentation({
           <p>
             {entry.family === "shadcn"
               ? "These primitives use shadcn Base UI with the same Crafter colors, typography and corners as this entire site. Customize that shared identity in the style generator."
-              : "Install a single component, or choose your theme and a collection to export together. Crafter defaults are monochrome with sharp corners."}
+              : "Install a single component, or choose your theme and a collection to export together. Crafter defaults use warm paper, ink and yellow, with Crafter Sans and soft corners."}
           </p>
           <Link
             className="doc-text-link"

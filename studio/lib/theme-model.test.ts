@@ -12,11 +12,11 @@ describe("shared theme editing", () => {
     const { theme, diff } = applyThemePatch(baseline, 4, {
       expectedRevision: 4,
       mode: "light",
-      tokens: { primary: "#256344", radius: "0.375rem" },
+      tokens: { primary: "#256344", radius: "1rem" },
     });
     expect(theme.light.primary).toBe("#256344");
     expect(theme.dark).toEqual(baseline.dark);
-    expect(baseline.light.primary).toBe("#141414");
+    expect(baseline.light.primary).toBe("#20221d");
     expect(diff).toHaveLength(2);
     expect(JSON.parse(themeFiles(theme)["theme.json"])).toEqual(theme);
   });
@@ -41,7 +41,7 @@ describe("shared theme editing", () => {
           tokens,
         }),
       ).toThrow();
-    expect(baseline.light.primary).toBe("#141414");
+    expect(baseline.light.primary).toBe("#20221d");
   });
   test("portable registry rebuild consumes the edited theme file", async () => {
     const dir = await mkdtemp(path.join(tmpdir(), "crafter-theme-"));
