@@ -113,7 +113,7 @@ export function themeVariables(
         "card-foreground": "#20221d",
         popover: "#ffffff",
         "popover-foreground": "#20221d",
-        secondary: "#eeefe7",
+        secondary: "#e5e6dc",
         "secondary-foreground": "#20221d",
         muted: "#eeefe7",
         "muted-foreground": "#60635a",
@@ -156,4 +156,78 @@ export function themeVariables(
     "control-height": "2.75rem",
     ...config.theme?.[dark ? "dark" : "light"],
   };
+}
+
+const usesCrafterSans = (config: LibraryConfig) =>
+  themeVariables(config)["font-sans"].startsWith('"Crafter Sans Text"');
+
+// 16px interface default with a 14px floor for compact labels.
+export function typeScale(config: LibraryConfig): Record<string, string> {
+  return {
+    "text-xs": "0.875rem",
+    "text-sm": "1rem",
+    "font-heading": usesCrafterSans(config)
+      ? '"Crafter Sans", var(--font-sans)'
+      : "var(--font-sans)",
+  };
+}
+
+export function baseCss(config: LibraryConfig) {
+  // shadcn cannot merge @font-face blocks, so the faces ship as a local
+  // stylesheet that Tailwind inlines in place.
+  const fonts = usesCrafterSans(config)
+    ? { '@import "./crafter-sans.css"': {} }
+    : {};
+  return {
+    ...fonts,
+    "@layer base": {
+      "h1, h2, h3": {
+        "font-family": "var(--font-heading)",
+        "font-weight": "500",
+        "letter-spacing": "-0.035em",
+      },
+    },
+    "@utility eyebrow": {
+      display: "flex",
+      "align-items": "center",
+      gap: "12px",
+      "font-size": "14px",
+      "line-height": "1.6",
+      "letter-spacing": "0.04em",
+      "text-transform": "uppercase",
+      "&::before": {
+        content: '""',
+        width: "7px",
+        height: "7px",
+        "flex-shrink": "0",
+        background: "var(--ring)",
+      },
+    },
+  };
+}
+
+const crafterFaces = [
+  ["Crafter Sans", "CrafterSansPreview-Medium", 500],
+  ["Crafter Sans Text", "CrafterSansTextPreview-Regular", 400],
+  ["Crafter Sans Text", "CrafterSansTextPreview-Medium", 500],
+  ["Crafter Sans Text", "CrafterSansTextPreview-SemiBold", 600],
+  ["Crafter Sans Text", "CrafterSansTextPreview-Bold", 700],
+] as const;
+
+export function fontFiles(config: LibraryConfig) {
+  if (!usesCrafterSans(config)) return [];
+  const content = crafterFaces
+    .map(
+      ([family, file, weight]) =>
+        `@font-face {\n  font-family: "${family}";\n  src: url("https://ui.crafter.run/fonts/${file}.woff2") format("woff2");\n  font-weight: ${weight};\n  font-display: swap;\n}\n`,
+    )
+    .join("");
+  return [
+    {
+      path: "app/crafter-sans.css",
+      type: "registry:file" as const,
+      target: "app/crafter-sans.css",
+      content,
+    },
+  ];
 }
